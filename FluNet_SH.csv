@@ -1,0 +1,1138 @@
+"","Surveillance site type","Year-week (ISO 8601 calendar)","Week start date (ISO 8601 calendar)","Tropics","Specimen tested","Influenza positive","Influenza negative","B (Victoria)","B (Yamagata)","B (lineage not determined)"
+"1","Non-sentinel","2020-01",2019-12-30,"Southern Hemisphere Temperate and Sub-Tropical",982,36,935,15,0,21
+"2","Non-sentinel","2020-02",2020-01-06,"Southern Hemisphere Temperate and Sub-Tropical",1083,40,1035,17,4,19
+"3","Non-sentinel","2020-03",2020-01-13,"Southern Hemisphere Temperate and Sub-Tropical",1087,42,1019,11,4,27
+"4","Non-sentinel","2020-04",2020-01-20,"Southern Hemisphere Temperate and Sub-Tropical",1035,30,955,19,1,10
+"5","Non-sentinel","2020-05",2020-01-27,"Southern Hemisphere Temperate and Sub-Tropical",1363,51,1263,11,0,40
+"6","Non-sentinel","2020-06",2020-02-03,"Southern Hemisphere Temperate and Sub-Tropical",1075,58,976,6,1,51
+"7","Non-sentinel","2020-07",2020-02-10,"Southern Hemisphere Temperate and Sub-Tropical",1222,42,1111,5,0,37
+"8","Non-sentinel","2020-08",2020-02-17,"Southern Hemisphere Temperate and Sub-Tropical",1248,36,1149,2,0,34
+"9","Non-sentinel","2020-09",2020-02-24,"Southern Hemisphere Temperate and Sub-Tropical",1279,35,1168,9,0,26
+"10","Non-sentinel","2020-10",2020-03-02,"Southern Hemisphere Temperate and Sub-Tropical",1794,60,1611,6,0,54
+"11","Non-sentinel","2020-11",2020-03-09,"Southern Hemisphere Temperate and Sub-Tropical",2638,89,2417,12,0,77
+"12","Non-sentinel","2020-12",2020-03-16,"Southern Hemisphere Temperate and Sub-Tropical",4392,125,4104,11,0,114
+"13","Non-sentinel","2020-13",2020-03-23,"Southern Hemisphere Temperate and Sub-Tropical",6097,77,5868,4,0,73
+"14","Non-sentinel","2020-14",2020-03-30,"Southern Hemisphere Temperate and Sub-Tropical",4445,34,4367,1,0,33
+"15","Non-sentinel","2020-15",2020-04-06,"Southern Hemisphere Temperate and Sub-Tropical",2338,25,2222,3,0,22
+"16","Non-sentinel","2020-16",2020-04-13,"Southern Hemisphere Temperate and Sub-Tropical",3242,15,3219,1,0,14
+"17","Non-sentinel","2020-17",2020-04-20,"Southern Hemisphere Temperate and Sub-Tropical",2953,21,2927,0,0,21
+"18","Non-sentinel","2020-18",2020-04-27,"Southern Hemisphere Temperate and Sub-Tropical",2729,26,2689,1,0,25
+"19","Non-sentinel","2020-19",2020-05-04,"Southern Hemisphere Temperate and Sub-Tropical",7669,2,7663,0,0,2
+"20","Non-sentinel","2020-20",2020-05-11,"Southern Hemisphere Temperate and Sub-Tropical",9397,6,9387,0,0,6
+"21","Non-sentinel","2020-21",2020-05-18,"Southern Hemisphere Temperate and Sub-Tropical",866,0,866,0,0,0
+"22","Non-sentinel","2020-22",2020-05-25,"Southern Hemisphere Temperate and Sub-Tropical",694,2,687,0,0,2
+"23","Non-sentinel","2020-23",2020-06-01,"Southern Hemisphere Temperate and Sub-Tropical",10669,2,10666,0,0,2
+"24","Non-sentinel","2020-24",2020-06-08,"Southern Hemisphere Temperate and Sub-Tropical",608,0,608,0,0,0
+"25","Non-sentinel","2020-25",2020-06-15,"Southern Hemisphere Temperate and Sub-Tropical",15142,3,15138,0,0,3
+"26","Non-sentinel","2020-26",2020-06-22,"Southern Hemisphere Temperate and Sub-Tropical",19008,3,19003,0,0,3
+"27","Non-sentinel","2020-27",2020-06-29,"Southern Hemisphere Temperate and Sub-Tropical",20188,6,20181,0,0,6
+"28","Non-sentinel","2020-28",2020-07-06,"Southern Hemisphere Temperate and Sub-Tropical",387,1,386,0,0,1
+"29","Non-sentinel","2020-29",2020-07-13,"Southern Hemisphere Temperate and Sub-Tropical",26976,1,26973,0,0,1
+"30","Non-sentinel","2020-30",2020-07-20,"Southern Hemisphere Temperate and Sub-Tropical",528,0,528,0,0,0
+"31","Non-sentinel","2020-31",2020-07-27,"Southern Hemisphere Temperate and Sub-Tropical",516,1,515,0,0,1
+"32","Non-sentinel","2020-32",2020-08-03,"Southern Hemisphere Temperate and Sub-Tropical",49434,1,49433,0,0,1
+"33","Non-sentinel","2020-33",2020-08-10,"Southern Hemisphere Temperate and Sub-Tropical",453,0,453,0,0,0
+"34","Non-sentinel","2020-34",2020-08-17,"Southern Hemisphere Temperate and Sub-Tropical",383,0,383,0,0,0
+"35","Non-sentinel","2020-35",2020-08-24,"Southern Hemisphere Temperate and Sub-Tropical",368,0,367,0,0,0
+"36","Non-sentinel","2020-36",2020-08-31,"Southern Hemisphere Temperate and Sub-Tropical",387,2,384,0,0,2
+"37","Non-sentinel","2020-37",2020-09-07,"Southern Hemisphere Temperate and Sub-Tropical",571,2,568,0,0,2
+"38","Non-sentinel","2020-38",2020-09-14,"Southern Hemisphere Temperate and Sub-Tropical",541,0,541,0,0,0
+"39","Non-sentinel","2020-39",2020-09-21,"Southern Hemisphere Temperate and Sub-Tropical",442,0,442,0,0,0
+"40","Non-sentinel","2020-40",2020-09-28,"Southern Hemisphere Temperate and Sub-Tropical",433,0,433,0,0,0
+"41","Non-sentinel","2020-41",2020-10-05,"Southern Hemisphere Temperate and Sub-Tropical",346,0,346,0,0,0
+"42","Non-sentinel","2020-42",2020-10-12,"Southern Hemisphere Temperate and Sub-Tropical",389,0,389,0,0,0
+"43","Non-sentinel","2020-43",2020-10-19,"Southern Hemisphere Temperate and Sub-Tropical",441,0,441,0,0,0
+"44","Non-sentinel","2020-44",2020-10-26,"Southern Hemisphere Temperate and Sub-Tropical",612,0,612,0,0,0
+"45","Non-sentinel","2020-45",2020-11-02,"Southern Hemisphere Temperate and Sub-Tropical",295,0,295,0,0,0
+"46","Non-sentinel","2020-46",2020-11-09,"Southern Hemisphere Temperate and Sub-Tropical",268,0,268,0,0,0
+"47","Non-sentinel","2020-47",2020-11-16,"Southern Hemisphere Temperate and Sub-Tropical",239,0,239,0,0,0
+"48","Non-sentinel","2020-48",2020-11-23,"Southern Hemisphere Temperate and Sub-Tropical",192,0,192,0,0,0
+"49","Non-sentinel","2020-49",2020-11-30,"Southern Hemisphere Temperate and Sub-Tropical",230,0,229,0,0,0
+"50","Non-sentinel","2020-50",2020-12-07,"Southern Hemisphere Temperate and Sub-Tropical",113,0,113,0,0,0
+"51","Non-sentinel","2020-51",2020-12-14,"Southern Hemisphere Temperate and Sub-Tropical",150,0,150,0,0,0
+"52","Non-sentinel","2020-52",2020-12-21,"Southern Hemisphere Temperate and Sub-Tropical",130,0,130,0,0,0
+"53","Non-sentinel","2020-53",2020-12-28,"Southern Hemisphere Temperate and Sub-Tropical",193,0,193,0,0,0
+"54","Non-sentinel","2021-01",2021-01-04,"Southern Hemisphere Temperate and Sub-Tropical",3694,0,3694,0,0,0
+"55","Non-sentinel","2021-02",2021-01-11,"Southern Hemisphere Temperate and Sub-Tropical",3491,0,3491,0,0,0
+"56","Non-sentinel","2021-03",2021-01-18,"Southern Hemisphere Temperate and Sub-Tropical",3258,0,3258,0,0,0
+"57","Non-sentinel","2021-04",2021-01-25,"Southern Hemisphere Temperate and Sub-Tropical",3362,0,3360,0,0,0
+"58","Non-sentinel","2021-05",2021-02-01,"Southern Hemisphere Temperate and Sub-Tropical",3049,0,3049,0,0,0
+"59","Non-sentinel","2021-06",2021-02-08,"Southern Hemisphere Temperate and Sub-Tropical",3123,2,3119,0,0,2
+"60","Non-sentinel","2021-07",2021-02-15,"Southern Hemisphere Temperate and Sub-Tropical",2607,0,2607,0,0,0
+"61","Non-sentinel","2021-08",2021-02-22,"Southern Hemisphere Temperate and Sub-Tropical",3231,0,3231,0,0,0
+"62","Non-sentinel","2021-09",2021-03-01,"Southern Hemisphere Temperate and Sub-Tropical",3419,0,3419,0,0,0
+"63","Non-sentinel","2021-10",2021-03-08,"Southern Hemisphere Temperate and Sub-Tropical",3506,0,3506,0,0,0
+"64","Non-sentinel","2021-11",2021-03-15,"Southern Hemisphere Temperate and Sub-Tropical",3732,1,3731,0,0,1
+"65","Non-sentinel","2021-12",2021-03-22,"Southern Hemisphere Temperate and Sub-Tropical",4292,0,4292,0,0,0
+"66","Non-sentinel","2021-13",2021-03-29,"Southern Hemisphere Temperate and Sub-Tropical",3112,1,3111,0,0,1
+"67","Non-sentinel","2021-14",2021-04-05,"Southern Hemisphere Temperate and Sub-Tropical",3728,0,3728,0,0,0
+"68","Non-sentinel","2021-15",2021-04-12,"Southern Hemisphere Temperate and Sub-Tropical",3341,0,3340,0,0,0
+"69","Non-sentinel","2021-16",2021-04-19,"Southern Hemisphere Temperate and Sub-Tropical",3127,0,3127,0,0,0
+"70","Non-sentinel","2021-17",2021-04-26,"Southern Hemisphere Temperate and Sub-Tropical",3323,0,3323,0,0,0
+"71","Non-sentinel","2021-18",2021-05-03,"Southern Hemisphere Temperate and Sub-Tropical",3082,0,3081,0,0,0
+"72","Non-sentinel","2021-19",2021-05-10,"Southern Hemisphere Temperate and Sub-Tropical",3231,0,3230,0,0,0
+"73","Non-sentinel","2021-20",2021-05-17,"Southern Hemisphere Temperate and Sub-Tropical",3491,0,3491,0,0,0
+"74","Non-sentinel","2021-21",2021-05-24,"Southern Hemisphere Temperate and Sub-Tropical",3298,0,3298,0,0,0
+"75","Non-sentinel","2021-22",2021-05-31,"Southern Hemisphere Temperate and Sub-Tropical",3431,0,3431,0,0,0
+"76","Non-sentinel","2021-23",2021-06-07,"Southern Hemisphere Temperate and Sub-Tropical",3728,1,3726,0,0,1
+"77","Non-sentinel","2021-24",2021-06-14,"Southern Hemisphere Temperate and Sub-Tropical",3956,0,3956,0,0,0
+"78","Non-sentinel","2021-25",2021-06-21,"Southern Hemisphere Temperate and Sub-Tropical",3992,0,3992,0,0,0
+"79","Non-sentinel","2021-26",2021-06-28,"Southern Hemisphere Temperate and Sub-Tropical",3894,0,3894,0,0,0
+"80","Non-sentinel","2021-27",2021-07-05,"Southern Hemisphere Temperate and Sub-Tropical",4079,0,4079,0,0,0
+"81","Non-sentinel","2021-28",2021-07-12,"Southern Hemisphere Temperate and Sub-Tropical",4084,0,4083,0,0,0
+"82","Non-sentinel","2021-29",2021-07-19,"Southern Hemisphere Temperate and Sub-Tropical",4491,0,4491,0,0,0
+"83","Non-sentinel","2021-30",2021-07-26,"Southern Hemisphere Temperate and Sub-Tropical",4451,0,4450,0,0,0
+"84","Non-sentinel","2021-31",2021-08-02,"Southern Hemisphere Temperate and Sub-Tropical",4027,0,4027,0,0,0
+"85","Non-sentinel","2021-32",2021-08-09,"Southern Hemisphere Temperate and Sub-Tropical",4567,0,4567,0,0,0
+"86","Non-sentinel","2021-33",2021-08-16,"Southern Hemisphere Temperate and Sub-Tropical",4479,0,4479,0,0,0
+"87","Non-sentinel","2021-34",2021-08-23,"Southern Hemisphere Temperate and Sub-Tropical",4724,0,4724,0,0,0
+"88","Non-sentinel","2021-35",2021-08-30,"Southern Hemisphere Temperate and Sub-Tropical",4577,0,4577,0,0,0
+"89","Non-sentinel","2021-36",2021-09-06,"Southern Hemisphere Temperate and Sub-Tropical",4057,0,4057,0,0,0
+"90","Non-sentinel","2021-37",2021-09-13,"Southern Hemisphere Temperate and Sub-Tropical",3996,0,3996,0,0,0
+"91","Non-sentinel","2021-38",2021-09-20,"Southern Hemisphere Temperate and Sub-Tropical",4324,0,4324,0,0,0
+"92","Non-sentinel","2021-39",2021-09-27,"Southern Hemisphere Temperate and Sub-Tropical",4223,0,4223,0,0,0
+"93","Non-sentinel","2021-40",2021-10-04,"Southern Hemisphere Temperate and Sub-Tropical",3968,0,3968,0,0,0
+"94","Non-sentinel","2021-41",2021-10-11,"Southern Hemisphere Temperate and Sub-Tropical",3656,0,3656,0,0,0
+"95","Non-sentinel","2021-42",2021-10-18,"Southern Hemisphere Temperate and Sub-Tropical",3523,0,3522,0,0,0
+"96","Non-sentinel","2021-43",2021-10-25,"Southern Hemisphere Temperate and Sub-Tropical",5015,0,5015,0,0,0
+"97","Non-sentinel","2021-44",2021-11-01,"Southern Hemisphere Temperate and Sub-Tropical",3614,0,3613,0,0,0
+"98","Non-sentinel","2021-45",2021-11-08,"Southern Hemisphere Temperate and Sub-Tropical",3795,0,3793,0,0,0
+"99","Non-sentinel","2021-46",2021-11-15,"Southern Hemisphere Temperate and Sub-Tropical",3489,0,3449,0,0,0
+"100","Non-sentinel","2021-47",2021-11-22,"Southern Hemisphere Temperate and Sub-Tropical",3233,0,3201,0,0,0
+"101","Non-sentinel","2021-48",2021-11-29,"Southern Hemisphere Temperate and Sub-Tropical",3429,0,3357,0,0,0
+"102","Non-sentinel","2021-49",2021-12-06,"Southern Hemisphere Temperate and Sub-Tropical",2872,0,2722,0,0,0
+"103","Non-sentinel","2021-50",2021-12-13,"Southern Hemisphere Temperate and Sub-Tropical",2864,0,2474,0,0,0
+"104","Non-sentinel","2021-51",2021-12-20,"Southern Hemisphere Temperate and Sub-Tropical",2341,1,1961,0,0,1
+"105","Non-sentinel","2021-52",2021-12-27,"Southern Hemisphere Temperate and Sub-Tropical",2135,1,1812,0,0,1
+"106","Non-sentinel","2022-01",2022-01-03,"Southern Hemisphere Temperate and Sub-Tropical",5795,1,4377,0,0,1
+"107","Non-sentinel","2022-02",2022-01-10,"Southern Hemisphere Temperate and Sub-Tropical",5173,1,4181,0,0,1
+"108","Non-sentinel","2022-03",2022-01-17,"Southern Hemisphere Temperate and Sub-Tropical",3856,1,3332,1,0,0
+"109","Non-sentinel","2022-04",2022-01-24,"Southern Hemisphere Temperate and Sub-Tropical",3563,0,3356,0,0,0
+"110","Non-sentinel","2022-05",2022-01-31,"Southern Hemisphere Temperate and Sub-Tropical",3231,0,3026,0,0,0
+"111","Non-sentinel","2022-06",2022-02-07,"Southern Hemisphere Temperate and Sub-Tropical",3760,1,3391,0,0,1
+"112","Non-sentinel","2022-07",2022-02-14,"Southern Hemisphere Temperate and Sub-Tropical",3951,0,3606,0,0,0
+"113","Non-sentinel","2022-08",2022-02-21,"Southern Hemisphere Temperate and Sub-Tropical",4305,0,3683,0,0,0
+"114","Non-sentinel","2022-09",2022-02-28,"Southern Hemisphere Temperate and Sub-Tropical",5084,3,4286,0,0,3
+"115","Non-sentinel","2022-10",2022-03-07,"Southern Hemisphere Temperate and Sub-Tropical",6085,4,4681,0,0,4
+"116","Non-sentinel","2022-11",2022-03-14,"Southern Hemisphere Temperate and Sub-Tropical",6837,5,5246,0,0,5
+"117","Non-sentinel","2022-12",2022-03-21,"Southern Hemisphere Temperate and Sub-Tropical",6729,5,5487,0,0,5
+"118","Non-sentinel","2022-13",2022-03-28,"Southern Hemisphere Temperate and Sub-Tropical",7501,3,6199,0,0,3
+"119","Non-sentinel","2022-14",2022-04-04,"Southern Hemisphere Temperate and Sub-Tropical",6852,1,5457,0,0,1
+"120","Non-sentinel","2022-15",2022-04-11,"Southern Hemisphere Temperate and Sub-Tropical",5868,1,5084,0,0,1
+"121","Non-sentinel","2022-16",2022-04-18,"Southern Hemisphere Temperate and Sub-Tropical",6530,3,5587,0,0,3
+"122","Non-sentinel","2022-17",2022-04-25,"Southern Hemisphere Temperate and Sub-Tropical",6626,5,5896,0,0,5
+"123","Non-sentinel","2022-18",2022-05-02,"Southern Hemisphere Temperate and Sub-Tropical",7810,1,7209,0,0,1
+"124","Non-sentinel","2022-19",2022-05-09,"Southern Hemisphere Temperate and Sub-Tropical",9379,7,8771,0,0,7
+"125","Non-sentinel","2022-20",2022-05-16,"Southern Hemisphere Temperate and Sub-Tropical",11287,6,10832,0,0,6
+"126","Non-sentinel","2022-21",2022-05-23,"Southern Hemisphere Temperate and Sub-Tropical",12787,6,12339,0,0,6
+"127","Non-sentinel","2022-22",2022-05-30,"Southern Hemisphere Temperate and Sub-Tropical",13554,6,13124,0,0,6
+"128","Non-sentinel","2022-23",2022-06-06,"Southern Hemisphere Temperate and Sub-Tropical",13490,5,12946,0,0,5
+"129","Non-sentinel","2022-24",2022-06-13,"Southern Hemisphere Temperate and Sub-Tropical",12597,7,12085,0,0,7
+"130","Non-sentinel","2022-25",2022-06-20,"Southern Hemisphere Temperate and Sub-Tropical",12337,3,11900,0,0,3
+"131","Non-sentinel","2022-26",2022-06-27,"Southern Hemisphere Temperate and Sub-Tropical",12245,1,11851,0,0,1
+"132","Non-sentinel","2022-27",2022-07-04,"Southern Hemisphere Temperate and Sub-Tropical",10825,4,10485,1,0,3
+"133","Non-sentinel","2022-28",2022-07-11,"Southern Hemisphere Temperate and Sub-Tropical",9918,4,9575,0,0,4
+"134","Non-sentinel","2022-29",2022-07-18,"Southern Hemisphere Temperate and Sub-Tropical",9619,2,9338,0,0,2
+"135","Non-sentinel","2022-30",2022-07-25,"Southern Hemisphere Temperate and Sub-Tropical",9228,1,8992,0,0,1
+"136","Non-sentinel","2022-31",2022-08-01,"Southern Hemisphere Temperate and Sub-Tropical",9174,2,8912,0,0,2
+"137","Non-sentinel","2022-32",2022-08-08,"Southern Hemisphere Temperate and Sub-Tropical",9186,1,8856,1,0,0
+"138","Non-sentinel","2022-33",2022-08-15,"Southern Hemisphere Temperate and Sub-Tropical",8368,8,8095,0,0,8
+"139","Non-sentinel","2022-34",2022-08-22,"Southern Hemisphere Temperate and Sub-Tropical",8422,10,8098,2,0,8
+"140","Non-sentinel","2022-35",2022-08-29,"Southern Hemisphere Temperate and Sub-Tropical",8021,10,7695,6,0,4
+"141","Non-sentinel","2022-36",2022-09-05,"Southern Hemisphere Temperate and Sub-Tropical",7935,51,7464,11,0,40
+"142","Non-sentinel","2022-37",2022-09-12,"Southern Hemisphere Temperate and Sub-Tropical",7628,122,6927,11,0,111
+"143","Non-sentinel","2022-38",2022-09-19,"Southern Hemisphere Temperate and Sub-Tropical",7882,172,6954,13,0,159
+"144","Non-sentinel","2022-39",2022-09-26,"Southern Hemisphere Temperate and Sub-Tropical",8192,200,7228,20,0,180
+"145","Non-sentinel","2022-40",2022-10-03,"Southern Hemisphere Temperate and Sub-Tropical",7155,236,6212,45,0,191
+"146","Non-sentinel","2022-41",2022-10-10,"Southern Hemisphere Temperate and Sub-Tropical",6736,354,5645,110,0,244
+"147","Non-sentinel","2022-42",2022-10-17,"Southern Hemisphere Temperate and Sub-Tropical",8367,720,6503,139,0,581
+"148","Non-sentinel","2022-43",2022-10-24,"Southern Hemisphere Temperate and Sub-Tropical",8879,661,6866,96,0,565
+"149","Non-sentinel","2022-44",2022-10-31,"Southern Hemisphere Temperate and Sub-Tropical",8232,828,6213,66,0,762
+"150","Non-sentinel","2022-45",2022-11-07,"Southern Hemisphere Temperate and Sub-Tropical",9590,986,7425,41,0,945
+"151","Non-sentinel","2022-46",2022-11-14,"Southern Hemisphere Temperate and Sub-Tropical",9532,810,7742,25,0,785
+"152","Non-sentinel","2022-47",2022-11-21,"Southern Hemisphere Temperate and Sub-Tropical",7614,503,6367,24,0,479
+"153","Non-sentinel","2022-48",2022-11-28,"Southern Hemisphere Temperate and Sub-Tropical",6749,377,5789,12,0,365
+"154","Non-sentinel","2022-49",2022-12-05,"Southern Hemisphere Temperate and Sub-Tropical",5367,216,4790,13,0,203
+"155","Non-sentinel","2022-50",2022-12-12,"Southern Hemisphere Temperate and Sub-Tropical",5585,183,5172,23,0,160
+"156","Non-sentinel","2022-51",2022-12-19,"Southern Hemisphere Temperate and Sub-Tropical",4024,62,3829,13,0,49
+"157","Non-sentinel","2022-52",2022-12-26,"Southern Hemisphere Temperate and Sub-Tropical",2564,13,2452,10,0,3
+"158","Non-sentinel","2023-01",2023-01-02,"Southern Hemisphere Temperate and Sub-Tropical",11917,96,11743,29,0,67
+"159","Non-sentinel","2023-02",2023-01-09,"Southern Hemisphere Temperate and Sub-Tropical",10556,109,10375,32,0,77
+"160","Non-sentinel","2023-03",2023-01-16,"Southern Hemisphere Temperate and Sub-Tropical",9272,115,9112,19,0,96
+"161","Non-sentinel","2023-04",2023-01-23,"Southern Hemisphere Temperate and Sub-Tropical",8692,152,8499,33,0,119
+"162","Non-sentinel","2023-05",2023-01-30,"Southern Hemisphere Temperate and Sub-Tropical",8227,151,8023,27,0,124
+"163","Non-sentinel","2023-06",2023-02-06,"Southern Hemisphere Temperate and Sub-Tropical",8683,179,8446,20,0,159
+"164","Non-sentinel","2023-07",2023-02-13,"Southern Hemisphere Temperate and Sub-Tropical",9088,177,8849,19,0,158
+"165","Non-sentinel","2023-08",2023-02-20,"Southern Hemisphere Temperate and Sub-Tropical",8423,225,8135,26,0,199
+"166","Non-sentinel","2023-09",2023-02-27,"Southern Hemisphere Temperate and Sub-Tropical",11644,472,11047,31,0,441
+"167","Non-sentinel","2023-10",2023-03-06,"Southern Hemisphere Temperate and Sub-Tropical",12472,536,11765,27,0,509
+"168","Non-sentinel","2023-11",2023-03-13,"Southern Hemisphere Temperate and Sub-Tropical",18013,1011,16795,35,0,976
+"169","Non-sentinel","2023-12",2023-03-20,"Southern Hemisphere Temperate and Sub-Tropical",18491,1202,16963,32,0,1170
+"170","Non-sentinel","2023-13",2023-03-27,"Southern Hemisphere Temperate and Sub-Tropical",18768,1174,17153,44,0,1130
+"171","Non-sentinel","2023-14",2023-04-03,"Southern Hemisphere Temperate and Sub-Tropical",13970,758,12687,31,0,727
+"172","Non-sentinel","2023-15",2023-04-10,"Southern Hemisphere Temperate and Sub-Tropical",15764,732,14291,30,0,702
+"173","Non-sentinel","2023-16",2023-04-17,"Southern Hemisphere Temperate and Sub-Tropical",15210,567,13767,30,0,537
+"174","Non-sentinel","2023-17",2023-04-24,"Southern Hemisphere Temperate and Sub-Tropical",17264,651,15559,33,0,618
+"175","Non-sentinel","2023-18",2023-05-01,"Southern Hemisphere Temperate and Sub-Tropical",16745,641,14872,17,0,624
+"176","Non-sentinel","2023-19",2023-05-08,"Southern Hemisphere Temperate and Sub-Tropical",17720,733,15602,17,0,716
+"177","Non-sentinel","2023-20",2023-05-15,"Southern Hemisphere Temperate and Sub-Tropical",19807,635,17618,20,0,615
+"178","Non-sentinel","2023-21",2023-05-22,"Southern Hemisphere Temperate and Sub-Tropical",21426,658,19263,8,0,650
+"179","Non-sentinel","2023-22",2023-05-29,"Southern Hemisphere Temperate and Sub-Tropical",20982,582,18998,32,0,550
+"180","Non-sentinel","2023-23",2023-06-05,"Southern Hemisphere Temperate and Sub-Tropical",18480,414,16962,19,0,395
+"181","Non-sentinel","2023-24",2023-06-12,"Southern Hemisphere Temperate and Sub-Tropical",18886,351,17593,27,0,324
+"182","Non-sentinel","2023-25",2023-06-19,"Southern Hemisphere Temperate and Sub-Tropical",16945,296,15812,21,0,275
+"183","Non-sentinel","2023-26",2023-06-26,"Southern Hemisphere Temperate and Sub-Tropical",16125,226,15160,21,0,205
+"184","Non-sentinel","2023-27",2023-07-03,"Southern Hemisphere Temperate and Sub-Tropical",15062,233,14146,21,0,212
+"185","Non-sentinel","2023-28",2023-07-10,"Southern Hemisphere Temperate and Sub-Tropical",14013,177,13413,25,0,152
+"186","Non-sentinel","2023-29",2023-07-17,"Southern Hemisphere Temperate and Sub-Tropical",12735,144,12258,13,0,131
+"187","Non-sentinel","2023-30",2023-07-24,"Southern Hemisphere Temperate and Sub-Tropical",11787,139,11395,23,0,116
+"188","Non-sentinel","2023-31",2023-07-31,"Southern Hemisphere Temperate and Sub-Tropical",12206,109,11887,24,0,85
+"189","Non-sentinel","2023-32",2023-08-07,"Southern Hemisphere Temperate and Sub-Tropical",12292,95,12001,36,0,59
+"190","Non-sentinel","2023-33",2023-08-14,"Southern Hemisphere Temperate and Sub-Tropical",12958,133,12682,46,0,87
+"191","Non-sentinel","2023-34",2023-08-21,"Southern Hemisphere Temperate and Sub-Tropical",13098,127,12842,43,0,84
+"192","Non-sentinel","2023-35",2023-08-28,"Southern Hemisphere Temperate and Sub-Tropical",12979,119,12743,45,0,74
+"193","Non-sentinel","2023-36",2023-09-04,"Southern Hemisphere Temperate and Sub-Tropical",12500,132,12271,33,0,99
+"194","Non-sentinel","2023-37",2023-09-11,"Southern Hemisphere Temperate and Sub-Tropical",14545,156,14283,40,0,116
+"195","Non-sentinel","2023-38",2023-09-18,"Southern Hemisphere Temperate and Sub-Tropical",14008,148,13748,32,0,116
+"196","Non-sentinel","2023-39",2023-09-25,"Southern Hemisphere Temperate and Sub-Tropical",14088,140,13852,51,0,89
+"197","Non-sentinel","2023-40",2023-10-02,"Southern Hemisphere Temperate and Sub-Tropical",15462,156,15255,43,0,113
+"198","Non-sentinel","2023-41",2023-10-09,"Southern Hemisphere Temperate and Sub-Tropical",13215,181,13002,48,0,133
+"199","Non-sentinel","2023-42",2023-10-16,"Southern Hemisphere Temperate and Sub-Tropical",16440,214,16162,49,0,165
+"200","Non-sentinel","2023-43",2023-10-23,"Southern Hemisphere Temperate and Sub-Tropical",17332,191,17041,48,0,143
+"201","Non-sentinel","2023-44",2023-10-30,"Southern Hemisphere Temperate and Sub-Tropical",13670,174,13431,48,0,126
+"202","Non-sentinel","2023-45",2023-11-06,"Southern Hemisphere Temperate and Sub-Tropical",16473,173,16196,45,0,128
+"203","Non-sentinel","2023-46",2023-11-13,"Southern Hemisphere Temperate and Sub-Tropical",12935,149,12679,48,0,101
+"204","Non-sentinel","2023-47",2023-11-20,"Southern Hemisphere Temperate and Sub-Tropical",12048,112,11792,40,0,72
+"205","Non-sentinel","2023-48",2023-11-27,"Southern Hemisphere Temperate and Sub-Tropical",11525,114,11256,44,0,70
+"206","Non-sentinel","2023-49",2023-12-04,"Southern Hemisphere Temperate and Sub-Tropical",10035,101,9742,31,0,70
+"207","Non-sentinel","2023-50",2023-12-11,"Southern Hemisphere Temperate and Sub-Tropical",9676,81,9386,36,0,45
+"208","Non-sentinel","2023-51",2023-12-18,"Southern Hemisphere Temperate and Sub-Tropical",5991,43,5802,22,0,21
+"209","Non-sentinel","2023-52",2023-12-25,"Southern Hemisphere Temperate and Sub-Tropical",3054,35,2936,17,0,18
+"210","Non-sentinel","2024-01",2024-01-01,"Southern Hemisphere Temperate and Sub-Tropical",8059,28,7891,17,0,11
+"211","Non-sentinel","2024-02",2024-01-08,"Southern Hemisphere Temperate and Sub-Tropical",7903,17,7654,13,0,4
+"212","Non-sentinel","2024-03",2024-01-15,"Southern Hemisphere Temperate and Sub-Tropical",8013,21,7803,8,0,13
+"213","Non-sentinel","2024-04",2024-01-22,"Southern Hemisphere Temperate and Sub-Tropical",8554,12,8297,7,0,5
+"214","Non-sentinel","2024-05",2024-01-29,"Southern Hemisphere Temperate and Sub-Tropical",8752,18,8462,1,0,17
+"215","Non-sentinel","2024-06",2024-02-05,"Southern Hemisphere Temperate and Sub-Tropical",9816,11,9537,6,0,5
+"216","Non-sentinel","2024-07",2024-02-12,"Southern Hemisphere Temperate and Sub-Tropical",8644,9,8190,1,0,8
+"217","Non-sentinel","2024-08",2024-02-19,"Southern Hemisphere Temperate and Sub-Tropical",11380,9,10435,0,0,9
+"218","Non-sentinel","2024-09",2024-02-26,"Southern Hemisphere Temperate and Sub-Tropical",11326,22,9980,4,0,18
+"219","Non-sentinel","2024-10",2024-03-04,"Southern Hemisphere Temperate and Sub-Tropical",12811,11,11633,1,0,10
+"220","Non-sentinel","2024-11",2024-03-11,"Southern Hemisphere Temperate and Sub-Tropical",11710,15,10358,2,0,13
+"221","Non-sentinel","2024-12",2024-03-18,"Southern Hemisphere Temperate and Sub-Tropical",11201,12,9858,3,0,9
+"222","Non-sentinel","2024-13",2024-03-25,"Southern Hemisphere Temperate and Sub-Tropical",10906,14,9861,4,0,10
+"223","Non-sentinel","2024-14",2024-04-01,"Southern Hemisphere Temperate and Sub-Tropical",12081,15,10672,0,0,15
+"224","Non-sentinel","2024-15",2024-04-08,"Southern Hemisphere Temperate and Sub-Tropical",12079,15,10648,5,0,10
+"225","Non-sentinel","2024-16",2024-04-15,"Southern Hemisphere Temperate and Sub-Tropical",12912,15,11315,1,0,14
+"226","Non-sentinel","2024-17",2024-04-22,"Southern Hemisphere Temperate and Sub-Tropical",13604,16,11735,2,0,14
+"227","Non-sentinel","2024-18",2024-04-29,"Southern Hemisphere Temperate and Sub-Tropical",13084,16,10943,6,0,10
+"228","Non-sentinel","2024-19",2024-05-06,"Southern Hemisphere Temperate and Sub-Tropical",13917,25,11485,3,0,22
+"229","Non-sentinel","2024-20",2024-05-13,"Southern Hemisphere Temperate and Sub-Tropical",15331,27,12587,3,0,24
+"230","Non-sentinel","2024-21",2024-05-20,"Southern Hemisphere Temperate and Sub-Tropical",17568,36,13917,10,0,26
+"231","Non-sentinel","2024-22",2024-05-27,"Southern Hemisphere Temperate and Sub-Tropical",16984,33,13126,7,0,26
+"232","Non-sentinel","2024-23",2024-06-03,"Southern Hemisphere Temperate and Sub-Tropical",18961,41,15196,10,0,31
+"233","Non-sentinel","2024-24",2024-06-10,"Southern Hemisphere Temperate and Sub-Tropical",18380,44,15578,3,0,41
+"234","Non-sentinel","2024-25",2024-06-17,"Southern Hemisphere Temperate and Sub-Tropical",15901,35,14245,5,0,30
+"235","Non-sentinel","2024-26",2024-06-24,"Southern Hemisphere Temperate and Sub-Tropical",15944,46,14518,10,0,36
+"236","Non-sentinel","2024-27",2024-07-01,"Southern Hemisphere Temperate and Sub-Tropical",14706,47,13352,10,0,37
+"237","Non-sentinel","2024-28",2024-07-08,"Southern Hemisphere Temperate and Sub-Tropical",14183,59,13224,15,0,44
+"238","Non-sentinel","2024-29",2024-07-15,"Southern Hemisphere Temperate and Sub-Tropical",14442,93,13412,29,0,64
+"239","Non-sentinel","2024-30",2024-07-22,"Southern Hemisphere Temperate and Sub-Tropical",14091,101,13399,34,0,67
+"240","Non-sentinel","2024-31",2024-07-29,"Southern Hemisphere Temperate and Sub-Tropical",13376,92,12910,29,0,63
+"241","Non-sentinel","2024-32",2024-08-05,"Southern Hemisphere Temperate and Sub-Tropical",13487,124,13116,45,0,79
+"242","Non-sentinel","2024-33",2024-08-12,"Southern Hemisphere Temperate and Sub-Tropical",13639,140,13259,46,0,94
+"243","Non-sentinel","2024-34",2024-08-19,"Southern Hemisphere Temperate and Sub-Tropical",15380,242,14819,67,0,175
+"244","Non-sentinel","2024-35",2024-08-26,"Southern Hemisphere Temperate and Sub-Tropical",15089,285,14538,80,0,205
+"245","Non-sentinel","2024-36",2024-09-02,"Southern Hemisphere Temperate and Sub-Tropical",15075,359,14443,101,0,258
+"246","Non-sentinel","2024-37",2024-09-09,"Southern Hemisphere Temperate and Sub-Tropical",15246,432,14532,100,0,332
+"247","Non-sentinel","2024-38",2024-09-16,"Southern Hemisphere Temperate and Sub-Tropical",13414,414,12745,77,0,337
+"248","Non-sentinel","2024-39",2024-09-23,"Southern Hemisphere Temperate and Sub-Tropical",13767,493,13058,83,0,410
+"249","Non-sentinel","2024-40",2024-09-30,"Southern Hemisphere Temperate and Sub-Tropical",12332,499,11651,94,0,405
+"250","Non-sentinel","2024-41",2024-10-07,"Southern Hemisphere Temperate and Sub-Tropical",12294,600,11524,118,0,482
+"251","Non-sentinel","2024-42",2024-10-14,"Southern Hemisphere Temperate and Sub-Tropical",12764,741,11850,129,0,612
+"252","Non-sentinel","2024-43",2024-10-21,"Southern Hemisphere Temperate and Sub-Tropical",12771,742,11836,112,0,630
+"253","Non-sentinel","2024-44",2024-10-28,"Southern Hemisphere Temperate and Sub-Tropical",11356,688,10504,83,0,605
+"254","Non-sentinel","2024-45",2024-11-04,"Southern Hemisphere Temperate and Sub-Tropical",11645,608,10886,74,0,534
+"255","Non-sentinel","2024-46",2024-11-11,"Southern Hemisphere Temperate and Sub-Tropical",10943,584,10204,78,0,506
+"256","Non-sentinel","2024-47",2024-11-18,"Southern Hemisphere Temperate and Sub-Tropical",10923,651,10085,90,0,561
+"257","Non-sentinel","2024-48",2024-11-25,"Southern Hemisphere Temperate and Sub-Tropical",10713,603,9934,89,0,514
+"258","Non-sentinel","2024-49",2024-12-02,"Southern Hemisphere Temperate and Sub-Tropical",10410,606,9654,88,0,518
+"259","Non-sentinel","2024-50",2024-12-09,"Southern Hemisphere Temperate and Sub-Tropical",9161,576,8456,102,0,474
+"260","Non-sentinel","2024-51",2024-12-16,"Southern Hemisphere Temperate and Sub-Tropical",5355,265,5005,85,0,180
+"261","Non-sentinel","2024-52",2024-12-23,"Southern Hemisphere Temperate and Sub-Tropical",3241,157,3015,67,0,90
+"262","Non-sentinel","2025-01",2024-12-30,"Southern Hemisphere Temperate and Sub-Tropical",13625,244,13242,58,0,186
+"263","Non-sentinel","2025-02",2025-01-06,"Southern Hemisphere Temperate and Sub-Tropical",14584,246,14218,36,0,210
+"264","Non-sentinel","2025-03",2025-01-13,"Southern Hemisphere Temperate and Sub-Tropical",13631,199,13327,24,0,175
+"265","Non-sentinel","2025-04",2025-01-20,"Southern Hemisphere Temperate and Sub-Tropical",12108,184,11835,17,0,167
+"266","Non-sentinel","2025-05",2025-01-27,"Southern Hemisphere Temperate and Sub-Tropical",11520,153,11299,20,0,133
+"267","Non-sentinel","2025-06",2025-02-03,"Southern Hemisphere Temperate and Sub-Tropical",10685,84,10548,13,0,71
+"268","Non-sentinel","2025-07",2025-02-10,"Southern Hemisphere Temperate and Sub-Tropical",9922,94,9743,7,0,87
+"269","Non-sentinel","2025-08",2025-02-17,"Southern Hemisphere Temperate and Sub-Tropical",8029,78,7860,2,0,76
+"270","Non-sentinel","2025-09",2025-02-24,"Southern Hemisphere Temperate and Sub-Tropical",8989,90,8784,5,0,85
+"271","Non-sentinel","2025-10",2025-03-03,"Southern Hemisphere Temperate and Sub-Tropical",7479,78,7252,5,0,73
+"272","Non-sentinel","2025-11",2025-03-10,"Southern Hemisphere Temperate and Sub-Tropical",9273,88,8973,8,0,80
+"273","Non-sentinel","2025-12",2025-03-17,"Southern Hemisphere Temperate and Sub-Tropical",10570,56,10200,4,0,52
+"274","Non-sentinel","2025-13",2025-03-24,"Southern Hemisphere Temperate and Sub-Tropical",10903,62,10351,10,0,52
+"275","Non-sentinel","2025-14",2025-03-31,"Southern Hemisphere Temperate and Sub-Tropical",12294,61,11593,8,0,53
+"276","Non-sentinel","2025-15",2025-04-07,"Southern Hemisphere Temperate and Sub-Tropical",13227,50,12136,4,0,46
+"277","Non-sentinel","2025-16",2025-04-14,"Southern Hemisphere Temperate and Sub-Tropical",12639,53,10979,9,0,44
+"278","Non-sentinel","2025-17",2025-04-21,"Southern Hemisphere Temperate and Sub-Tropical",15890,57,13522,8,0,49
+"279","Non-sentinel","2025-18",2025-04-28,"Southern Hemisphere Temperate and Sub-Tropical",15641,48,12873,6,0,42
+"280","Non-sentinel","2025-19",2025-05-05,"Southern Hemisphere Temperate and Sub-Tropical",20181,58,16729,4,0,54
+"281","Non-sentinel","2025-20",2025-05-12,"Southern Hemisphere Temperate and Sub-Tropical",22333,69,18265,4,0,65
+"282","Non-sentinel","2025-21",2025-05-19,"Southern Hemisphere Temperate and Sub-Tropical",24975,71,20668,4,0,67
+"283","Non-sentinel","2025-22",2025-05-26,"Southern Hemisphere Temperate and Sub-Tropical",25871,80,21519,6,0,74
+"284","Non-sentinel","2025-23",2025-06-02,"Southern Hemisphere Temperate and Sub-Tropical",26248,102,21797,2,0,100
+"285","Non-sentinel","2025-24",2025-06-09,"Southern Hemisphere Temperate and Sub-Tropical",25260,94,21351,7,0,87
+"286","Non-sentinel","2025-25",2025-06-16,"Southern Hemisphere Temperate and Sub-Tropical",22256,71,19361,7,0,64
+"287","Non-sentinel","2025-26",2025-06-23,"Southern Hemisphere Temperate and Sub-Tropical",22893,84,20612,8,0,76
+"288","Non-sentinel","2025-27",2025-06-30,"Southern Hemisphere Temperate and Sub-Tropical",19753,78,18213,3,0,75
+"289","Non-sentinel","2025-28",2025-07-07,"Southern Hemisphere Temperate and Sub-Tropical",19167,101,17970,5,0,96
+"290","Non-sentinel","2025-29",2025-07-14,"Southern Hemisphere Temperate and Sub-Tropical",18411,94,17556,3,0,91
+"291","Non-sentinel","2025-30",2025-07-21,"Southern Hemisphere Temperate and Sub-Tropical",17622,116,16942,9,0,107
+"292","Non-sentinel","2025-31",2025-07-28,"Southern Hemisphere Temperate and Sub-Tropical",15674,96,15179,6,0,90
+"293","Non-sentinel","2025-32",2025-08-04,"Southern Hemisphere Temperate and Sub-Tropical",15574,104,15151,18,0,86
+"294","Non-sentinel","2025-33",2025-08-11,"Southern Hemisphere Temperate and Sub-Tropical",15238,96,14849,21,0,75
+"295","Non-sentinel","2025-34",2025-08-18,"Southern Hemisphere Temperate and Sub-Tropical",16986,130,16555,28,0,102
+"296","Non-sentinel","2025-35",2025-08-25,"Southern Hemisphere Temperate and Sub-Tropical",16295,125,15900,18,0,107
+"297","Non-sentinel","2025-36",2025-09-01,"Southern Hemisphere Temperate and Sub-Tropical",14951,145,14511,25,0,120
+"298","Non-sentinel","2025-37",2025-09-08,"Southern Hemisphere Temperate and Sub-Tropical",15778,170,15223,27,0,143
+"299","Non-sentinel","2025-38",2025-09-15,"Southern Hemisphere Temperate and Sub-Tropical",15209,151,14559,32,0,119
+"300","Non-sentinel","2025-39",2025-09-22,"Southern Hemisphere Temperate and Sub-Tropical",14730,173,13938,41,0,132
+"301","Non-sentinel","2025-40",2025-09-29,"Southern Hemisphere Temperate and Sub-Tropical",14522,158,13754,37,0,121
+"302","Not defined","2015-28",2015-07-06,"Southern Hemisphere Temperate and Sub-Tropical",4522,193,3865,10,16,167
+"303","Not defined","2015-29",2015-07-13,"Southern Hemisphere Temperate and Sub-Tropical",4358,223,3609,7,22,194
+"304","Not defined","2015-30",2015-07-20,"Southern Hemisphere Temperate and Sub-Tropical",4386,268,3582,2,10,256
+"305","Not defined","2015-31",2015-07-27,"Southern Hemisphere Temperate and Sub-Tropical",4620,346,3640,4,24,318
+"306","Not defined","2015-32",2015-08-03,"Southern Hemisphere Temperate and Sub-Tropical",4586,387,3549,2,20,365
+"307","Not defined","2015-33",2015-08-10,"Southern Hemisphere Temperate and Sub-Tropical",4722,427,3608,8,16,403
+"308","Not defined","2015-34",2015-08-17,"Southern Hemisphere Temperate and Sub-Tropical",4898,469,3749,12,28,429
+"309","Not defined","2015-35",2015-08-24,"Southern Hemisphere Temperate and Sub-Tropical",5176,445,4050,10,21,414
+"310","Not defined","2015-36",2015-08-31,"Southern Hemisphere Temperate and Sub-Tropical",4823,388,3838,11,26,351
+"311","Not defined","2015-37",2015-09-07,"Southern Hemisphere Temperate and Sub-Tropical",4648,439,3728,14,24,401
+"312","Not defined","2015-38",2015-09-14,"Southern Hemisphere Temperate and Sub-Tropical",4195,358,3410,12,35,311
+"313","Not defined","2015-39",2015-09-21,"Southern Hemisphere Temperate and Sub-Tropical",4005,363,3255,47,59,257
+"314","Not defined","2015-40",2015-09-28,"Southern Hemisphere Temperate and Sub-Tropical",3472,232,2979,30,30,172
+"315","Not defined","2015-41",2015-10-05,"Southern Hemisphere Temperate and Sub-Tropical",2737,114,2457,13,24,77
+"316","Not defined","2015-42",2015-10-12,"Southern Hemisphere Temperate and Sub-Tropical",2318,81,2109,17,17,47
+"317","Not defined","2015-43",2015-10-19,"Southern Hemisphere Temperate and Sub-Tropical",2223,93,2053,28,17,48
+"318","Not defined","2015-44",2015-10-26,"Southern Hemisphere Temperate and Sub-Tropical",1995,63,1882,22,12,29
+"319","Not defined","2015-45",2015-11-02,"Southern Hemisphere Temperate and Sub-Tropical",1869,61,1766,20,9,32
+"320","Not defined","2015-46",2015-11-09,"Southern Hemisphere Temperate and Sub-Tropical",1734,72,1613,35,1,36
+"321","Not defined","2015-47",2015-11-16,"Southern Hemisphere Temperate and Sub-Tropical",1705,57,1625,17,5,35
+"322","Not defined","2015-48",2015-11-23,"Southern Hemisphere Temperate and Sub-Tropical",1535,36,1471,6,1,29
+"323","Not defined","2015-49",2015-11-30,"Southern Hemisphere Temperate and Sub-Tropical",1527,45,1449,4,1,40
+"324","Not defined","2015-50",2015-12-07,"Southern Hemisphere Temperate and Sub-Tropical",1264,38,1189,5,1,32
+"325","Not defined","2015-51",2015-12-14,"Southern Hemisphere Temperate and Sub-Tropical",1236,43,1147,4,1,38
+"326","Not defined","2015-52",2015-12-21,"Southern Hemisphere Temperate and Sub-Tropical",861,23,805,2,0,21
+"327","Not defined","2015-53",2015-12-28,"Southern Hemisphere Temperate and Sub-Tropical",589,30,546,6,1,23
+"328","Not defined","2016-01",2016-01-04,"Southern Hemisphere Temperate and Sub-Tropical",1041,20,1004,7,1,12
+"329","Not defined","2016-02",2016-01-11,"Southern Hemisphere Temperate and Sub-Tropical",1196,19,1148,3,1,15
+"330","Not defined","2016-03",2016-01-18,"Southern Hemisphere Temperate and Sub-Tropical",1173,19,1125,4,1,14
+"331","Not defined","2016-04",2016-01-25,"Southern Hemisphere Temperate and Sub-Tropical",1138,13,1084,3,0,10
+"332","Not defined","2016-05",2016-02-01,"Southern Hemisphere Temperate and Sub-Tropical",1142,20,1076,2,0,18
+"333","Not defined","2016-06",2016-02-08,"Southern Hemisphere Temperate and Sub-Tropical",1106,25,1023,1,0,24
+"334","Not defined","2016-07",2016-02-15,"Southern Hemisphere Temperate and Sub-Tropical",1216,23,1133,1,2,20
+"335","Not defined","2016-08",2016-02-22,"Southern Hemisphere Temperate and Sub-Tropical",1393,23,1274,3,1,19
+"336","Not defined","2016-09",2016-02-29,"Southern Hemisphere Temperate and Sub-Tropical",1110,21,986,0,0,21
+"337","Not defined","2016-10",2016-03-07,"Southern Hemisphere Temperate and Sub-Tropical",1704,25,1515,7,2,16
+"338","Not defined","2016-11",2016-03-14,"Southern Hemisphere Temperate and Sub-Tropical",2089,22,1864,7,1,14
+"339","Not defined","2016-12",2016-03-21,"Southern Hemisphere Temperate and Sub-Tropical",2040,23,1672,4,1,18
+"340","Not defined","2016-13",2016-03-28,"Southern Hemisphere Temperate and Sub-Tropical",3817,43,2797,5,1,37
+"341","Not defined","2016-14",2016-04-04,"Southern Hemisphere Temperate and Sub-Tropical",4391,52,3385,6,0,46
+"342","Not defined","2016-15",2016-04-11,"Southern Hemisphere Temperate and Sub-Tropical",3742,42,2977,5,2,35
+"343","Not defined","2016-16",2016-04-18,"Southern Hemisphere Temperate and Sub-Tropical",3358,41,2856,5,2,34
+"344","Not defined","2016-17",2016-04-25,"Southern Hemisphere Temperate and Sub-Tropical",3376,41,2866,5,1,35
+"345","Not defined","2016-18",2016-05-02,"Southern Hemisphere Temperate and Sub-Tropical",3533,46,3097,8,0,38
+"346","Not defined","2016-19",2016-05-09,"Southern Hemisphere Temperate and Sub-Tropical",3779,61,3144,10,2,49
+"347","Not defined","2016-20",2016-05-16,"Southern Hemisphere Temperate and Sub-Tropical",4498,85,3516,32,3,50
+"348","Not defined","2016-21",2016-05-23,"Southern Hemisphere Temperate and Sub-Tropical",5817,105,4533,43,5,57
+"349","Not defined","2016-22",2016-05-30,"Southern Hemisphere Temperate and Sub-Tropical",6577,155,5173,48,5,102
+"350","Not defined","2016-23",2016-06-06,"Southern Hemisphere Temperate and Sub-Tropical",6196,147,4945,60,1,86
+"351","Not defined","2016-24",2016-06-13,"Southern Hemisphere Temperate and Sub-Tropical",6224,178,5001,45,7,126
+"352","Not defined","2016-25",2016-06-20,"Southern Hemisphere Temperate and Sub-Tropical",6232,175,5199,50,6,119
+"353","Not defined","2016-26",2016-06-27,"Southern Hemisphere Temperate and Sub-Tropical",5951,182,5092,65,6,111
+"354","Not defined","2016-27",2016-07-04,"Southern Hemisphere Temperate and Sub-Tropical",5605,191,4857,76,8,107
+"355","Not defined","2016-28",2016-07-11,"Southern Hemisphere Temperate and Sub-Tropical",6024,195,5284,49,12,134
+"356","Not defined","2016-29",2016-07-18,"Southern Hemisphere Temperate and Sub-Tropical",5358,148,4613,56,7,85
+"357","Not defined","2016-30",2016-07-25,"Southern Hemisphere Temperate and Sub-Tropical",5202,151,4474,54,8,89
+"358","Not defined","2016-31",2016-08-01,"Southern Hemisphere Temperate and Sub-Tropical",5080,175,4303,62,10,103
+"359","Not defined","2016-32",2016-08-08,"Southern Hemisphere Temperate and Sub-Tropical",5148,206,4258,54,7,145
+"360","Not defined","2016-33",2016-08-15,"Southern Hemisphere Temperate and Sub-Tropical",5578,195,4588,53,10,132
+"361","Not defined","2016-34",2016-08-22,"Southern Hemisphere Temperate and Sub-Tropical",5173,179,4236,57,8,114
+"362","Not defined","2016-35",2016-08-29,"Southern Hemisphere Temperate and Sub-Tropical",5286,177,4322,52,4,121
+"363","Not defined","2016-36",2016-09-05,"Southern Hemisphere Temperate and Sub-Tropical",5060,162,4139,34,10,118
+"364","Not defined","2016-37",2016-09-12,"Southern Hemisphere Temperate and Sub-Tropical",4569,181,3844,44,6,131
+"365","Not defined","2016-38",2016-09-19,"Southern Hemisphere Temperate and Sub-Tropical",4375,153,3766,37,5,111
+"366","Not defined","2016-39",2016-09-26,"Southern Hemisphere Temperate and Sub-Tropical",3896,128,3430,44,4,80
+"367","Not defined","2016-40",2016-10-03,"Southern Hemisphere Temperate and Sub-Tropical",3565,135,3151,26,10,99
+"368","Not defined","2016-41",2016-10-10,"Southern Hemisphere Temperate and Sub-Tropical",3135,104,2827,19,2,83
+"369","Not defined","2016-42",2016-10-17,"Southern Hemisphere Temperate and Sub-Tropical",2739,68,2539,22,6,40
+"370","Not defined","2016-43",2016-10-24,"Southern Hemisphere Temperate and Sub-Tropical",2497,55,2345,10,2,43
+"371","Not defined","2016-44",2016-10-31,"Southern Hemisphere Temperate and Sub-Tropical",2162,46,2038,13,2,31
+"372","Not defined","2016-45",2016-11-07,"Southern Hemisphere Temperate and Sub-Tropical",2116,45,2030,13,1,31
+"373","Not defined","2016-46",2016-11-14,"Southern Hemisphere Temperate and Sub-Tropical",2005,33,1910,11,2,20
+"374","Not defined","2016-47",2016-11-21,"Southern Hemisphere Temperate and Sub-Tropical",1829,17,1765,1,3,13
+"375","Not defined","2016-48",2016-11-28,"Southern Hemisphere Temperate and Sub-Tropical",1646,39,1580,5,1,33
+"376","Not defined","2016-49",2016-12-05,"Southern Hemisphere Temperate and Sub-Tropical",1413,25,1367,3,1,21
+"377","Not defined","2016-50",2016-12-12,"Southern Hemisphere Temperate and Sub-Tropical",1314,18,1265,5,1,12
+"378","Not defined","2016-51",2016-12-19,"Southern Hemisphere Temperate and Sub-Tropical",762,18,722,1,0,17
+"379","Not defined","2016-52",2016-12-26,"Southern Hemisphere Temperate and Sub-Tropical",643,9,619,1,0,8
+"380","Not defined","2017-01",2017-01-02,"Southern Hemisphere Temperate and Sub-Tropical",1583,32,1493,8,6,18
+"381","Not defined","2017-02",2017-01-09,"Southern Hemisphere Temperate and Sub-Tropical",1714,21,1634,8,2,11
+"382","Not defined","2017-03",2017-01-16,"Southern Hemisphere Temperate and Sub-Tropical",1311,15,1252,1,3,11
+"383","Not defined","2017-04",2017-01-23,"Southern Hemisphere Temperate and Sub-Tropical",1545,9,1450,0,3,6
+"384","Not defined","2017-05",2017-01-30,"Southern Hemisphere Temperate and Sub-Tropical",1600,26,1449,3,3,20
+"385","Not defined","2017-06",2017-02-06,"Southern Hemisphere Temperate and Sub-Tropical",1241,11,1107,0,2,9
+"386","Not defined","2017-07",2017-02-13,"Southern Hemisphere Temperate and Sub-Tropical",1444,21,1307,2,4,15
+"387","Not defined","2017-08",2017-02-20,"Southern Hemisphere Temperate and Sub-Tropical",1608,23,1462,1,0,22
+"388","Not defined","2017-09",2017-02-27,"Southern Hemisphere Temperate and Sub-Tropical",1321,15,1220,0,1,14
+"389","Not defined","2017-10",2017-03-06,"Southern Hemisphere Temperate and Sub-Tropical",1804,28,1661,6,3,19
+"390","Not defined","2017-11",2017-03-13,"Southern Hemisphere Temperate and Sub-Tropical",2142,37,1985,4,7,26
+"391","Not defined","2017-12",2017-03-20,"Southern Hemisphere Temperate and Sub-Tropical",2422,24,2262,1,4,19
+"392","Not defined","2017-13",2017-03-27,"Southern Hemisphere Temperate and Sub-Tropical",2644,26,2460,2,3,21
+"393","Not defined","2017-14",2017-04-03,"Southern Hemisphere Temperate and Sub-Tropical",2633,39,2459,7,3,29
+"394","Not defined","2017-15",2017-04-10,"Southern Hemisphere Temperate and Sub-Tropical",1760,30,1599,2,7,21
+"395","Not defined","2017-16",2017-04-17,"Southern Hemisphere Temperate and Sub-Tropical",3008,26,2804,3,3,20
+"396","Not defined","2017-17",2017-04-24,"Southern Hemisphere Temperate and Sub-Tropical",3110,56,2851,2,6,48
+"397","Not defined","2017-18",2017-05-01,"Southern Hemisphere Temperate and Sub-Tropical",3318,63,2990,3,15,45
+"398","Not defined","2017-19",2017-05-08,"Southern Hemisphere Temperate and Sub-Tropical",3718,72,3273,2,18,52
+"399","Not defined","2017-20",2017-05-15,"Southern Hemisphere Temperate and Sub-Tropical",3908,63,3332,6,14,43
+"400","Not defined","2017-21",2017-05-22,"Southern Hemisphere Temperate and Sub-Tropical",5928,83,5147,0,25,58
+"401","Not defined","2017-22",2017-05-29,"Southern Hemisphere Temperate and Sub-Tropical",5338,106,4325,2,26,78
+"402","Not defined","2017-23",2017-06-05,"Southern Hemisphere Temperate and Sub-Tropical",6108,151,4731,14,29,108
+"403","Not defined","2017-24",2017-06-12,"Southern Hemisphere Temperate and Sub-Tropical",6774,167,5211,11,52,104
+"404","Not defined","2017-25",2017-06-19,"Southern Hemisphere Temperate and Sub-Tropical",6542,190,4898,17,62,111
+"405","Not defined","2017-26",2017-06-26,"Southern Hemisphere Temperate and Sub-Tropical",6327,195,4846,17,62,116
+"406","Not defined","2017-27",2017-07-03,"Southern Hemisphere Temperate and Sub-Tropical",6105,228,4935,10,85,133
+"407","Not defined","2017-28",2017-07-10,"Southern Hemisphere Temperate and Sub-Tropical",5849,214,4788,12,81,121
+"408","Not defined","2017-29",2017-07-17,"Southern Hemisphere Temperate and Sub-Tropical",5560,212,4566,3,77,132
+"409","Not defined","2017-30",2017-07-24,"Southern Hemisphere Temperate and Sub-Tropical",5223,236,4307,9,86,141
+"410","Not defined","2017-31",2017-07-31,"Southern Hemisphere Temperate and Sub-Tropical",5346,291,4371,7,91,193
+"411","Not defined","2017-32",2017-08-07,"Southern Hemisphere Temperate and Sub-Tropical",5222,346,4102,8,78,260
+"412","Not defined","2017-33",2017-08-14,"Southern Hemisphere Temperate and Sub-Tropical",5827,380,4661,5,81,294
+"413","Not defined","2017-34",2017-08-21,"Southern Hemisphere Temperate and Sub-Tropical",5846,401,4675,10,101,290
+"414","Not defined","2017-35",2017-08-28,"Southern Hemisphere Temperate and Sub-Tropical",5691,392,4616,4,101,287
+"415","Not defined","2017-36",2017-09-04,"Southern Hemisphere Temperate and Sub-Tropical",5637,379,4490,2,79,298
+"416","Not defined","2017-37",2017-09-11,"Southern Hemisphere Temperate and Sub-Tropical",5479,343,4420,5,69,269
+"417","Not defined","2017-38",2017-09-18,"Southern Hemisphere Temperate and Sub-Tropical",5137,338,4241,8,59,271
+"418","Not defined","2017-39",2017-09-25,"Southern Hemisphere Temperate and Sub-Tropical",4668,306,3985,3,44,259
+"419","Not defined","2017-40",2017-10-02,"Southern Hemisphere Temperate and Sub-Tropical",4162,274,3627,9,54,211
+"420","Not defined","2017-41",2017-10-09,"Southern Hemisphere Temperate and Sub-Tropical",3738,233,3330,4,58,171
+"421","Not defined","2017-42",2017-10-16,"Southern Hemisphere Temperate and Sub-Tropical",3330,162,3050,5,38,119
+"422","Not defined","2017-43",2017-10-23,"Southern Hemisphere Temperate and Sub-Tropical",3024,129,2808,5,23,101
+"423","Not defined","2017-44",2017-10-30,"Southern Hemisphere Temperate and Sub-Tropical",2894,122,2705,5,38,79
+"424","Not defined","2017-45",2017-11-06,"Southern Hemisphere Temperate and Sub-Tropical",2750,119,2585,10,37,72
+"425","Not defined","2017-46",2017-11-13,"Southern Hemisphere Temperate and Sub-Tropical",2634,88,2485,6,34,48
+"426","Not defined","2017-47",2017-11-20,"Southern Hemisphere Temperate and Sub-Tropical",2219,92,2072,5,34,53
+"427","Not defined","2017-48",2017-11-27,"Southern Hemisphere Temperate and Sub-Tropical",2246,78,2123,6,23,49
+"428","Not defined","2017-49",2017-12-04,"Southern Hemisphere Temperate and Sub-Tropical",1847,70,1727,8,24,38
+"429","Not defined","2017-50",2017-12-11,"Southern Hemisphere Temperate and Sub-Tropical",1797,58,1693,3,21,34
+"430","Not defined","2017-51",2017-12-18,"Southern Hemisphere Temperate and Sub-Tropical",1418,36,1339,3,10,23
+"431","Not defined","2017-52",2017-12-25,"Southern Hemisphere Temperate and Sub-Tropical",1300,38,1223,2,6,30
+"432","Not defined","2018-01",2018-01-01,"Southern Hemisphere Temperate and Sub-Tropical",1697,49,1580,6,17,26
+"433","Not defined","2018-02",2018-01-08,"Southern Hemisphere Temperate and Sub-Tropical",1685,50,1586,4,21,25
+"434","Not defined","2018-03",2018-01-15,"Southern Hemisphere Temperate and Sub-Tropical",1682,60,1557,1,18,41
+"435","Not defined","2018-04",2018-01-22,"Southern Hemisphere Temperate and Sub-Tropical",1586,41,1483,0,6,35
+"436","Not defined","2018-05",2018-01-29,"Southern Hemisphere Temperate and Sub-Tropical",1832,57,1703,2,17,38
+"437","Not defined","2018-06",2018-02-05,"Southern Hemisphere Temperate and Sub-Tropical",1748,43,1641,4,12,27
+"438","Not defined","2018-07",2018-02-12,"Southern Hemisphere Temperate and Sub-Tropical",1613,48,1462,4,14,30
+"439","Not defined","2018-08",2018-02-19,"Southern Hemisphere Temperate and Sub-Tropical",1748,59,1584,5,28,26
+"440","Not defined","2018-09",2018-02-26,"Southern Hemisphere Temperate and Sub-Tropical",1825,34,1713,2,12,20
+"441","Not defined","2018-10",2018-03-05,"Southern Hemisphere Temperate and Sub-Tropical",1914,33,1777,3,16,14
+"442","Not defined","2018-11",2018-03-12,"Southern Hemisphere Temperate and Sub-Tropical",2266,31,2130,1,15,15
+"443","Not defined","2018-12",2018-03-19,"Southern Hemisphere Temperate and Sub-Tropical",2633,41,2468,0,16,25
+"444","Not defined","2018-13",2018-03-26,"Southern Hemisphere Temperate and Sub-Tropical",2378,16,2143,3,7,6
+"445","Not defined","2018-14",2018-04-02,"Southern Hemisphere Temperate and Sub-Tropical",3173,32,2784,3,11,18
+"446","Not defined","2018-15",2018-04-09,"Southern Hemisphere Temperate and Sub-Tropical",3072,38,2734,1,17,20
+"447","Not defined","2018-16",2018-04-16,"Southern Hemisphere Temperate and Sub-Tropical",3072,45,2716,2,15,28
+"448","Not defined","2018-17",2018-04-23,"Southern Hemisphere Temperate and Sub-Tropical",2756,47,2386,3,19,25
+"449","Not defined","2018-18",2018-04-30,"Southern Hemisphere Temperate and Sub-Tropical",3368,33,3030,3,9,21
+"450","Not defined","2018-19",2018-05-07,"Southern Hemisphere Temperate and Sub-Tropical",3935,42,3420,3,19,20
+"451","Not defined","2018-20",2018-05-14,"Southern Hemisphere Temperate and Sub-Tropical",4298,51,3598,1,23,27
+"452","Not defined","2018-21",2018-05-21,"Southern Hemisphere Temperate and Sub-Tropical",4474,46,4045,2,15,29
+"453","Not defined","2018-22",2018-05-28,"Southern Hemisphere Temperate and Sub-Tropical",4763,44,4163,4,19,21
+"454","Not defined","2018-23",2018-06-04,"Southern Hemisphere Temperate and Sub-Tropical",5232,58,4435,7,25,26
+"455","Not defined","2018-24",2018-06-11,"Southern Hemisphere Temperate and Sub-Tropical",5240,66,4618,10,22,34
+"456","Not defined","2018-25",2018-06-18,"Southern Hemisphere Temperate and Sub-Tropical",5461,72,4657,10,27,35
+"457","Not defined","2018-26",2018-06-25,"Southern Hemisphere Temperate and Sub-Tropical",5687,78,4895,16,30,32
+"458","Not defined","2018-27",2018-07-02,"Southern Hemisphere Temperate and Sub-Tropical",5583,76,4830,12,22,42
+"459","Not defined","2018-28",2018-07-09,"Southern Hemisphere Temperate and Sub-Tropical",5595,108,4782,12,30,66
+"460","Not defined","2018-29",2018-07-16,"Southern Hemisphere Temperate and Sub-Tropical",5875,156,5035,11,41,104
+"461","Not defined","2018-30",2018-07-23,"Southern Hemisphere Temperate and Sub-Tropical",5728,146,4950,14,37,95
+"462","Not defined","2018-31",2018-07-30,"Southern Hemisphere Temperate and Sub-Tropical",5256,140,4547,16,37,87
+"463","Not defined","2018-32",2018-08-06,"Southern Hemisphere Temperate and Sub-Tropical",5472,213,4524,25,62,126
+"464","Not defined","2018-33",2018-08-13,"Southern Hemisphere Temperate and Sub-Tropical",5800,261,4748,35,67,159
+"465","Not defined","2018-34",2018-08-20,"Southern Hemisphere Temperate and Sub-Tropical",5802,284,4648,36,83,165
+"466","Not defined","2018-35",2018-08-27,"Southern Hemisphere Temperate and Sub-Tropical",5996,305,4780,50,92,163
+"467","Not defined","2018-36",2018-09-03,"Southern Hemisphere Temperate and Sub-Tropical",6017,283,5116,55,103,125
+"468","Not defined","2018-37",2018-09-10,"Southern Hemisphere Temperate and Sub-Tropical",5801,286,4839,74,89,123
+"469","Not defined","2018-38",2018-09-17,"Southern Hemisphere Temperate and Sub-Tropical",5005,226,4253,58,78,90
+"470","Not defined","2018-39",2018-09-24,"Southern Hemisphere Temperate and Sub-Tropical",4671,158,4140,29,51,78
+"471","Not defined","2018-40",2018-10-01,"Southern Hemisphere Temperate and Sub-Tropical",4138,118,3718,29,38,51
+"472","Not defined","2018-41",2018-10-08,"Southern Hemisphere Temperate and Sub-Tropical",3763,129,3438,17,41,71
+"473","Not defined","2018-42",2018-10-15,"Southern Hemisphere Temperate and Sub-Tropical",3495,86,3278,9,30,47
+"474","Not defined","2018-43",2018-10-22,"Southern Hemisphere Temperate and Sub-Tropical",3204,71,3024,15,19,37
+"475","Not defined","2018-44",2018-10-29,"Southern Hemisphere Temperate and Sub-Tropical",2796,48,2678,7,12,29
+"476","Not defined","2018-45",2018-11-05,"Southern Hemisphere Temperate and Sub-Tropical",2945,86,2774,35,23,28
+"477","Not defined","2018-46",2018-11-12,"Southern Hemisphere Temperate and Sub-Tropical",2686,61,2544,13,21,27
+"478","Not defined","2018-47",2018-11-19,"Southern Hemisphere Temperate and Sub-Tropical",2784,65,2596,12,26,27
+"479","Not defined","2018-48",2018-11-26,"Southern Hemisphere Temperate and Sub-Tropical",2584,87,2365,17,24,46
+"480","Not defined","2018-49",2018-12-03,"Southern Hemisphere Temperate and Sub-Tropical",1818,61,1556,11,11,39
+"481","Not defined","2018-50",2018-12-10,"Southern Hemisphere Temperate and Sub-Tropical",2405,68,2208,17,15,36
+"482","Not defined","2018-51",2018-12-17,"Southern Hemisphere Temperate and Sub-Tropical",1897,54,1699,7,6,41
+"483","Not defined","2018-52",2018-12-24,"Southern Hemisphere Temperate and Sub-Tropical",1386,24,1253,0,6,18
+"484","Not defined","2019-01",2018-12-31,"Southern Hemisphere Temperate and Sub-Tropical",1911,108,1697,26,4,78
+"485","Not defined","2019-02",2019-01-07,"Southern Hemisphere Temperate and Sub-Tropical",2216,37,2034,7,11,19
+"486","Not defined","2019-03",2019-01-14,"Southern Hemisphere Temperate and Sub-Tropical",2234,27,2043,4,8,15
+"487","Not defined","2019-04",2019-01-21,"Southern Hemisphere Temperate and Sub-Tropical",2220,24,2053,4,3,17
+"488","Not defined","2019-05",2019-01-28,"Southern Hemisphere Temperate and Sub-Tropical",2135,27,1955,9,2,16
+"489","Not defined","2019-06",2019-02-04,"Southern Hemisphere Temperate and Sub-Tropical",2156,21,1988,4,4,13
+"490","Not defined","2019-07",2019-02-11,"Southern Hemisphere Temperate and Sub-Tropical",2210,12,2037,3,1,8
+"491","Not defined","2019-08",2019-02-18,"Southern Hemisphere Temperate and Sub-Tropical",2477,6,2279,0,4,2
+"492","Not defined","2019-09",2019-02-25,"Southern Hemisphere Temperate and Sub-Tropical",2431,14,2219,4,2,8
+"493","Not defined","2019-10",2019-03-04,"Southern Hemisphere Temperate and Sub-Tropical",2303,12,2142,4,1,7
+"494","Not defined","2019-11",2019-03-11,"Southern Hemisphere Temperate and Sub-Tropical",2810,15,2613,4,1,10
+"495","Not defined","2019-12",2019-03-18,"Southern Hemisphere Temperate and Sub-Tropical",3620,47,3355,15,4,28
+"496","Not defined","2019-13",2019-03-25,"Southern Hemisphere Temperate and Sub-Tropical",3790,18,3540,2,3,13
+"497","Not defined","2019-14",2019-04-01,"Southern Hemisphere Temperate and Sub-Tropical",3769,29,3507,10,3,16
+"498","Not defined","2019-15",2019-04-08,"Southern Hemisphere Temperate and Sub-Tropical",3943,25,3667,8,1,16
+"499","Not defined","2019-16",2019-04-15,"Southern Hemisphere Temperate and Sub-Tropical",3729,24,3374,6,4,14
+"500","Not defined","2019-17",2019-04-22,"Southern Hemisphere Temperate and Sub-Tropical",4499,24,4059,4,1,19
+"501","Not defined","2019-18",2019-04-29,"Southern Hemisphere Temperate and Sub-Tropical",4373,30,3848,7,2,21
+"502","Not defined","2019-19",2019-05-06,"Southern Hemisphere Temperate and Sub-Tropical",4992,90,4217,23,1,66
+"503","Not defined","2019-20",2019-05-13,"Southern Hemisphere Temperate and Sub-Tropical",6064,68,4996,31,3,34
+"504","Not defined","2019-21",2019-05-20,"Southern Hemisphere Temperate and Sub-Tropical",7241,128,5709,55,2,71
+"505","Not defined","2019-22",2019-05-27,"Southern Hemisphere Temperate and Sub-Tropical",7804,156,6080,54,5,97
+"506","Not defined","2019-23",2019-06-03,"Southern Hemisphere Temperate and Sub-Tropical",8727,162,6430,56,9,97
+"507","Not defined","2019-24",2019-06-10,"Southern Hemisphere Temperate and Sub-Tropical",9623,240,7142,79,12,149
+"508","Not defined","2019-25",2019-06-17,"Southern Hemisphere Temperate and Sub-Tropical",8940,329,6594,139,19,171
+"509","Not defined","2019-26",2019-06-24,"Southern Hemisphere Temperate and Sub-Tropical",9689,330,7278,106,18,206
+"510","Not defined","2019-27",2019-07-01,"Southern Hemisphere Temperate and Sub-Tropical",9704,333,7603,121,20,192
+"511","Not defined","2019-28",2019-07-08,"Southern Hemisphere Temperate and Sub-Tropical",9066,277,7349,76,27,174
+"512","Not defined","2019-29",2019-07-15,"Southern Hemisphere Temperate and Sub-Tropical",9257,266,7676,74,29,163
+"513","Not defined","2019-30",2019-07-22,"Southern Hemisphere Temperate and Sub-Tropical",7893,266,6648,66,32,168
+"514","Not defined","2019-31",2019-07-29,"Southern Hemisphere Temperate and Sub-Tropical",7075,256,6061,82,31,143
+"515","Not defined","2019-32",2019-08-05,"Southern Hemisphere Temperate and Sub-Tropical",7201,275,6195,55,43,177
+"516","Not defined","2019-33",2019-08-12,"Southern Hemisphere Temperate and Sub-Tropical",7552,391,6489,75,40,276
+"517","Not defined","2019-34",2019-08-19,"Southern Hemisphere Temperate and Sub-Tropical",7268,395,6182,59,66,270
+"518","Not defined","2019-35",2019-08-26,"Southern Hemisphere Temperate and Sub-Tropical",7363,412,6435,65,75,272
+"519","Not defined","2019-36",2019-09-02,"Southern Hemisphere Temperate and Sub-Tropical",6795,402,6013,62,63,277
+"520","Not defined","2019-37",2019-09-09,"Southern Hemisphere Temperate and Sub-Tropical",6326,357,5596,65,67,225
+"521","Not defined","2019-38",2019-09-16,"Southern Hemisphere Temperate and Sub-Tropical",5687,246,5186,35,42,169
+"522","Not defined","2019-39",2019-09-23,"Southern Hemisphere Temperate and Sub-Tropical",5716,216,5234,36,54,126
+"523","Not defined","2019-40",2019-09-30,"Southern Hemisphere Temperate and Sub-Tropical",5050,179,4665,26,50,103
+"524","Not defined","2019-41",2019-10-07,"Southern Hemisphere Temperate and Sub-Tropical",5021,184,4660,33,63,88
+"525","Not defined","2019-42",2019-10-14,"Southern Hemisphere Temperate and Sub-Tropical",4258,148,3987,26,35,87
+"526","Not defined","2019-43",2019-10-21,"Southern Hemisphere Temperate and Sub-Tropical",4202,123,3984,13,24,86
+"527","Not defined","2019-44",2019-10-28,"Southern Hemisphere Temperate and Sub-Tropical",3683,92,3523,13,16,63
+"528","Not defined","2019-45",2019-11-04,"Southern Hemisphere Temperate and Sub-Tropical",3412,101,3256,14,14,73
+"529","Not defined","2019-46",2019-11-11,"Southern Hemisphere Temperate and Sub-Tropical",3231,70,3110,6,4,60
+"530","Not defined","2019-47",2019-11-18,"Southern Hemisphere Temperate and Sub-Tropical",2936,68,2821,8,4,56
+"531","Not defined","2019-48",2019-11-25,"Southern Hemisphere Temperate and Sub-Tropical",2593,53,2487,4,1,48
+"532","Not defined","2019-49",2019-12-02,"Southern Hemisphere Temperate and Sub-Tropical",2443,51,2333,1,2,48
+"533","Not defined","2019-50",2019-12-09,"Southern Hemisphere Temperate and Sub-Tropical",2181,64,2061,14,1,49
+"534","Not defined","2019-51",2019-12-16,"Southern Hemisphere Temperate and Sub-Tropical",1683,22,1635,12,0,10
+"535","Not defined","2019-52",2019-12-23,"Southern Hemisphere Temperate and Sub-Tropical",1399,13,1359,2,0,11
+"536","Not defined","2020-01",2019-12-30,"Southern Hemisphere Temperate and Sub-Tropical",1058,1,1009,0,0,1
+"537","Not defined","2020-02",2020-01-06,"Southern Hemisphere Temperate and Sub-Tropical",1244,3,1172,1,0,2
+"538","Not defined","2020-03",2020-01-13,"Southern Hemisphere Temperate and Sub-Tropical",1081,7,1012,5,0,2
+"539","Not defined","2020-04",2020-01-20,"Southern Hemisphere Temperate and Sub-Tropical",1275,10,1158,0,0,10
+"540","Not defined","2020-05",2020-01-27,"Southern Hemisphere Temperate and Sub-Tropical",1517,17,1417,1,0,16
+"541","Not defined","2020-06",2020-02-03,"Southern Hemisphere Temperate and Sub-Tropical",1555,8,1448,2,0,6
+"542","Not defined","2020-07",2020-02-10,"Southern Hemisphere Temperate and Sub-Tropical",1433,10,1341,5,0,5
+"543","Not defined","2020-08",2020-02-17,"Southern Hemisphere Temperate and Sub-Tropical",1524,10,1446,2,0,8
+"544","Not defined","2020-09",2020-02-24,"Southern Hemisphere Temperate and Sub-Tropical",1746,5,1653,1,0,4
+"545","Not defined","2020-10",2020-03-02,"Southern Hemisphere Temperate and Sub-Tropical",3001,5,2890,1,0,4
+"546","Not defined","2020-11",2020-03-09,"Southern Hemisphere Temperate and Sub-Tropical",4793,11,4653,3,0,8
+"547","Not defined","2020-12",2020-03-16,"Southern Hemisphere Temperate and Sub-Tropical",3968,5,3897,0,0,5
+"548","Not defined","2020-13",2020-03-23,"Southern Hemisphere Temperate and Sub-Tropical",3652,4,3599,3,0,1
+"549","Not defined","2020-14",2020-03-30,"Southern Hemisphere Temperate and Sub-Tropical",2978,3,2948,0,0,3
+"550","Not defined","2020-15",2020-04-06,"Southern Hemisphere Temperate and Sub-Tropical",2763,6,2749,1,0,5
+"551","Not defined","2020-16",2020-04-13,"Southern Hemisphere Temperate and Sub-Tropical",3126,3,3120,0,0,3
+"552","Not defined","2020-17",2020-04-20,"Southern Hemisphere Temperate and Sub-Tropical",3063,0,3054,0,0,0
+"553","Not defined","2020-18",2020-04-27,"Southern Hemisphere Temperate and Sub-Tropical",3127,0,3127,0,0,0
+"554","Not defined","2020-19",2020-05-04,"Southern Hemisphere Temperate and Sub-Tropical",3103,0,3103,0,0,0
+"555","Not defined","2020-20",2020-05-11,"Southern Hemisphere Temperate and Sub-Tropical",3545,0,3545,0,0,0
+"556","Not defined","2020-21",2020-05-18,"Southern Hemisphere Temperate and Sub-Tropical",3484,0,3484,0,0,0
+"557","Not defined","2020-22",2020-05-25,"Southern Hemisphere Temperate and Sub-Tropical",3607,0,3607,0,0,0
+"558","Not defined","2020-23",2020-06-01,"Southern Hemisphere Temperate and Sub-Tropical",3640,0,3640,0,0,0
+"559","Not defined","2020-24",2020-06-08,"Southern Hemisphere Temperate and Sub-Tropical",2940,0,2939,0,0,0
+"560","Not defined","2020-25",2020-06-15,"Southern Hemisphere Temperate and Sub-Tropical",3797,1,3796,0,0,1
+"561","Not defined","2020-26",2020-06-22,"Southern Hemisphere Temperate and Sub-Tropical",3590,0,3590,0,0,0
+"562","Not defined","2020-27",2020-06-29,"Southern Hemisphere Temperate and Sub-Tropical",3868,0,3867,0,0,0
+"563","Not defined","2020-28",2020-07-06,"Southern Hemisphere Temperate and Sub-Tropical",4462,1,4461,0,0,1
+"564","Not defined","2020-29",2020-07-13,"Southern Hemisphere Temperate and Sub-Tropical",5351,0,5349,0,0,0
+"565","Not defined","2020-30",2020-07-20,"Southern Hemisphere Temperate and Sub-Tropical",5292,0,5292,0,0,0
+"566","Not defined","2020-31",2020-07-27,"Southern Hemisphere Temperate and Sub-Tropical",4511,0,4511,0,0,0
+"567","Not defined","2020-32",2020-08-03,"Southern Hemisphere Temperate and Sub-Tropical",2717,0,2717,0,0,0
+"568","Not defined","2020-33",2020-08-10,"Southern Hemisphere Temperate and Sub-Tropical",1849,0,1849,0,0,0
+"569","Not defined","2020-34",2020-08-17,"Southern Hemisphere Temperate and Sub-Tropical",1898,0,1898,0,0,0
+"570","Not defined","2020-35",2020-08-24,"Southern Hemisphere Temperate and Sub-Tropical",1562,0,1562,0,0,0
+"571","Not defined","2020-36",2020-08-31,"Southern Hemisphere Temperate and Sub-Tropical",1722,0,1722,0,0,0
+"572","Not defined","2020-37",2020-09-07,"Southern Hemisphere Temperate and Sub-Tropical",1541,0,1541,0,0,0
+"573","Not defined","2020-38",2020-09-14,"Southern Hemisphere Temperate and Sub-Tropical",1582,0,1582,0,0,0
+"574","Not defined","2020-39",2020-09-21,"Southern Hemisphere Temperate and Sub-Tropical",1419,0,1419,0,0,0
+"575","Not defined","2020-40",2020-09-28,"Southern Hemisphere Temperate and Sub-Tropical",1528,0,1528,0,0,0
+"576","Not defined","2020-41",2020-10-05,"Southern Hemisphere Temperate and Sub-Tropical",1431,0,1431,0,0,0
+"577","Not defined","2020-42",2020-10-12,"Southern Hemisphere Temperate and Sub-Tropical",1527,0,1527,0,0,0
+"578","Not defined","2020-43",2020-10-19,"Southern Hemisphere Temperate and Sub-Tropical",1468,0,1468,0,0,0
+"579","Not defined","2020-44",2020-10-26,"Southern Hemisphere Temperate and Sub-Tropical",1648,0,1648,0,0,0
+"580","Not defined","2020-45",2020-11-02,"Southern Hemisphere Temperate and Sub-Tropical",1744,0,1744,0,0,0
+"581","Not defined","2020-46",2020-11-09,"Southern Hemisphere Temperate and Sub-Tropical",1526,0,1526,0,0,0
+"582","Not defined","2020-47",2020-11-16,"Southern Hemisphere Temperate and Sub-Tropical",1670,0,1670,0,0,0
+"583","Not defined","2020-48",2020-11-23,"Southern Hemisphere Temperate and Sub-Tropical",1711,0,1711,0,0,0
+"584","Not defined","2020-49",2020-11-30,"Southern Hemisphere Temperate and Sub-Tropical",1649,0,1649,0,0,0
+"585","Not defined","2020-50",2020-12-07,"Southern Hemisphere Temperate and Sub-Tropical",1808,0,1808,0,0,0
+"586","Not defined","2020-51",2020-12-14,"Southern Hemisphere Temperate and Sub-Tropical",2210,0,2210,0,0,0
+"587","Not defined","2020-52",2020-12-21,"Southern Hemisphere Temperate and Sub-Tropical",2143,0,2143,0,0,0
+"588","Not defined","2020-53",2020-12-28,"Southern Hemisphere Temperate and Sub-Tropical",2141,0,2141,0,0,0
+"589","Not defined","2021-01",2021-01-04,"Southern Hemisphere Temperate and Sub-Tropical",2445,0,2445,0,0,0
+"590","Not defined","2021-02",2021-01-11,"Southern Hemisphere Temperate and Sub-Tropical",1923,0,1923,0,0,0
+"591","Not defined","2021-03",2021-01-18,"Southern Hemisphere Temperate and Sub-Tropical",1619,0,1619,0,0,0
+"592","Not defined","2021-04",2021-01-25,"Southern Hemisphere Temperate and Sub-Tropical",1606,0,1606,0,0,0
+"593","Not defined","2021-05",2021-02-01,"Southern Hemisphere Temperate and Sub-Tropical",1993,0,1993,0,0,0
+"594","Not defined","2021-06",2021-02-08,"Southern Hemisphere Temperate and Sub-Tropical",1788,0,1787,0,0,0
+"595","Not defined","2021-07",2021-02-15,"Southern Hemisphere Temperate and Sub-Tropical",1817,0,1817,0,0,0
+"596","Not defined","2021-08",2021-02-22,"Southern Hemisphere Temperate and Sub-Tropical",1682,0,1682,0,0,0
+"597","Not defined","2021-09",2021-03-01,"Southern Hemisphere Temperate and Sub-Tropical",1728,0,1727,0,0,0
+"598","Not defined","2021-10",2021-03-08,"Southern Hemisphere Temperate and Sub-Tropical",1685,0,1685,0,0,0
+"599","Not defined","2021-11",2021-03-15,"Southern Hemisphere Temperate and Sub-Tropical",1755,0,1755,0,0,0
+"600","Not defined","2021-12",2021-03-22,"Southern Hemisphere Temperate and Sub-Tropical",1589,0,1589,0,0,0
+"601","Not defined","2021-13",2021-03-29,"Southern Hemisphere Temperate and Sub-Tropical",1500,0,1500,0,0,0
+"602","Not defined","2021-14",2021-04-05,"Southern Hemisphere Temperate and Sub-Tropical",1587,0,1587,0,0,0
+"603","Not defined","2021-15",2021-04-12,"Southern Hemisphere Temperate and Sub-Tropical",1558,0,1558,0,0,0
+"604","Not defined","2021-16",2021-04-19,"Southern Hemisphere Temperate and Sub-Tropical",1635,2,1633,2,0,0
+"605","Not defined","2021-17",2021-04-26,"Southern Hemisphere Temperate and Sub-Tropical",1914,0,1914,0,0,0
+"606","Not defined","2021-18",2021-05-03,"Southern Hemisphere Temperate and Sub-Tropical",1876,3,1873,2,0,1
+"607","Not defined","2021-19",2021-05-10,"Southern Hemisphere Temperate and Sub-Tropical",1917,3,1914,3,0,0
+"608","Not defined","2021-20",2021-05-17,"Southern Hemisphere Temperate and Sub-Tropical",2220,3,2217,3,0,0
+"609","Not defined","2021-21",2021-05-24,"Southern Hemisphere Temperate and Sub-Tropical",2296,4,2292,3,0,1
+"610","Not defined","2021-22",2021-05-31,"Southern Hemisphere Temperate and Sub-Tropical",2304,5,2299,4,0,1
+"611","Not defined","2021-23",2021-06-07,"Southern Hemisphere Temperate and Sub-Tropical",2426,9,2417,7,0,2
+"612","Not defined","2021-24",2021-06-14,"Southern Hemisphere Temperate and Sub-Tropical",2352,5,2345,5,0,0
+"613","Not defined","2021-25",2021-06-21,"Southern Hemisphere Temperate and Sub-Tropical",3045,6,3039,6,0,0
+"614","Not defined","2021-26",2021-06-28,"Southern Hemisphere Temperate and Sub-Tropical",3474,3,3471,3,0,0
+"615","Not defined","2021-27",2021-07-05,"Southern Hemisphere Temperate and Sub-Tropical",3008,2,3006,2,0,0
+"616","Not defined","2021-28",2021-07-12,"Southern Hemisphere Temperate and Sub-Tropical",2427,1,2426,1,0,0
+"617","Not defined","2021-29",2021-07-19,"Southern Hemisphere Temperate and Sub-Tropical",2646,3,2642,3,0,0
+"618","Not defined","2021-30",2021-07-26,"Southern Hemisphere Temperate and Sub-Tropical",2483,4,2479,3,0,1
+"619","Not defined","2021-31",2021-08-02,"Southern Hemisphere Temperate and Sub-Tropical",2561,2,2559,2,0,0
+"620","Not defined","2021-32",2021-08-09,"Southern Hemisphere Temperate and Sub-Tropical",2536,9,2526,9,0,0
+"621","Not defined","2021-33",2021-08-16,"Southern Hemisphere Temperate and Sub-Tropical",3084,3,3081,3,0,0
+"622","Not defined","2021-34",2021-08-23,"Southern Hemisphere Temperate and Sub-Tropical",2737,9,2726,7,0,2
+"623","Not defined","2021-35",2021-08-30,"Southern Hemisphere Temperate and Sub-Tropical",2818,9,2808,8,0,1
+"624","Not defined","2021-36",2021-09-06,"Southern Hemisphere Temperate and Sub-Tropical",2913,11,2899,11,0,0
+"625","Not defined","2021-37",2021-09-13,"Southern Hemisphere Temperate and Sub-Tropical",2844,15,2818,15,0,0
+"626","Not defined","2021-38",2021-09-20,"Southern Hemisphere Temperate and Sub-Tropical",2827,20,2798,16,0,4
+"627","Not defined","2021-39",2021-09-27,"Southern Hemisphere Temperate and Sub-Tropical",2890,9,2874,7,0,2
+"628","Not defined","2021-40",2021-10-04,"Southern Hemisphere Temperate and Sub-Tropical",2943,14,2916,13,0,1
+"629","Not defined","2021-41",2021-10-11,"Southern Hemisphere Temperate and Sub-Tropical",2700,13,2672,11,0,2
+"630","Not defined","2021-42",2021-10-18,"Southern Hemisphere Temperate and Sub-Tropical",2713,11,2686,9,0,2
+"631","Not defined","2021-43",2021-10-25,"Southern Hemisphere Temperate and Sub-Tropical",2624,10,2594,7,0,3
+"632","Not defined","2021-44",2021-11-01,"Southern Hemisphere Temperate and Sub-Tropical",2669,33,2616,21,0,12
+"633","Not defined","2021-45",2021-11-08,"Southern Hemisphere Temperate and Sub-Tropical",2534,9,2491,2,0,7
+"634","Not defined","2021-46",2021-11-15,"Southern Hemisphere Temperate and Sub-Tropical",2616,26,2547,26,0,0
+"635","Not defined","2021-47",2021-11-22,"Southern Hemisphere Temperate and Sub-Tropical",2493,27,2397,26,0,1
+"636","Not defined","2021-48",2021-11-29,"Southern Hemisphere Temperate and Sub-Tropical",2480,16,2397,16,0,0
+"637","Not defined","2021-49",2021-12-06,"Southern Hemisphere Temperate and Sub-Tropical",2601,26,2531,1,0,25
+"638","Not defined","2021-50",2021-12-13,"Southern Hemisphere Temperate and Sub-Tropical",2586,18,2546,10,0,8
+"639","Not defined","2021-51",2021-12-20,"Southern Hemisphere Temperate and Sub-Tropical",3054,12,3032,5,0,7
+"640","Not defined","2021-52",2021-12-27,"Southern Hemisphere Temperate and Sub-Tropical",3324,3,3315,3,0,0
+"641","Not defined","2022-01",2022-01-03,"Southern Hemisphere Temperate and Sub-Tropical",3006,3,2978,NA,NA,3
+"642","Not defined","2022-02",2022-01-10,"Southern Hemisphere Temperate and Sub-Tropical",2663,2,2637,NA,NA,2
+"643","Not defined","2022-03",2022-01-17,"Southern Hemisphere Temperate and Sub-Tropical",2640,8,2619,NA,NA,8
+"644","Not defined","2022-04",2022-01-24,"Southern Hemisphere Temperate and Sub-Tropical",2905,15,2883,NA,NA,15
+"645","Not defined","2022-05",2022-01-31,"Southern Hemisphere Temperate and Sub-Tropical",2851,9,2824,NA,NA,9
+"646","Not defined","2022-06",2022-02-07,"Southern Hemisphere Temperate and Sub-Tropical",2739,24,2674,NA,NA,24
+"647","Not defined","2022-07",2022-02-14,"Southern Hemisphere Temperate and Sub-Tropical",3036,24,3000,NA,NA,24
+"648","Not defined","2022-08",2022-02-21,"Southern Hemisphere Temperate and Sub-Tropical",3241,17,3204,NA,NA,17
+"649","Not defined","2022-09",2022-02-28,"Southern Hemisphere Temperate and Sub-Tropical",3155,26,3104,NA,NA,26
+"650","Not defined","2022-10",2022-03-07,"Southern Hemisphere Temperate and Sub-Tropical",3819,31,3753,NA,NA,31
+"651","Not defined","2022-11",2022-03-14,"Southern Hemisphere Temperate and Sub-Tropical",3762,48,3671,NA,NA,48
+"652","Not defined","2022-12",2022-03-21,"Southern Hemisphere Temperate and Sub-Tropical",3819,71,3703,NA,NA,71
+"653","Not defined","2022-13",2022-03-28,"Southern Hemisphere Temperate and Sub-Tropical",5324,98,5138,NA,NA,98
+"654","Not defined","2022-14",2022-04-04,"Southern Hemisphere Temperate and Sub-Tropical",4856,80,4680,NA,NA,80
+"655","Not defined","2022-15",2022-04-11,"Southern Hemisphere Temperate and Sub-Tropical",4927,82,4744,NA,NA,82
+"656","Not defined","2022-16",2022-04-18,"Southern Hemisphere Temperate and Sub-Tropical",4617,79,4388,NA,NA,79
+"657","Not defined","2022-17",2022-04-25,"Southern Hemisphere Temperate and Sub-Tropical",4388,72,4119,NA,NA,72
+"658","Not defined","2022-18",2022-05-02,"Southern Hemisphere Temperate and Sub-Tropical",4956,50,4546,NA,NA,50
+"659","Not defined","2022-19",2022-05-09,"Southern Hemisphere Temperate and Sub-Tropical",5581,63,4914,NA,NA,63
+"660","Not defined","2022-20",2022-05-16,"Southern Hemisphere Temperate and Sub-Tropical",6590,49,5496,NA,NA,49
+"661","Not defined","2022-21",2022-05-23,"Southern Hemisphere Temperate and Sub-Tropical",5430,55,4508,NA,NA,55
+"662","Not defined","2022-22",2022-05-30,"Southern Hemisphere Temperate and Sub-Tropical",8586,71,7532,NA,NA,71
+"663","Not defined","2022-23",2022-06-06,"Southern Hemisphere Temperate and Sub-Tropical",8766,62,7371,NA,NA,62
+"664","Not defined","2022-24",2022-06-13,"Southern Hemisphere Temperate and Sub-Tropical",9739,52,8184,NA,NA,52
+"665","Not defined","2022-25",2022-06-20,"Southern Hemisphere Temperate and Sub-Tropical",10801,71,9346,NA,NA,71
+"666","Not defined","2022-26",2022-06-27,"Southern Hemisphere Temperate and Sub-Tropical",10232,85,9167,NA,NA,85
+"667","Not defined","2022-27",2022-07-04,"Southern Hemisphere Temperate and Sub-Tropical",10083,107,9228,NA,NA,107
+"668","Not defined","2022-28",2022-07-11,"Southern Hemisphere Temperate and Sub-Tropical",9869,79,9389,NA,NA,79
+"669","Not defined","2022-29",2022-07-18,"Southern Hemisphere Temperate and Sub-Tropical",10214,70,9939,NA,NA,70
+"670","Not defined","2022-30",2022-07-25,"Southern Hemisphere Temperate and Sub-Tropical",9043,61,8802,NA,NA,61
+"671","Not defined","2022-31",2022-08-01,"Southern Hemisphere Temperate and Sub-Tropical",8619,56,8426,NA,NA,56
+"672","Not defined","2022-32",2022-08-08,"Southern Hemisphere Temperate and Sub-Tropical",8287,63,8095,NA,NA,63
+"673","Not defined","2022-33",2022-08-15,"Southern Hemisphere Temperate and Sub-Tropical",7870,67,7714,NA,NA,67
+"674","Not defined","2022-34",2022-08-22,"Southern Hemisphere Temperate and Sub-Tropical",6910,2,6851,NA,NA,2
+"675","Not defined","2022-35",2022-08-29,"Southern Hemisphere Temperate and Sub-Tropical",6589,0,6543,NA,NA,0
+"676","Not defined","2022-36",2022-09-05,"Southern Hemisphere Temperate and Sub-Tropical",6442,1,6382,NA,NA,1
+"677","Not defined","2022-37",2022-09-12,"Southern Hemisphere Temperate and Sub-Tropical",6313,2,6264,NA,NA,2
+"678","Not defined","2022-38",2022-09-19,"Southern Hemisphere Temperate and Sub-Tropical",6045,1,6005,NA,NA,1
+"679","Not defined","2022-39",2022-09-26,"Southern Hemisphere Temperate and Sub-Tropical",5734,11,5678,NA,NA,11
+"680","Not defined","2022-40",2022-10-03,"Southern Hemisphere Temperate and Sub-Tropical",5301,9,5267,NA,NA,9
+"681","Not defined","2022-41",2022-10-10,"Southern Hemisphere Temperate and Sub-Tropical",5212,7,5172,NA,NA,7
+"682","Not defined","2022-42",2022-10-17,"Southern Hemisphere Temperate and Sub-Tropical",5268,7,5224,NA,NA,7
+"683","Not defined","2022-43",2022-10-24,"Southern Hemisphere Temperate and Sub-Tropical",5153,2,5121,NA,NA,2
+"684","Not defined","2022-44",2022-10-31,"Southern Hemisphere Temperate and Sub-Tropical",5322,4,5256,NA,NA,4
+"685","Not defined","2022-45",2022-11-07,"Southern Hemisphere Temperate and Sub-Tropical",5917,2,5860,NA,NA,2
+"686","Not defined","2022-46",2022-11-14,"Southern Hemisphere Temperate and Sub-Tropical",5757,7,5684,NA,NA,7
+"687","Not defined","2022-47",2022-11-21,"Southern Hemisphere Temperate and Sub-Tropical",5392,2,5333,NA,NA,2
+"688","Not defined","2022-48",2022-11-28,"Southern Hemisphere Temperate and Sub-Tropical",5554,8,5498,NA,NA,8
+"689","Not defined","2022-49",2022-12-05,"Southern Hemisphere Temperate and Sub-Tropical",5494,1,5415,NA,NA,1
+"690","Not defined","2022-50",2022-12-12,"Southern Hemisphere Temperate and Sub-Tropical",5587,1,5535,NA,NA,1
+"691","Not defined","2022-51",2022-12-19,"Southern Hemisphere Temperate and Sub-Tropical",5387,2,5337,NA,NA,2
+"692","Not defined","2022-52",2022-12-26,"Southern Hemisphere Temperate and Sub-Tropical",5247,6,5183,NA,NA,6
+"693","Not defined","2023-01",2023-01-02,"Southern Hemisphere Temperate and Sub-Tropical",4641,16,4570,NA,NA,16
+"694","Not defined","2023-02",2023-01-09,"Southern Hemisphere Temperate and Sub-Tropical",4348,6,4283,NA,NA,6
+"695","Not defined","2023-03",2023-01-16,"Southern Hemisphere Temperate and Sub-Tropical",3967,8,3924,NA,NA,8
+"696","Not defined","2023-04",2023-01-23,"Southern Hemisphere Temperate and Sub-Tropical",4011,16,3963,NA,NA,16
+"697","Not defined","2023-05",2023-01-30,"Southern Hemisphere Temperate and Sub-Tropical",3820,17,3774,NA,NA,17
+"698","Not defined","2023-06",2023-02-06,"Southern Hemisphere Temperate and Sub-Tropical",3995,36,3894,7,NA,29
+"699","Not defined","2023-07",2023-02-13,"Southern Hemisphere Temperate and Sub-Tropical",4105,51,4005,25,NA,26
+"700","Not defined","2023-08",2023-02-20,"Southern Hemisphere Temperate and Sub-Tropical",3783,49,3681,23,NA,26
+"701","Not defined","2023-09",2023-02-27,"Southern Hemisphere Temperate and Sub-Tropical",4004,56,3894,12,NA,44
+"702","Not defined","2023-10",2023-03-06,"Southern Hemisphere Temperate and Sub-Tropical",4138,80,3993,27,NA,53
+"703","Not defined","2023-11",2023-03-13,"Southern Hemisphere Temperate and Sub-Tropical",4349,90,4186,28,NA,62
+"704","Not defined","2023-12",2023-03-20,"Southern Hemisphere Temperate and Sub-Tropical",4257,143,4056,59,NA,84
+"705","Not defined","2023-13",2023-03-27,"Southern Hemisphere Temperate and Sub-Tropical",4668,165,4431,51,NA,114
+"706","Not defined","2023-14",2023-04-03,"Southern Hemisphere Temperate and Sub-Tropical",4892,160,4652,58,NA,102
+"707","Not defined","2023-15",2023-04-10,"Southern Hemisphere Temperate and Sub-Tropical",5124,132,4879,17,NA,115
+"708","Not defined","2023-16",2023-04-17,"Southern Hemisphere Temperate and Sub-Tropical",5101,106,4891,6,NA,100
+"709","Not defined","2023-17",2023-04-24,"Southern Hemisphere Temperate and Sub-Tropical",5951,108,5689,3,NA,105
+"710","Not defined","2023-18",2023-05-01,"Southern Hemisphere Temperate and Sub-Tropical",6390,79,6173,1,NA,78
+"711","Not defined","2023-19",2023-05-08,"Southern Hemisphere Temperate and Sub-Tropical",7579,100,7275,3,NA,97
+"712","Not defined","2023-20",2023-05-15,"Southern Hemisphere Temperate and Sub-Tropical",7235,103,6840,0,NA,103
+"713","Not defined","2023-21",2023-05-22,"Southern Hemisphere Temperate and Sub-Tropical",7539,140,6956,1,NA,139
+"714","Not defined","2023-22",2023-05-29,"Southern Hemisphere Temperate and Sub-Tropical",7939,198,7167,0,NA,198
+"715","Not defined","2023-23",2023-06-05,"Southern Hemisphere Temperate and Sub-Tropical",7943,224,7095,0,NA,224
+"716","Not defined","2023-24",2023-06-12,"Southern Hemisphere Temperate and Sub-Tropical",7981,210,7098,0,NA,210
+"717","Not defined","2023-25",2023-06-19,"Southern Hemisphere Temperate and Sub-Tropical",7614,217,6728,NA,NA,217
+"718","Not defined","2023-26",2023-06-26,"Southern Hemisphere Temperate and Sub-Tropical",7588,308,6561,NA,NA,308
+"719","Not defined","2023-27",2023-07-03,"Southern Hemisphere Temperate and Sub-Tropical",8085,417,6910,NA,NA,417
+"720","Not defined","2023-28",2023-07-10,"Southern Hemisphere Temperate and Sub-Tropical",6559,275,5818,0,NA,275
+"721","Not defined","2023-29",2023-07-17,"Southern Hemisphere Temperate and Sub-Tropical",7064,208,6517,0,NA,208
+"722","Not defined","2023-30",2023-07-24,"Southern Hemisphere Temperate and Sub-Tropical",5744,216,5261,0,NA,216
+"723","Not defined","2023-31",2023-07-31,"Southern Hemisphere Temperate and Sub-Tropical",5760,187,5321,0,NA,187
+"724","Not defined","2023-32",2023-08-07,"Southern Hemisphere Temperate and Sub-Tropical",5702,184,5295,0,NA,184
+"725","Not defined","2023-33",2023-08-14,"Southern Hemisphere Temperate and Sub-Tropical",5594,176,5267,0,NA,176
+"726","Not defined","2023-34",2023-08-21,"Southern Hemisphere Temperate and Sub-Tropical",5346,182,5017,0,NA,182
+"727","Not defined","2023-35",2023-08-28,"Southern Hemisphere Temperate and Sub-Tropical",5423,156,5146,0,NA,156
+"728","Not defined","2023-36",2023-09-04,"Southern Hemisphere Temperate and Sub-Tropical",4891,134,4627,0,NA,134
+"729","Not defined","2023-37",2023-09-11,"Southern Hemisphere Temperate and Sub-Tropical",4818,95,4584,0,NA,95
+"730","Not defined","2023-38",2023-09-18,"Southern Hemisphere Temperate and Sub-Tropical",4916,74,4669,0,NA,74
+"731","Not defined","2023-39",2023-09-25,"Southern Hemisphere Temperate and Sub-Tropical",4368,39,4181,0,NA,39
+"732","Not defined","2023-40",2023-10-02,"Southern Hemisphere Temperate and Sub-Tropical",4560,36,4393,0,NA,36
+"733","Not defined","2023-41",2023-10-09,"Southern Hemisphere Temperate and Sub-Tropical",4408,31,4257,3,NA,28
+"734","Not defined","2023-42",2023-10-16,"Southern Hemisphere Temperate and Sub-Tropical",4223,23,4072,4,NA,19
+"735","Not defined","2023-43",2023-10-23,"Southern Hemisphere Temperate and Sub-Tropical",4401,20,4219,0,NA,20
+"736","Not defined","2023-44",2023-10-30,"Southern Hemisphere Temperate and Sub-Tropical",4570,16,4356,0,NA,16
+"737","Not defined","2023-45",2023-11-06,"Southern Hemisphere Temperate and Sub-Tropical",4944,14,4729,0,NA,14
+"738","Not defined","2023-46",2023-11-13,"Southern Hemisphere Temperate and Sub-Tropical",4661,8,4508,0,NA,8
+"739","Not defined","2023-47",2023-11-20,"Southern Hemisphere Temperate and Sub-Tropical",4447,8,4321,0,NA,8
+"740","Not defined","2023-48",2023-11-27,"Southern Hemisphere Temperate and Sub-Tropical",4390,4,4269,0,NA,4
+"741","Not defined","2023-49",2023-12-04,"Southern Hemisphere Temperate and Sub-Tropical",4350,9,4177,0,NA,9
+"742","Not defined","2023-50",2023-12-11,"Southern Hemisphere Temperate and Sub-Tropical",4541,7,4371,0,NA,7
+"743","Not defined","2023-51",2023-12-18,"Southern Hemisphere Temperate and Sub-Tropical",1117,1,1086,0,NA,1
+"744","Not defined","2023-52",2023-12-25,"Southern Hemisphere Temperate and Sub-Tropical",1167,4,1137,0,NA,4
+"745","Not defined","2024-01",2024-01-01,"Southern Hemisphere Temperate and Sub-Tropical",1190,1,1158,0,NA,1
+"746","Not defined","2024-02",2024-01-08,"Southern Hemisphere Temperate and Sub-Tropical",1216,3,1169,0,NA,3
+"747","Not defined","2024-03",2024-01-15,"Southern Hemisphere Temperate and Sub-Tropical",3975,1,3866,0,NA,1
+"748","Not defined","2024-04",2024-01-22,"Southern Hemisphere Temperate and Sub-Tropical",3977,9,3877,0,NA,9
+"749","Not defined","2024-05",2024-01-29,"Southern Hemisphere Temperate and Sub-Tropical",3788,13,3688,0,NA,13
+"750","Not defined","2024-06",2024-02-05,"Southern Hemisphere Temperate and Sub-Tropical",3635,6,3577,NA,NA,6
+"751","Not defined","2024-07",2024-02-12,"Southern Hemisphere Temperate and Sub-Tropical",3721,3,3637,0,NA,3
+"752","Not defined","2024-08",2024-02-19,"Southern Hemisphere Temperate and Sub-Tropical",3888,12,3792,0,NA,12
+"753","Not defined","2024-09",2024-02-26,"Southern Hemisphere Temperate and Sub-Tropical",4097,8,4006,0,NA,8
+"754","Not defined","2024-10",2024-03-04,"Southern Hemisphere Temperate and Sub-Tropical",4073,5,3954,0,NA,5
+"755","Not defined","2024-11",2024-03-11,"Southern Hemisphere Temperate and Sub-Tropical",4093,14,3967,0,NA,14
+"756","Not defined","2024-12",2024-03-18,"Southern Hemisphere Temperate and Sub-Tropical",4005,21,3868,0,NA,21
+"757","Not defined","2024-13",2024-03-25,"Southern Hemisphere Temperate and Sub-Tropical",4129,11,3988,0,NA,11
+"758","Not defined","2024-14",2024-04-01,"Southern Hemisphere Temperate and Sub-Tropical",4375,9,4237,0,NA,9
+"759","Not defined","2024-15",2024-04-08,"Southern Hemisphere Temperate and Sub-Tropical",4373,4,4268,0,NA,4
+"760","Not defined","2024-16",2024-04-15,"Southern Hemisphere Temperate and Sub-Tropical",4506,9,4343,0,NA,9
+"761","Not defined","2024-17",2024-04-22,"Southern Hemisphere Temperate and Sub-Tropical",4418,10,4257,0,NA,10
+"762","Not defined","2024-18",2024-04-29,"Southern Hemisphere Temperate and Sub-Tropical",4749,7,4521,1,NA,6
+"763","Not defined","2024-19",2024-05-06,"Southern Hemisphere Temperate and Sub-Tropical",4896,11,4600,0,NA,11
+"764","Not defined","2024-20",2024-05-13,"Southern Hemisphere Temperate and Sub-Tropical",5467,9,5077,0,NA,9
+"765","Not defined","2024-21",2024-05-20,"Southern Hemisphere Temperate and Sub-Tropical",5853,10,5428,0,NA,10
+"766","Not defined","2024-22",2024-05-27,"Southern Hemisphere Temperate and Sub-Tropical",6269,12,5728,0,NA,12
+"767","Not defined","2024-23",2024-06-03,"Southern Hemisphere Temperate and Sub-Tropical",6569,8,5965,0,NA,8
+"768","Not defined","2024-24",2024-06-10,"Southern Hemisphere Temperate and Sub-Tropical",6693,13,5912,0,NA,13
+"769","Not defined","2024-25",2024-06-17,"Southern Hemisphere Temperate and Sub-Tropical",6810,12,5939,0,NA,12
+"770","Not defined","2024-26",2024-06-24,"Southern Hemisphere Temperate and Sub-Tropical",7536,9,6393,0,NA,9
+"771","Not defined","2024-27",2024-07-01,"Southern Hemisphere Temperate and Sub-Tropical",7560,16,6183,1,NA,15
+"772","Not defined","2024-28",2024-07-08,"Southern Hemisphere Temperate and Sub-Tropical",7451,6,6198,0,NA,6
+"773","Not defined","2024-29",2024-07-15,"Southern Hemisphere Temperate and Sub-Tropical",7044,8,6127,NA,NA,8
+"774","Not defined","2024-30",2024-07-22,"Southern Hemisphere Temperate and Sub-Tropical",6370,5,5585,NA,NA,5
+"775","Not defined","2024-31",2024-07-29,"Southern Hemisphere Temperate and Sub-Tropical",6036,4,5414,NA,NA,4
+"776","Not defined","2024-32",2024-08-05,"Southern Hemisphere Temperate and Sub-Tropical",6311,6,5653,NA,NA,6
+"777","Not defined","2024-33",2024-08-12,"Southern Hemisphere Temperate and Sub-Tropical",6149,8,5611,NA,NA,8
+"778","Not defined","2024-34",2024-08-19,"Southern Hemisphere Temperate and Sub-Tropical",6031,6,5545,0,NA,6
+"779","Not defined","2024-35",2024-08-26,"Southern Hemisphere Temperate and Sub-Tropical",5658,14,5297,0,NA,14
+"780","Not defined","2024-36",2024-09-02,"Southern Hemisphere Temperate and Sub-Tropical",5699,6,5380,0,NA,6
+"781","Not defined","2024-37",2024-09-09,"Southern Hemisphere Temperate and Sub-Tropical",5516,9,5236,0,NA,9
+"782","Not defined","2024-38",2024-09-16,"Southern Hemisphere Temperate and Sub-Tropical",5601,11,5342,0,NA,11
+"783","Not defined","2024-39",2024-09-23,"Southern Hemisphere Temperate and Sub-Tropical",5392,11,5178,0,NA,11
+"784","Not defined","2024-40",2024-09-30,"Southern Hemisphere Temperate and Sub-Tropical",5550,6,5370,0,NA,6
+"785","Not defined","2024-41",2024-10-07,"Southern Hemisphere Temperate and Sub-Tropical",5039,11,4942,0,NA,11
+"786","Not defined","2024-42",2024-10-14,"Southern Hemisphere Temperate and Sub-Tropical",4833,4,4771,0,NA,4
+"787","Not defined","2024-43",2024-10-21,"Southern Hemisphere Temperate and Sub-Tropical",4662,7,4598,0,NA,7
+"788","Not defined","2024-44",2024-10-28,"Southern Hemisphere Temperate and Sub-Tropical",4606,12,4539,NA,NA,12
+"789","Not defined","2024-45",2024-11-04,"Southern Hemisphere Temperate and Sub-Tropical",4904,5,4819,0,NA,5
+"790","Not defined","2024-46",2024-11-11,"Southern Hemisphere Temperate and Sub-Tropical",4638,10,4535,0,NA,10
+"791","Not defined","2024-47",2024-11-18,"Southern Hemisphere Temperate and Sub-Tropical",4391,5,4310,0,NA,5
+"792","Not defined","2024-48",2024-11-25,"Southern Hemisphere Temperate and Sub-Tropical",4389,7,4318,0,NA,7
+"793","Not defined","2024-49",2024-12-02,"Southern Hemisphere Temperate and Sub-Tropical",4366,8,4292,0,NA,8
+"794","Not defined","2024-50",2024-12-09,"Southern Hemisphere Temperate and Sub-Tropical",4251,13,4186,0,NA,13
+"795","Not defined","2024-51",2024-12-16,"Southern Hemisphere Temperate and Sub-Tropical",2820,5,2776,0,NA,5
+"796","Not defined","2024-52",2024-12-23,"Southern Hemisphere Temperate and Sub-Tropical",2956,6,2904,0,NA,6
+"797","Not defined","2025-01",2024-12-30,"Southern Hemisphere Temperate and Sub-Tropical",4235,7,4153,NA,NA,7
+"798","Not defined","2025-02",2025-01-06,"Southern Hemisphere Temperate and Sub-Tropical",4116,23,3970,NA,NA,23
+"799","Not defined","2025-03",2025-01-13,"Southern Hemisphere Temperate and Sub-Tropical",3939,17,3812,NA,NA,17
+"800","Not defined","2025-04",2025-01-20,"Southern Hemisphere Temperate and Sub-Tropical",3864,16,3733,NA,NA,16
+"801","Not defined","2025-05",2025-01-27,"Southern Hemisphere Temperate and Sub-Tropical",3775,18,3647,NA,NA,18
+"802","Not defined","2025-06",2025-02-03,"Southern Hemisphere Temperate and Sub-Tropical",3844,25,3636,NA,NA,25
+"803","Not defined","2025-07",2025-02-10,"Southern Hemisphere Temperate and Sub-Tropical",4031,21,3824,NA,NA,21
+"804","Not defined","2025-08",2025-02-17,"Southern Hemisphere Temperate and Sub-Tropical",4356,26,4117,NA,NA,26
+"805","Not defined","2025-09",2025-02-24,"Southern Hemisphere Temperate and Sub-Tropical",4561,23,4316,NA,NA,23
+"806","Not defined","2025-10",2025-03-03,"Southern Hemisphere Temperate and Sub-Tropical",4548,23,4308,NA,NA,23
+"807","Not defined","2025-11",2025-03-10,"Southern Hemisphere Temperate and Sub-Tropical",4329,30,4129,NA,NA,30
+"808","Not defined","2025-12",2025-03-17,"Southern Hemisphere Temperate and Sub-Tropical",4400,41,4172,NA,NA,41
+"809","Not defined","2025-13",2025-03-24,"Southern Hemisphere Temperate and Sub-Tropical",4460,26,4245,NA,NA,26
+"810","Not defined","2025-14",2025-03-31,"Southern Hemisphere Temperate and Sub-Tropical",4519,48,4297,NA,NA,48
+"811","Not defined","2025-15",2025-04-07,"Southern Hemisphere Temperate and Sub-Tropical",4464,53,4219,NA,NA,53
+"812","Not defined","2025-16",2025-04-14,"Southern Hemisphere Temperate and Sub-Tropical",4506,59,4258,NA,NA,59
+"813","Not defined","2025-17",2025-04-21,"Southern Hemisphere Temperate and Sub-Tropical",4658,90,4362,NA,NA,90
+"814","Not defined","2025-18",2025-04-28,"Southern Hemisphere Temperate and Sub-Tropical",4631,70,4423,NA,NA,70
+"815","Not defined","2025-19",2025-05-05,"Southern Hemisphere Temperate and Sub-Tropical",4682,41,4506,NA,NA,41
+"816","Not defined","2025-20",2025-05-12,"Southern Hemisphere Temperate and Sub-Tropical",5110,37,4914,NA,NA,37
+"817","Not defined","2025-21",2025-05-19,"Southern Hemisphere Temperate and Sub-Tropical",5081,43,4820,NA,NA,43
+"818","Not defined","2025-22",2025-05-26,"Southern Hemisphere Temperate and Sub-Tropical",5432,48,5130,NA,NA,48
+"819","Not defined","2025-23",2025-06-02,"Southern Hemisphere Temperate and Sub-Tropical",5729,37,5345,NA,NA,37
+"820","Not defined","2025-24",2025-06-09,"Southern Hemisphere Temperate and Sub-Tropical",5768,69,5368,NA,NA,69
+"821","Not defined","2025-25",2025-06-16,"Southern Hemisphere Temperate and Sub-Tropical",5171,93,4689,NA,NA,93
+"822","Not defined","2025-26",2025-06-23,"Southern Hemisphere Temperate and Sub-Tropical",5045,120,4511,NA,NA,120
+"823","Not defined","2025-27",2025-06-30,"Southern Hemisphere Temperate and Sub-Tropical",5548,158,4882,NA,NA,158
+"824","Not defined","2025-28",2025-07-07,"Southern Hemisphere Temperate and Sub-Tropical",5215,179,4538,NA,NA,179
+"825","Not defined","2025-29",2025-07-14,"Southern Hemisphere Temperate and Sub-Tropical",5137,126,4516,NA,NA,126
+"826","Not defined","2025-30",2025-07-21,"Southern Hemisphere Temperate and Sub-Tropical",5158,118,4423,NA,NA,118
+"827","Not defined","2025-31",2025-07-28,"Southern Hemisphere Temperate and Sub-Tropical",4933,112,4293,NA,NA,112
+"828","Not defined","2025-32",2025-08-04,"Southern Hemisphere Temperate and Sub-Tropical",4781,113,4200,NA,NA,113
+"829","Not defined","2025-33",2025-08-11,"Southern Hemisphere Temperate and Sub-Tropical",4617,127,4059,NA,NA,127
+"830","Not defined","2025-34",2025-08-18,"Southern Hemisphere Temperate and Sub-Tropical",4231,111,3725,NA,NA,111
+"831","Not defined","2025-35",2025-08-25,"Southern Hemisphere Temperate and Sub-Tropical",4258,109,3822,NA,NA,109
+"832","Not defined","2025-36",2025-09-01,"Southern Hemisphere Temperate and Sub-Tropical",4378,107,3946,NA,NA,107
+"833","Not defined","2025-37",2025-09-08,"Southern Hemisphere Temperate and Sub-Tropical",4275,88,3860,NA,NA,88
+"834","Not defined","2025-38",2025-09-15,"Southern Hemisphere Temperate and Sub-Tropical",3873,63,3565,NA,NA,63
+"835","Not defined","2025-39",2025-09-22,"Southern Hemisphere Temperate and Sub-Tropical",3618,63,3353,NA,NA,63
+"836","Not defined","2025-40",2025-09-29,"Southern Hemisphere Temperate and Sub-Tropical",3576,62,3349,NA,NA,62
+"837","Sentinel","2020-01",2019-12-30,"Southern Hemisphere Temperate and Sub-Tropical",132,10,122,0,0,10
+"838","Sentinel","2020-02",2020-01-06,"Southern Hemisphere Temperate and Sub-Tropical",146,9,135,0,0,9
+"839","Sentinel","2020-03",2020-01-13,"Southern Hemisphere Temperate and Sub-Tropical",134,12,121,0,0,12
+"840","Sentinel","2020-04",2020-01-20,"Southern Hemisphere Temperate and Sub-Tropical",123,10,113,0,0,10
+"841","Sentinel","2020-05",2020-01-27,"Southern Hemisphere Temperate and Sub-Tropical",105,6,97,0,0,6
+"842","Sentinel","2020-06",2020-02-03,"Southern Hemisphere Temperate and Sub-Tropical",107,8,99,0,0,8
+"843","Sentinel","2020-07",2020-02-10,"Southern Hemisphere Temperate and Sub-Tropical",98,5,91,0,0,5
+"844","Sentinel","2020-08",2020-02-17,"Southern Hemisphere Temperate and Sub-Tropical",119,7,112,0,0,7
+"845","Sentinel","2020-09",2020-02-24,"Southern Hemisphere Temperate and Sub-Tropical",153,13,135,0,0,13
+"846","Sentinel","2020-10",2020-03-02,"Southern Hemisphere Temperate and Sub-Tropical",229,9,208,0,0,9
+"847","Sentinel","2020-11",2020-03-09,"Southern Hemisphere Temperate and Sub-Tropical",400,11,375,1,0,10
+"848","Sentinel","2020-12",2020-03-16,"Southern Hemisphere Temperate and Sub-Tropical",593,26,544,0,0,26
+"849","Sentinel","2020-13",2020-03-23,"Southern Hemisphere Temperate and Sub-Tropical",272,2,264,0,0,2
+"850","Sentinel","2020-14",2020-03-30,"Southern Hemisphere Temperate and Sub-Tropical",121,0,121,0,0,0
+"851","Sentinel","2020-15",2020-04-06,"Southern Hemisphere Temperate and Sub-Tropical",102,0,102,0,0,0
+"852","Sentinel","2020-16",2020-04-13,"Southern Hemisphere Temperate and Sub-Tropical",121,0,121,0,0,0
+"853","Sentinel","2020-17",2020-04-20,"Southern Hemisphere Temperate and Sub-Tropical",167,0,167,0,0,0
+"854","Sentinel","2020-18",2020-04-27,"Southern Hemisphere Temperate and Sub-Tropical",168,1,167,0,0,1
+"855","Sentinel","2020-19",2020-05-04,"Southern Hemisphere Temperate and Sub-Tropical",186,0,186,0,0,0
+"856","Sentinel","2020-20",2020-05-11,"Southern Hemisphere Temperate and Sub-Tropical",229,0,229,0,0,0
+"857","Sentinel","2020-21",2020-05-18,"Southern Hemisphere Temperate and Sub-Tropical",233,0,233,0,0,0
+"858","Sentinel","2020-22",2020-05-25,"Southern Hemisphere Temperate and Sub-Tropical",237,0,237,0,0,0
+"859","Sentinel","2020-23",2020-06-01,"Southern Hemisphere Temperate and Sub-Tropical",71,0,71,0,0,0
+"860","Sentinel","2020-24",2020-06-08,"Southern Hemisphere Temperate and Sub-Tropical",64,0,64,0,0,0
+"861","Sentinel","2020-25",2020-06-15,"Southern Hemisphere Temperate and Sub-Tropical",57,0,57,0,0,0
+"862","Sentinel","2020-26",2020-06-22,"Southern Hemisphere Temperate and Sub-Tropical",35,1,34,0,0,1
+"863","Sentinel","2020-27",2020-06-29,"Southern Hemisphere Temperate and Sub-Tropical",8,0,8,0,0,0
+"864","Sentinel","2020-28",2020-07-06,"Southern Hemisphere Temperate and Sub-Tropical",2,0,2,0,0,0
+"865","Sentinel","2020-29",2020-07-13,"Southern Hemisphere Temperate and Sub-Tropical",1,0,1,0,0,0
+"866","Sentinel","2020-30",2020-07-20,"Southern Hemisphere Temperate and Sub-Tropical",5,0,5,0,0,0
+"867","Sentinel","2020-31",2020-07-27,"Southern Hemisphere Temperate and Sub-Tropical",6,0,6,0,0,0
+"868","Sentinel","2020-32",2020-08-03,"Southern Hemisphere Temperate and Sub-Tropical",11,0,11,0,0,0
+"869","Sentinel","2020-33",2020-08-10,"Southern Hemisphere Temperate and Sub-Tropical",11,0,11,0,0,0
+"870","Sentinel","2020-34",2020-08-17,"Southern Hemisphere Temperate and Sub-Tropical",9,0,9,0,0,0
+"871","Sentinel","2020-35",2020-08-24,"Southern Hemisphere Temperate and Sub-Tropical",15,0,15,0,0,0
+"872","Sentinel","2020-36",2020-08-31,"Southern Hemisphere Temperate and Sub-Tropical",16,0,16,0,0,0
+"873","Sentinel","2020-37",2020-09-07,"Southern Hemisphere Temperate and Sub-Tropical",24,0,24,0,0,0
+"874","Sentinel","2020-38",2020-09-14,"Southern Hemisphere Temperate and Sub-Tropical",24,0,24,0,0,0
+"875","Sentinel","2020-39",2020-09-21,"Southern Hemisphere Temperate and Sub-Tropical",29,0,29,0,0,0
+"876","Sentinel","2020-40",2020-09-28,"Southern Hemisphere Temperate and Sub-Tropical",27,0,27,0,0,0
+"877","Sentinel","2020-41",2020-10-05,"Southern Hemisphere Temperate and Sub-Tropical",30,0,30,0,0,0
+"878","Sentinel","2020-42",2020-10-12,"Southern Hemisphere Temperate and Sub-Tropical",14,0,14,0,0,0
+"879","Sentinel","2020-43",2020-10-19,"Southern Hemisphere Temperate and Sub-Tropical",11,0,11,0,0,0
+"880","Sentinel","2020-44",2020-10-26,"Southern Hemisphere Temperate and Sub-Tropical",14,0,14,0,0,0
+"881","Sentinel","2020-45",2020-11-02,"Southern Hemisphere Temperate and Sub-Tropical",13,0,13,0,0,0
+"882","Sentinel","2020-46",2020-11-09,"Southern Hemisphere Temperate and Sub-Tropical",4,0,4,0,0,0
+"883","Sentinel","2020-47",2020-11-16,"Southern Hemisphere Temperate and Sub-Tropical",2,0,2,0,0,0
+"884","Sentinel","2020-48",2020-11-23,"Southern Hemisphere Temperate and Sub-Tropical",3,0,3,0,0,0
+"885","Sentinel","2020-49",2020-11-30,"Southern Hemisphere Temperate and Sub-Tropical",3,0,3,0,0,0
+"886","Sentinel","2020-50",2020-12-07,"Southern Hemisphere Temperate and Sub-Tropical",1,0,1,0,0,0
+"887","Sentinel","2020-51",2020-12-14,"Southern Hemisphere Temperate and Sub-Tropical",4,0,4,0,0,0
+"888","Sentinel","2020-52",2020-12-21,"Southern Hemisphere Temperate and Sub-Tropical",26,0,26,0,0,0
+"889","Sentinel","2020-53",2020-12-28,"Southern Hemisphere Temperate and Sub-Tropical",14,0,14,0,0,0
+"890","Sentinel","2021-01",2021-01-04,"Southern Hemisphere Temperate and Sub-Tropical",17,0,17,0,0,0
+"891","Sentinel","2021-02",2021-01-11,"Southern Hemisphere Temperate and Sub-Tropical",11,0,11,0,0,0
+"892","Sentinel","2021-03",2021-01-18,"Southern Hemisphere Temperate and Sub-Tropical",24,0,24,0,0,0
+"893","Sentinel","2021-04",2021-01-25,"Southern Hemisphere Temperate and Sub-Tropical",30,0,30,0,0,0
+"894","Sentinel","2021-05",2021-02-01,"Southern Hemisphere Temperate and Sub-Tropical",23,0,23,0,0,0
+"895","Sentinel","2021-06",2021-02-08,"Southern Hemisphere Temperate and Sub-Tropical",18,0,18,0,0,0
+"896","Sentinel","2021-07",2021-02-15,"Southern Hemisphere Temperate and Sub-Tropical",6,0,6,0,0,0
+"897","Sentinel","2021-08",2021-02-22,"Southern Hemisphere Temperate and Sub-Tropical",13,0,13,0,0,0
+"898","Sentinel","2021-09",2021-03-01,"Southern Hemisphere Temperate and Sub-Tropical",23,0,23,0,0,0
+"899","Sentinel","2021-10",2021-03-08,"Southern Hemisphere Temperate and Sub-Tropical",25,0,25,0,0,0
+"900","Sentinel","2021-11",2021-03-15,"Southern Hemisphere Temperate and Sub-Tropical",9,0,9,0,0,0
+"901","Sentinel","2021-12",2021-03-22,"Southern Hemisphere Temperate and Sub-Tropical",19,0,19,0,0,0
+"902","Sentinel","2021-13",2021-03-29,"Southern Hemisphere Temperate and Sub-Tropical",17,0,17,0,0,0
+"903","Sentinel","2021-14",2021-04-05,"Southern Hemisphere Temperate and Sub-Tropical",9,0,9,0,0,0
+"904","Sentinel","2021-15",2021-04-12,"Southern Hemisphere Temperate and Sub-Tropical",5,0,5,0,0,0
+"905","Sentinel","2021-16",2021-04-19,"Southern Hemisphere Temperate and Sub-Tropical",19,0,19,0,0,0
+"906","Sentinel","2021-17",2021-04-26,"Southern Hemisphere Temperate and Sub-Tropical",21,0,21,0,0,0
+"907","Sentinel","2021-18",2021-05-03,"Southern Hemisphere Temperate and Sub-Tropical",53,0,53,0,0,0
+"908","Sentinel","2021-19",2021-05-10,"Southern Hemisphere Temperate and Sub-Tropical",40,0,40,0,0,0
+"909","Sentinel","2021-20",2021-05-17,"Southern Hemisphere Temperate and Sub-Tropical",72,0,72,0,0,0
+"910","Sentinel","2021-21",2021-05-24,"Southern Hemisphere Temperate and Sub-Tropical",73,0,73,0,0,0
+"911","Sentinel","2021-22",2021-05-31,"Southern Hemisphere Temperate and Sub-Tropical",57,0,57,0,0,0
+"912","Sentinel","2021-23",2021-06-07,"Southern Hemisphere Temperate and Sub-Tropical",69,0,69,0,0,0
+"913","Sentinel","2021-24",2021-06-14,"Southern Hemisphere Temperate and Sub-Tropical",82,0,82,0,0,0
+"914","Sentinel","2021-25",2021-06-21,"Southern Hemisphere Temperate and Sub-Tropical",82,0,82,0,0,0
+"915","Sentinel","2021-26",2021-06-28,"Southern Hemisphere Temperate and Sub-Tropical",84,0,84,0,0,0
+"916","Sentinel","2021-27",2021-07-05,"Southern Hemisphere Temperate and Sub-Tropical",111,0,111,0,0,0
+"917","Sentinel","2021-28",2021-07-12,"Southern Hemisphere Temperate and Sub-Tropical",71,0,71,0,0,0
+"918","Sentinel","2021-29",2021-07-19,"Southern Hemisphere Temperate and Sub-Tropical",73,0,73,0,0,0
+"919","Sentinel","2021-30",2021-07-26,"Southern Hemisphere Temperate and Sub-Tropical",87,0,87,0,0,0
+"920","Sentinel","2021-31",2021-08-02,"Southern Hemisphere Temperate and Sub-Tropical",108,0,108,0,0,0
+"921","Sentinel","2021-32",2021-08-09,"Southern Hemisphere Temperate and Sub-Tropical",95,0,95,0,0,0
+"922","Sentinel","2021-33",2021-08-16,"Southern Hemisphere Temperate and Sub-Tropical",116,3,103,3,0,0
+"923","Sentinel","2021-34",2021-08-23,"Southern Hemisphere Temperate and Sub-Tropical",123,5,108,5,0,0
+"924","Sentinel","2021-35",2021-08-30,"Southern Hemisphere Temperate and Sub-Tropical",123,0,117,0,0,0
+"925","Sentinel","2021-36",2021-09-06,"Southern Hemisphere Temperate and Sub-Tropical",22,0,22,0,0,0
+"926","Sentinel","2021-37",2021-09-13,"Southern Hemisphere Temperate and Sub-Tropical",26,0,26,0,0,0
+"927","Sentinel","2021-38",2021-09-20,"Southern Hemisphere Temperate and Sub-Tropical",49,15,34,14,0,1
+"928","Sentinel","2021-39",2021-09-27,"Southern Hemisphere Temperate and Sub-Tropical",38,7,31,6,0,1
+"929","Sentinel","2021-40",2021-10-04,"Southern Hemisphere Temperate and Sub-Tropical",46,9,37,9,0,0
+"930","Sentinel","2021-41",2021-10-11,"Southern Hemisphere Temperate and Sub-Tropical",58,12,46,11,0,1
+"931","Sentinel","2021-42",2021-10-18,"Southern Hemisphere Temperate and Sub-Tropical",69,7,56,7,0,0
+"932","Sentinel","2021-43",2021-10-25,"Southern Hemisphere Temperate and Sub-Tropical",105,12,61,12,0,0
+"933","Sentinel","2021-44",2021-11-01,"Southern Hemisphere Temperate and Sub-Tropical",171,16,108,13,0,3
+"934","Sentinel","2021-45",2021-11-08,"Southern Hemisphere Temperate and Sub-Tropical",77,7,42,7,0,0
+"935","Sentinel","2021-46",2021-11-15,"Southern Hemisphere Temperate and Sub-Tropical",100,22,65,22,0,0
+"936","Sentinel","2021-47",2021-11-22,"Southern Hemisphere Temperate and Sub-Tropical",168,21,114,21,0,0
+"937","Sentinel","2021-48",2021-11-29,"Southern Hemisphere Temperate and Sub-Tropical",189,16,132,14,0,2
+"938","Sentinel","2021-49",2021-12-06,"Southern Hemisphere Temperate and Sub-Tropical",126,4,92,4,0,0
+"939","Sentinel","2021-50",2021-12-13,"Southern Hemisphere Temperate and Sub-Tropical",104,9,80,8,0,1
+"940","Sentinel","2021-51",2021-12-20,"Southern Hemisphere Temperate and Sub-Tropical",99,8,79,7,0,1
+"941","Sentinel","2021-52",2021-12-27,"Southern Hemisphere Temperate and Sub-Tropical",64,0,57,0,0,0
+"942","Sentinel","2022-01",2022-01-03,"Southern Hemisphere Temperate and Sub-Tropical",597,14,492,14,0,0
+"943","Sentinel","2022-02",2022-01-10,"Southern Hemisphere Temperate and Sub-Tropical",603,16,527,16,0,0
+"944","Sentinel","2022-03",2022-01-17,"Southern Hemisphere Temperate and Sub-Tropical",507,12,445,12,0,0
+"945","Sentinel","2022-04",2022-01-24,"Southern Hemisphere Temperate and Sub-Tropical",500,17,438,17,0,0
+"946","Sentinel","2022-05",2022-01-31,"Southern Hemisphere Temperate and Sub-Tropical",463,16,409,15,0,1
+"947","Sentinel","2022-06",2022-02-07,"Southern Hemisphere Temperate and Sub-Tropical",442,10,398,10,0,0
+"948","Sentinel","2022-07",2022-02-14,"Southern Hemisphere Temperate and Sub-Tropical",428,7,391,6,0,1
+"949","Sentinel","2022-08",2022-02-21,"Southern Hemisphere Temperate and Sub-Tropical",417,6,383,6,0,0
+"950","Sentinel","2022-09",2022-02-28,"Southern Hemisphere Temperate and Sub-Tropical",418,9,378,9,0,0
+"951","Sentinel","2022-10",2022-03-07,"Southern Hemisphere Temperate and Sub-Tropical",501,4,472,3,0,1
+"952","Sentinel","2022-11",2022-03-14,"Southern Hemisphere Temperate and Sub-Tropical",495,0,478,0,0,0
+"953","Sentinel","2022-12",2022-03-21,"Southern Hemisphere Temperate and Sub-Tropical",580,0,553,0,0,0
+"954","Sentinel","2022-13",2022-03-28,"Southern Hemisphere Temperate and Sub-Tropical",599,1,557,0,0,1
+"955","Sentinel","2022-14",2022-04-04,"Southern Hemisphere Temperate and Sub-Tropical",628,0,583,0,0,0
+"956","Sentinel","2022-15",2022-04-11,"Southern Hemisphere Temperate and Sub-Tropical",458,0,423,0,0,0
+"957","Sentinel","2022-16",2022-04-18,"Southern Hemisphere Temperate and Sub-Tropical",619,0,542,0,0,0
+"958","Sentinel","2022-17",2022-04-25,"Southern Hemisphere Temperate and Sub-Tropical",678,1,572,0,0,1
+"959","Sentinel","2022-18",2022-05-02,"Southern Hemisphere Temperate and Sub-Tropical",1000,0,859,0,0,0
+"960","Sentinel","2022-19",2022-05-09,"Southern Hemisphere Temperate and Sub-Tropical",1354,6,1208,6,0,0
+"961","Sentinel","2022-20",2022-05-16,"Southern Hemisphere Temperate and Sub-Tropical",1381,5,1234,5,0,0
+"962","Sentinel","2022-21",2022-05-23,"Southern Hemisphere Temperate and Sub-Tropical",1455,2,1339,1,0,1
+"963","Sentinel","2022-22",2022-05-30,"Southern Hemisphere Temperate and Sub-Tropical",1266,1,1128,1,0,0
+"964","Sentinel","2022-23",2022-06-06,"Southern Hemisphere Temperate and Sub-Tropical",1307,2,1122,1,0,1
+"965","Sentinel","2022-24",2022-06-13,"Southern Hemisphere Temperate and Sub-Tropical",1088,4,940,3,0,1
+"966","Sentinel","2022-25",2022-06-20,"Southern Hemisphere Temperate and Sub-Tropical",1196,7,1036,4,0,3
+"967","Sentinel","2022-26",2022-06-27,"Southern Hemisphere Temperate and Sub-Tropical",1011,5,909,4,0,1
+"968","Sentinel","2022-27",2022-07-04,"Southern Hemisphere Temperate and Sub-Tropical",1061,17,944,16,0,1
+"969","Sentinel","2022-28",2022-07-11,"Southern Hemisphere Temperate and Sub-Tropical",969,6,906,5,0,1
+"970","Sentinel","2022-29",2022-07-18,"Southern Hemisphere Temperate and Sub-Tropical",897,17,827,16,0,1
+"971","Sentinel","2022-30",2022-07-25,"Southern Hemisphere Temperate and Sub-Tropical",924,12,853,11,0,1
+"972","Sentinel","2022-31",2022-08-01,"Southern Hemisphere Temperate and Sub-Tropical",943,10,865,10,0,0
+"973","Sentinel","2022-32",2022-08-08,"Southern Hemisphere Temperate and Sub-Tropical",969,10,902,9,0,1
+"974","Sentinel","2022-33",2022-08-15,"Southern Hemisphere Temperate and Sub-Tropical",1009,23,942,20,0,3
+"975","Sentinel","2022-34",2022-08-22,"Southern Hemisphere Temperate and Sub-Tropical",1068,49,954,45,0,4
+"976","Sentinel","2022-35",2022-08-29,"Southern Hemisphere Temperate and Sub-Tropical",1019,33,939,27,0,6
+"977","Sentinel","2022-36",2022-09-05,"Southern Hemisphere Temperate and Sub-Tropical",1006,84,846,63,0,21
+"978","Sentinel","2022-37",2022-09-12,"Southern Hemisphere Temperate and Sub-Tropical",965,68,839,53,0,15
+"979","Sentinel","2022-38",2022-09-19,"Southern Hemisphere Temperate and Sub-Tropical",870,62,714,42,0,20
+"980","Sentinel","2022-39",2022-09-26,"Southern Hemisphere Temperate and Sub-Tropical",995,73,809,32,0,41
+"981","Sentinel","2022-40",2022-10-03,"Southern Hemisphere Temperate and Sub-Tropical",886,68,693,32,0,36
+"982","Sentinel","2022-41",2022-10-10,"Southern Hemisphere Temperate and Sub-Tropical",1050,120,788,11,0,109
+"983","Sentinel","2022-42",2022-10-17,"Southern Hemisphere Temperate and Sub-Tropical",1320,175,967,9,0,166
+"984","Sentinel","2022-43",2022-10-24,"Southern Hemisphere Temperate and Sub-Tropical",1133,178,780,20,0,158
+"985","Sentinel","2022-44",2022-10-31,"Southern Hemisphere Temperate and Sub-Tropical",1224,189,871,15,0,174
+"986","Sentinel","2022-45",2022-11-07,"Southern Hemisphere Temperate and Sub-Tropical",1174,191,814,6,0,185
+"987","Sentinel","2022-46",2022-11-14,"Southern Hemisphere Temperate and Sub-Tropical",1114,111,852,6,0,105
+"988","Sentinel","2022-47",2022-11-21,"Southern Hemisphere Temperate and Sub-Tropical",974,83,765,12,0,71
+"989","Sentinel","2022-48",2022-11-28,"Southern Hemisphere Temperate and Sub-Tropical",1105,66,859,7,0,59
+"990","Sentinel","2022-49",2022-12-05,"Southern Hemisphere Temperate and Sub-Tropical",896,48,735,7,0,41
+"991","Sentinel","2022-50",2022-12-12,"Southern Hemisphere Temperate and Sub-Tropical",897,30,765,4,0,26
+"992","Sentinel","2022-51",2022-12-19,"Southern Hemisphere Temperate and Sub-Tropical",872,25,768,7,0,18
+"993","Sentinel","2022-52",2022-12-26,"Southern Hemisphere Temperate and Sub-Tropical",612,11,556,2,0,9
+"994","Sentinel","2023-01",2023-01-02,"Southern Hemisphere Temperate and Sub-Tropical",919,18,841,2,0,16
+"995","Sentinel","2023-02",2023-01-09,"Southern Hemisphere Temperate and Sub-Tropical",999,22,923,5,0,17
+"996","Sentinel","2023-03",2023-01-16,"Southern Hemisphere Temperate and Sub-Tropical",924,26,852,15,0,11
+"997","Sentinel","2023-04",2023-01-23,"Southern Hemisphere Temperate and Sub-Tropical",746,20,692,7,0,13
+"998","Sentinel","2023-05",2023-01-30,"Southern Hemisphere Temperate and Sub-Tropical",676,29,634,22,0,7
+"999","Sentinel","2023-06",2023-02-06,"Southern Hemisphere Temperate and Sub-Tropical",714,21,674,15,0,6
+"1000","Sentinel","2023-07",2023-02-13,"Southern Hemisphere Temperate and Sub-Tropical",679,13,652,1,0,12
+"1001","Sentinel","2023-08",2023-02-20,"Southern Hemisphere Temperate and Sub-Tropical",786,22,745,9,0,13
+"1002","Sentinel","2023-09",2023-02-27,"Southern Hemisphere Temperate and Sub-Tropical",937,36,874,22,0,14
+"1003","Sentinel","2023-10",2023-03-06,"Southern Hemisphere Temperate and Sub-Tropical",1008,26,955,19,0,7
+"1004","Sentinel","2023-11",2023-03-13,"Southern Hemisphere Temperate and Sub-Tropical",1093,45,1004,35,0,10
+"1005","Sentinel","2023-12",2023-03-20,"Southern Hemisphere Temperate and Sub-Tropical",1072,37,953,21,0,16
+"1006","Sentinel","2023-13",2023-03-27,"Southern Hemisphere Temperate and Sub-Tropical",1212,43,1096,27,0,16
+"1007","Sentinel","2023-14",2023-04-03,"Southern Hemisphere Temperate and Sub-Tropical",1139,44,982,22,0,22
+"1008","Sentinel","2023-15",2023-04-10,"Southern Hemisphere Temperate and Sub-Tropical",1354,53,1197,35,0,18
+"1009","Sentinel","2023-16",2023-04-17,"Southern Hemisphere Temperate and Sub-Tropical",1395,43,1222,31,0,12
+"1010","Sentinel","2023-17",2023-04-24,"Southern Hemisphere Temperate and Sub-Tropical",1585,53,1381,27,0,26
+"1011","Sentinel","2023-18",2023-05-01,"Southern Hemisphere Temperate and Sub-Tropical",1524,33,1317,14,0,19
+"1012","Sentinel","2023-19",2023-05-08,"Southern Hemisphere Temperate and Sub-Tropical",1662,33,1369,14,0,19
+"1013","Sentinel","2023-20",2023-05-15,"Southern Hemisphere Temperate and Sub-Tropical",1899,19,1532,3,0,16
+"1014","Sentinel","2023-21",2023-05-22,"Southern Hemisphere Temperate and Sub-Tropical",2084,22,1679,6,0,16
+"1015","Sentinel","2023-22",2023-05-29,"Southern Hemisphere Temperate and Sub-Tropical",2133,39,1711,8,0,31
+"1016","Sentinel","2023-23",2023-06-05,"Southern Hemisphere Temperate and Sub-Tropical",1965,32,1641,5,0,27
+"1017","Sentinel","2023-24",2023-06-12,"Southern Hemisphere Temperate and Sub-Tropical",1983,23,1737,7,0,16
+"1018","Sentinel","2023-25",2023-06-19,"Southern Hemisphere Temperate and Sub-Tropical",1756,33,1516,6,0,27
+"1019","Sentinel","2023-26",2023-06-26,"Southern Hemisphere Temperate and Sub-Tropical",1753,23,1563,7,0,16
+"1020","Sentinel","2023-27",2023-07-03,"Southern Hemisphere Temperate and Sub-Tropical",1529,27,1332,10,0,17
+"1021","Sentinel","2023-28",2023-07-10,"Southern Hemisphere Temperate and Sub-Tropical",1331,28,1231,10,0,18
+"1022","Sentinel","2023-29",2023-07-17,"Southern Hemisphere Temperate and Sub-Tropical",1195,15,1112,8,0,7
+"1023","Sentinel","2023-30",2023-07-24,"Southern Hemisphere Temperate and Sub-Tropical",1205,22,1126,8,0,14
+"1024","Sentinel","2023-31",2023-07-31,"Southern Hemisphere Temperate and Sub-Tropical",1316,32,1220,13,0,19
+"1025","Sentinel","2023-32",2023-08-07,"Southern Hemisphere Temperate and Sub-Tropical",1265,64,1145,29,0,35
+"1026","Sentinel","2023-33",2023-08-14,"Southern Hemisphere Temperate and Sub-Tropical",1205,36,1122,17,0,19
+"1027","Sentinel","2023-34",2023-08-21,"Southern Hemisphere Temperate and Sub-Tropical",1288,36,1216,13,0,23
+"1028","Sentinel","2023-35",2023-08-28,"Southern Hemisphere Temperate and Sub-Tropical",1146,29,1071,13,0,16
+"1029","Sentinel","2023-36",2023-09-04,"Southern Hemisphere Temperate and Sub-Tropical",1278,31,1207,20,0,11
+"1030","Sentinel","2023-37",2023-09-11,"Southern Hemisphere Temperate and Sub-Tropical",1149,36,1073,23,0,13
+"1031","Sentinel","2023-38",2023-09-18,"Southern Hemisphere Temperate and Sub-Tropical",1255,26,1203,12,0,14
+"1032","Sentinel","2023-39",2023-09-25,"Southern Hemisphere Temperate and Sub-Tropical",1065,17,1023,8,0,9
+"1033","Sentinel","2023-40",2023-10-02,"Southern Hemisphere Temperate and Sub-Tropical",1030,18,996,9,0,9
+"1034","Sentinel","2023-41",2023-10-09,"Southern Hemisphere Temperate and Sub-Tropical",1046,30,991,12,0,18
+"1035","Sentinel","2023-42",2023-10-16,"Southern Hemisphere Temperate and Sub-Tropical",1179,26,1130,8,0,18
+"1036","Sentinel","2023-43",2023-10-23,"Southern Hemisphere Temperate and Sub-Tropical",747,16,702,4,0,12
+"1037","Sentinel","2023-44",2023-10-30,"Southern Hemisphere Temperate and Sub-Tropical",743,19,686,9,0,10
+"1038","Sentinel","2023-45",2023-11-06,"Southern Hemisphere Temperate and Sub-Tropical",891,28,829,17,0,11
+"1039","Sentinel","2023-46",2023-11-13,"Southern Hemisphere Temperate and Sub-Tropical",913,43,793,19,0,24
+"1040","Sentinel","2023-47",2023-11-20,"Southern Hemisphere Temperate and Sub-Tropical",878,21,758,11,0,10
+"1041","Sentinel","2023-48",2023-11-27,"Southern Hemisphere Temperate and Sub-Tropical",874,16,790,3,0,13
+"1042","Sentinel","2023-49",2023-12-04,"Southern Hemisphere Temperate and Sub-Tropical",706,16,641,6,0,10
+"1043","Sentinel","2023-50",2023-12-11,"Southern Hemisphere Temperate and Sub-Tropical",674,21,601,10,0,11
+"1044","Sentinel","2023-51",2023-12-18,"Southern Hemisphere Temperate and Sub-Tropical",603,12,560,6,0,6
+"1045","Sentinel","2023-52",2023-12-25,"Southern Hemisphere Temperate and Sub-Tropical",307,15,271,10,0,5
+"1046","Sentinel","2024-01",2024-01-01,"Southern Hemisphere Temperate and Sub-Tropical",538,5,515,2,0,3
+"1047","Sentinel","2024-02",2024-01-08,"Southern Hemisphere Temperate and Sub-Tropical",662,17,612,11,0,6
+"1048","Sentinel","2024-03",2024-01-15,"Southern Hemisphere Temperate and Sub-Tropical",635,9,578,8,0,1
+"1049","Sentinel","2024-04",2024-01-22,"Southern Hemisphere Temperate and Sub-Tropical",505,3,476,3,0,0
+"1050","Sentinel","2024-05",2024-01-29,"Southern Hemisphere Temperate and Sub-Tropical",720,7,671,4,0,3
+"1051","Sentinel","2024-06",2024-02-05,"Southern Hemisphere Temperate and Sub-Tropical",742,5,701,5,0,0
+"1052","Sentinel","2024-07",2024-02-12,"Southern Hemisphere Temperate and Sub-Tropical",694,9,642,8,0,1
+"1053","Sentinel","2024-08",2024-02-19,"Southern Hemisphere Temperate and Sub-Tropical",716,8,684,6,0,2
+"1054","Sentinel","2024-09",2024-02-26,"Southern Hemisphere Temperate and Sub-Tropical",778,19,712,17,0,2
+"1055","Sentinel","2024-10",2024-03-04,"Southern Hemisphere Temperate and Sub-Tropical",877,12,824,8,0,4
+"1056","Sentinel","2024-11",2024-03-11,"Southern Hemisphere Temperate and Sub-Tropical",797,10,745,3,0,7
+"1057","Sentinel","2024-12",2024-03-18,"Southern Hemisphere Temperate and Sub-Tropical",936,7,846,4,0,3
+"1058","Sentinel","2024-13",2024-03-25,"Southern Hemisphere Temperate and Sub-Tropical",715,1,626,0,0,1
+"1059","Sentinel","2024-14",2024-04-01,"Southern Hemisphere Temperate and Sub-Tropical",956,6,842,5,0,1
+"1060","Sentinel","2024-15",2024-04-08,"Southern Hemisphere Temperate and Sub-Tropical",978,4,819,4,0,0
+"1061","Sentinel","2024-16",2024-04-15,"Southern Hemisphere Temperate and Sub-Tropical",1144,11,929,8,0,3
+"1062","Sentinel","2024-17",2024-04-22,"Southern Hemisphere Temperate and Sub-Tropical",1197,6,924,6,0,0
+"1063","Sentinel","2024-18",2024-04-29,"Southern Hemisphere Temperate and Sub-Tropical",1161,7,844,7,0,0
+"1064","Sentinel","2024-19",2024-05-06,"Southern Hemisphere Temperate and Sub-Tropical",1338,19,932,17,0,2
+"1065","Sentinel","2024-20",2024-05-13,"Southern Hemisphere Temperate and Sub-Tropical",1591,17,1082,13,0,4
+"1066","Sentinel","2024-21",2024-05-20,"Southern Hemisphere Temperate and Sub-Tropical",1496,19,972,16,0,3
+"1067","Sentinel","2024-22",2024-05-27,"Southern Hemisphere Temperate and Sub-Tropical",1880,32,1221,21,0,11
+"1068","Sentinel","2024-23",2024-06-03,"Southern Hemisphere Temperate and Sub-Tropical",1664,27,1257,19,0,8
+"1069","Sentinel","2024-24",2024-06-10,"Southern Hemisphere Temperate and Sub-Tropical",1862,28,1452,22,0,6
+"1070","Sentinel","2024-25",2024-06-17,"Southern Hemisphere Temperate and Sub-Tropical",1603,27,1310,24,0,3
+"1071","Sentinel","2024-26",2024-06-24,"Southern Hemisphere Temperate and Sub-Tropical",1442,27,1237,21,0,6
+"1072","Sentinel","2024-27",2024-07-01,"Southern Hemisphere Temperate and Sub-Tropical",1553,21,1310,17,0,4
+"1073","Sentinel","2024-28",2024-07-08,"Southern Hemisphere Temperate and Sub-Tropical",1404,25,1233,17,0,8
+"1074","Sentinel","2024-29",2024-07-15,"Southern Hemisphere Temperate and Sub-Tropical",1518,37,1352,17,0,20
+"1075","Sentinel","2024-30",2024-07-22,"Southern Hemisphere Temperate and Sub-Tropical",1729,53,1558,30,0,23
+"1076","Sentinel","2024-31",2024-07-29,"Southern Hemisphere Temperate and Sub-Tropical",1796,54,1649,31,0,23
+"1077","Sentinel","2024-32",2024-08-05,"Southern Hemisphere Temperate and Sub-Tropical",1639,52,1502,32,0,20
+"1078","Sentinel","2024-33",2024-08-12,"Southern Hemisphere Temperate and Sub-Tropical",1626,66,1499,34,0,32
+"1079","Sentinel","2024-34",2024-08-19,"Southern Hemisphere Temperate and Sub-Tropical",1670,71,1546,45,0,26
+"1080","Sentinel","2024-35",2024-08-26,"Southern Hemisphere Temperate and Sub-Tropical",1533,91,1410,41,0,50
+"1081","Sentinel","2024-36",2024-09-02,"Southern Hemisphere Temperate and Sub-Tropical",1606,85,1489,36,0,49
+"1082","Sentinel","2024-37",2024-09-09,"Southern Hemisphere Temperate and Sub-Tropical",1558,98,1421,38,0,60
+"1083","Sentinel","2024-38",2024-09-16,"Southern Hemisphere Temperate and Sub-Tropical",1393,64,1295,30,0,34
+"1084","Sentinel","2024-39",2024-09-23,"Southern Hemisphere Temperate and Sub-Tropical",1197,67,1110,14,0,53
+"1085","Sentinel","2024-40",2024-09-30,"Southern Hemisphere Temperate and Sub-Tropical",1337,110,1215,15,0,95
+"1086","Sentinel","2024-41",2024-10-07,"Southern Hemisphere Temperate and Sub-Tropical",1260,117,1123,22,0,95
+"1087","Sentinel","2024-42",2024-10-14,"Southern Hemisphere Temperate and Sub-Tropical",1318,118,1176,17,0,101
+"1088","Sentinel","2024-43",2024-10-21,"Southern Hemisphere Temperate and Sub-Tropical",1071,105,949,13,0,92
+"1089","Sentinel","2024-44",2024-10-28,"Southern Hemisphere Temperate and Sub-Tropical",1091,82,986,14,0,68
+"1090","Sentinel","2024-45",2024-11-04,"Southern Hemisphere Temperate and Sub-Tropical",1052,85,951,11,0,74
+"1091","Sentinel","2024-46",2024-11-11,"Southern Hemisphere Temperate and Sub-Tropical",1040,46,964,9,0,37
+"1092","Sentinel","2024-47",2024-11-18,"Southern Hemisphere Temperate and Sub-Tropical",1181,73,1079,11,0,62
+"1093","Sentinel","2024-48",2024-11-25,"Southern Hemisphere Temperate and Sub-Tropical",1003,71,905,13,0,58
+"1094","Sentinel","2024-49",2024-12-02,"Southern Hemisphere Temperate and Sub-Tropical",979,59,905,11,0,48
+"1095","Sentinel","2024-50",2024-12-09,"Southern Hemisphere Temperate and Sub-Tropical",823,76,733,24,0,52
+"1096","Sentinel","2024-51",2024-12-16,"Southern Hemisphere Temperate and Sub-Tropical",724,57,636,12,0,45
+"1097","Sentinel","2024-52",2024-12-23,"Southern Hemisphere Temperate and Sub-Tropical",416,33,368,8,0,25
+"1098","Sentinel","2025-01",2024-12-30,"Southern Hemisphere Temperate and Sub-Tropical",1359,32,1289,9,0,23
+"1099","Sentinel","2025-02",2025-01-06,"Southern Hemisphere Temperate and Sub-Tropical",1588,36,1494,16,0,20
+"1100","Sentinel","2025-03",2025-01-13,"Southern Hemisphere Temperate and Sub-Tropical",1283,44,1216,25,0,19
+"1101","Sentinel","2025-04",2025-01-20,"Southern Hemisphere Temperate and Sub-Tropical",1320,55,1208,37,0,18
+"1102","Sentinel","2025-05",2025-01-27,"Southern Hemisphere Temperate and Sub-Tropical",1095,26,1040,13,0,13
+"1103","Sentinel","2025-06",2025-02-03,"Southern Hemisphere Temperate and Sub-Tropical",1138,23,1100,15,0,8
+"1104","Sentinel","2025-07",2025-02-10,"Southern Hemisphere Temperate and Sub-Tropical",1063,20,1002,14,0,6
+"1105","Sentinel","2025-08",2025-02-17,"Southern Hemisphere Temperate and Sub-Tropical",863,16,813,13,0,3
+"1106","Sentinel","2025-09",2025-02-24,"Southern Hemisphere Temperate and Sub-Tropical",764,13,716,7,0,6
+"1107","Sentinel","2025-10",2025-03-03,"Southern Hemisphere Temperate and Sub-Tropical",1062,28,982,19,0,9
+"1108","Sentinel","2025-11",2025-03-10,"Southern Hemisphere Temperate and Sub-Tropical",897,20,823,13,0,7
+"1109","Sentinel","2025-12",2025-03-17,"Southern Hemisphere Temperate and Sub-Tropical",1100,13,1017,10,0,3
+"1110","Sentinel","2025-13",2025-03-24,"Southern Hemisphere Temperate and Sub-Tropical",1070,29,962,13,0,16
+"1111","Sentinel","2025-14",2025-03-31,"Southern Hemisphere Temperate and Sub-Tropical",1145,15,977,11,0,4
+"1112","Sentinel","2025-15",2025-04-07,"Southern Hemisphere Temperate and Sub-Tropical",1260,13,996,8,0,5
+"1113","Sentinel","2025-16",2025-04-14,"Southern Hemisphere Temperate and Sub-Tropical",1227,26,930,14,0,12
+"1114","Sentinel","2025-17",2025-04-21,"Southern Hemisphere Temperate and Sub-Tropical",1295,24,876,13,0,11
+"1115","Sentinel","2025-18",2025-04-28,"Southern Hemisphere Temperate and Sub-Tropical",1406,17,946,8,0,9
+"1116","Sentinel","2025-19",2025-05-05,"Southern Hemisphere Temperate and Sub-Tropical",1610,34,1051,18,0,16
+"1117","Sentinel","2025-20",2025-05-12,"Southern Hemisphere Temperate and Sub-Tropical",1607,22,1065,12,0,10
+"1118","Sentinel","2025-21",2025-05-19,"Southern Hemisphere Temperate and Sub-Tropical",1771,19,1176,9,0,10
+"1119","Sentinel","2025-22",2025-05-26,"Southern Hemisphere Temperate and Sub-Tropical",1817,27,1290,10,0,17
+"1120","Sentinel","2025-23",2025-06-02,"Southern Hemisphere Temperate and Sub-Tropical",2124,29,1492,19,0,10
+"1121","Sentinel","2025-24",2025-06-09,"Southern Hemisphere Temperate and Sub-Tropical",2147,30,1598,17,0,13
+"1122","Sentinel","2025-25",2025-06-16,"Southern Hemisphere Temperate and Sub-Tropical",2110,43,1650,20,0,23
+"1123","Sentinel","2025-26",2025-06-23,"Southern Hemisphere Temperate and Sub-Tropical",1989,54,1542,24,0,30
+"1124","Sentinel","2025-27",2025-06-30,"Southern Hemisphere Temperate and Sub-Tropical",2028,44,1615,21,0,23
+"1125","Sentinel","2025-28",2025-07-07,"Southern Hemisphere Temperate and Sub-Tropical",2005,57,1696,32,0,25
+"1126","Sentinel","2025-29",2025-07-14,"Southern Hemisphere Temperate and Sub-Tropical",1646,43,1457,35,0,8
+"1127","Sentinel","2025-30",2025-07-21,"Southern Hemisphere Temperate and Sub-Tropical",1513,29,1390,17,0,12
+"1128","Sentinel","2025-31",2025-07-28,"Southern Hemisphere Temperate and Sub-Tropical",1591,31,1469,17,0,14
+"1129","Sentinel","2025-32",2025-08-04,"Southern Hemisphere Temperate and Sub-Tropical",1681,60,1548,31,0,29
+"1130","Sentinel","2025-33",2025-08-11,"Southern Hemisphere Temperate and Sub-Tropical",1686,51,1550,25,0,26
+"1131","Sentinel","2025-34",2025-08-18,"Southern Hemisphere Temperate and Sub-Tropical",1652,41,1544,19,0,22
+"1132","Sentinel","2025-35",2025-08-25,"Southern Hemisphere Temperate and Sub-Tropical",1618,50,1465,26,0,24
+"1133","Sentinel","2025-36",2025-09-01,"Southern Hemisphere Temperate and Sub-Tropical",1478,43,1358,19,0,24
+"1134","Sentinel","2025-37",2025-09-08,"Southern Hemisphere Temperate and Sub-Tropical",1573,34,1438,13,0,21
+"1135","Sentinel","2025-38",2025-09-15,"Southern Hemisphere Temperate and Sub-Tropical",1521,30,1382,15,0,15
+"1136","Sentinel","2025-39",2025-09-22,"Southern Hemisphere Temperate and Sub-Tropical",1334,31,1190,11,0,20
+"1137","Sentinel","2025-40",2025-09-29,"Southern Hemisphere Temperate and Sub-Tropical",1342,45,1167,24,0,21

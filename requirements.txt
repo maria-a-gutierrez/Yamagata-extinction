@@ -1,0 +1,14 @@
+# Python package versions used to produce the published results (Python 3.11.9).
+# Install with:  pip install -r requirements.txt
+numpy==2.2.6
+scipy==1.13.0
+pandas==2.3.3
+matplotlib==3.10.9
+seaborn==0.13.2
+xgboost==3.2.0
+shap==0.51.0
+tqdm==4.67.3
+
+# Needed only to open and run the notebook:
+jupyterlab>=4.0
+ipykernel>=6.29
