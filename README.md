@@ -1,10 +1,6 @@
-# Reproduction code: post-pandemic dynamics of influenza B (Victoria & Yamagata)
+# Reproduction code: Identifying the viral and epidemiological factors behind the apparent global extinction of influenza B/Yamagata
 
-This repository contains the model and analysis code needed to reproduce the
-results and figures of the accompanying paper on the COVID‑19‑era extinction of
-the influenza B/Yamagata lineage and the post‑pandemic reemergence of B/Victoria.
 
-> **Citation / DOI:** _Add the paper citation and the Zenodo DOI here once minted._
 > **License:** MIT — see [License](#license) below.
 
 ## Model
