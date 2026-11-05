@@ -1,6 +1,36 @@
+# simulator.py: the two-lineage (Victoria, Yamagata), three-region influenza B model.
+#
+# Regions: Northern-Hemisphere temperate (N1 = 4 billion people), Tropics (N2 = 3.4 billion) and
+# Southern-Hemisphere temperate (N3 = 800 million). For each lineage, SIRS dynamics with waning immunity
+# (omegaV = 1/T_V, omegaY = 1/T_Y) and all-or-none cross-immunity (sigmaVY, sigmaYV); seasonal forcing in
+# the temperate regions (peak on day season_phase in the NH, opposite phase in the SH); mixing between
+# regions (m); and a COVID-19 reduction in contacts from 1 April 2020 (initial size c_pandemic, relaxing
+# over Lockdown_duration days).
+#
+# Force of infection (balanced mixing): in region i,
+#     FOI_i = beta * s_i * c * [(1 - m (N - N_i) / N) I_i / N_i + m * sum_{j != i} I_j / N],
+# i.e. a region-i person makes a fraction m N_j / N of their contacts with region j and everyone makes the
+# same total number of contacts, so contacts between any two regions balance. Seasonality s_i and the
+# contact multiplier c act on the recipient's region. With equal prevalence everywhere the bracket reduces
+# to I / N, so the single-region coexistence equilibrium is an exact equilibrium of the unforced model.
+#
+# model() integrates the deterministic ODEs (scipy's solve_ivp) from 1 January 2000 (t = 0, at the
+# coexistence equilibrium) and by default runs to July 2027 with the lockdown on 1 April 2020
+# (tspan = 27.75 years, Tpan = 20.25/27.75: the settings of Fig. 3). A lineage is extinct when it has
+# fewer than `threshold` (1) infected in every region. Optionally it runs tau-leaping ensembles (0.1-day
+# leaps, starting from rounded counts): Victoria from Yamagata's extinction (stochastic=True, nsims runs)
+# and single Yamagata reintroductions into the NH on 1 October 2026, 1 January, 1 April and 1 July 2027
+# (stochastic2=True, nsims2 runs; nsims2=0 gives only Yamagata's R_e on those dates). With plot=True it
+# draws the Fig. 3 layout and saves the data it shows next to the figure (<figure>_plotdata.pkl), so that
+# redraw_fig3() can restyle it without rerunning anything.
+#
+# run_single_simulation() is the wrapper that the Latin hypercube search calls.
+
 import numpy as np
 from scipy.integrate import solve_ivp
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
+import pickle
 import datetime
 import pandas as pd
 
@@ -49,117 +79,99 @@ def seasonal_multiplier_local(amp, phase, period, t, t_lock, Lockdown_duration):
 def seasonal_multiplier_triple(multiplier_nh):
     return multiplier_nh, 1.0, 2.0 - multiplier_nh
 
+def balanced_mixing(m, N1, N2, N3):
+    """Balanced mixing: a region-i person makes a fraction m*N_j/N of their contacts
+    with region j and the rest, 1 - m*(N - N_i)/N, at home. Returns the within-region
+    coefficients (a1, a2, a3) and the population shares (q1, q2, q3) = N_i/N."""
+    N = N1 + N2 + N3
+    q = (N1/N, N2/N, N3/N)
+    return tuple(1 - m*(1 - qi) for qi in q), q
+
 
 def run_stochastic_ensemble(t_start, t_end, y_start_state, N1, N2, N3, betaV, gamma, mu, omegaV, m, 
                             season_amp, season_phase, season_period, t_lock, Lockdown_duration, c_pandemic,
-                            n_sims=100, seed=1, tau=1.0):
+                            n_sims=100, seed=1, tau=0.1, t_check=None):
     """
-    Simulates the remaining system using Tau-Leaping for Victoria dynamics 
-    after Yamagata's absolute extinction. 
+    Simulates the remaining system using Tau-Leaping for Victoria dynamics
+    after Yamagata's absolute extinction.
+    The runs start from the rounded counts at extinction and take leaps of tau days (with 1-day
+    leaps the ensemble mean drifts below the ODE). All runs advance together; the state is stored
+    once a week from the first whole day, and the total infecteds of every run are also taken at
+    the first leap at or after t_check (at the end if t_check is None or past it).
+    Events that move people between the same two compartments are drawn as one Poisson count
+    (recoveries and deaths of infecteds; waning and births), which has the same distribution as
+    drawing them separately. A run whose infecteds reach zero stays at zero (Victoria has no
+    source outside the model), so it is no longer advanced: its infecteds and cumulative
+    infections are final, and its stored susceptibles stay at their value when it died out.
+    Returns (weekly times, cumulative infections cumIV1-3 (n_sims, n_weeks, 3), infecteds at t_check
+    (n_sims,)); only these are used, so only these are stored.
     """
-    np.random.seed(seed)
+    rng = np.random.default_rng(seed)
     # y_start_state indices correspond to Victoria's layout:
     # 0:SV1, 1:IV1, 2:cumIV1, 3:SV2, 4:IV2, 5:cumIV2, 6:SV3, 7:IV3, 8:cumIV3
-    t_eval = np.arange(np.ceil(t_start), t_end, tau)
-    n_steps = len(t_eval)
-    
-    # Storage for all simulations: shape (n_sims, n_steps, 9)
-    all_trajectories = np.zeros((n_sims, n_steps, 9))
+    t_days = np.arange(np.ceil(t_start), t_end, 1.0)
+    t_eval = t_days[::7]
+    leaps_per_day = int(round(1.0 / tau))
 
-    r21, r31 = N2/N1, N3/N1
-    r12, r32 = N1/N2, N3/N2
-    r13, r23 = N1/N3, N2/N3
+    # Storage for all simulations: cumulative infections, shape (n_sims, n_weeks, 3); single precision
+    # keeps 10^5 runs under 0.4 GB (counts lose under 1 part in 10^7)
+    all_cum = np.zeros((n_sims, len(t_eval), 3), dtype=np.float32)
 
-    for sim in range(n_sims):
-        # Local state tracks total counts rather than fractions for Poisson accuracy
-        # x vector structure: [SV1, IV1, cumIV1, SV2, IV2, cumIV2, SV3, IV3, cumIV3]
-        x = np.array([
-            y_start_state[0]*N1, y_start_state[1]*N1, 0.0,
-            y_start_state[6]*N2, y_start_state[7]*N2, 0.0,
-            y_start_state[12]*N3, y_start_state[13]*N3, 0.0
-        ], dtype=float)
-        
-        for step_idx, t in enumerate(t_eval):
-            all_trajectories[sim, step_idx, :] = x
-            
-            # Extract current integer counts
-            SV1, IV1, _, SV2, IV2, _, SV3, IV3, _ = x
-            
+    (a1, a2, a3), (q1, q2, q3) = balanced_mixing(m, N1, N2, N3)
+    N = np.array([N1, N2, N3])
+    a, q = np.array([a1, a2, a3]), np.array([q1, q2, q3])
+    births = mu * N
+
+    # Counts by region (columns) for every run (rows), rounded as stated in Methods
+    S = np.tile(np.rint([y_start_state[0]*N1, y_start_state[6]*N2, y_start_state[12]*N3]), (n_sims, 1))
+    I = np.tile(np.rint([y_start_state[1]*N1, y_start_state[7]*N2, y_start_state[13]*N3]), (n_sims, 1))
+    cum = np.zeros((n_sims, 3))
+    alive = np.arange(n_sims)  # runs that still have infecteds
+    I_at_check = None
+
+    for day_idx, t_day in enumerate(t_days):
+        if day_idx % 7 == 0:
+            all_cum[:, day_idx // 7, :] = cum
+        alive = alive[I[alive].sum(axis=1) > 0]
+        Sa, Ia, cuma = S[alive], I[alive], cum[alive]
+        for leap in range(leaps_per_day):
+            t = t_day + leap * tau
+            if I_at_check is None and t_check is not None and t >= t_check:
+                I[alive] = Ia
+                I_at_check = I.sum(axis=1)
+
             # Compute current multiplier arrays
             cm = contact_multiplier(t, t_lock, Lockdown_duration, c_pandemic)
-            seas1, seas2, seas3 = seasonal_multiplier_triple(seasonal_multiplier_local(season_amp, season_phase, season_period, t, t_lock, Lockdown_duration))
-            
-            # Global fractional forces of infection
-            inf_fraction_V1 = (IV1/N1) + m * ((IV2/N2)*r21 + (IV3/N3)*r31)
-            inf_fraction_V2 = (IV2/N2) + m * ((IV1/N1)*r12 + (IV3/N3)*r32)
-            inf_fraction_V3 = (IV3/N3) + m * ((IV1/N1)*r13 + (IV2/N2)*r23)
-            
-            forceV1 = betaV * seas1 * cm * inf_fraction_V1
-            forceV2 = betaV * seas2 * cm * inf_fraction_V2
-            forceV3 = betaV * seas3 * cm * inf_fraction_V3
-            
-            # Calculate transition rates (Expected counts per unit time)
-            # Region 1
-            rate_inf1 = forceV1 * SV1
-            rate_rec1 = gamma * IV1
-            rate_wan1 = omegaV * (N1 - (SV1 + IV1))
-            rate_birth1 = mu * N1
-            rate_m_S1 = mu * SV1
-            rate_m_I1 = mu * IV1
-            
-            # Region 2
-            rate_inf2 = forceV2 * SV2
-            rate_rec2 = gamma * IV2
-            rate_wan2 = omegaV * (N2 - (SV2 + IV2))
-            rate_birth2 = mu * N2
-            rate_m_S2 = mu * SV2
-            rate_m_I2 = mu * IV2
-            
-            # Region 3
-            rate_inf3 = forceV3 * SV3
-            rate_rec3 = gamma * IV3
-            rate_wan3 = omegaV * (N3 - (SV3 + IV3))
-            rate_birth3 = mu * N3
-            rate_m_S3 = mu * SV3
-            rate_m_I3 = mu * IV3
-            
-            # Sample discrete number of events occurring over window tau
+            seas = np.array(seasonal_multiplier_triple(seasonal_multiplier_local(season_amp, season_phase, season_period, t, t_lock, Lockdown_duration)))
+
+            # Global fractional forces of infection: a_i I_i/N_i + m * sum_{j != i} q_j I_j/N_j
+            prev = Ia / N
+            shared = prev * q
+            forceV = betaV * seas * cm * (a * prev + m * (shared.sum(axis=1, keepdims=True) - shared))
+
+            # Sample discrete number of events occurring over window tau: infections, recoveries and
+            # deaths of infecteds, waning and births, deaths of susceptibles
             # Clips to 0 to prevent issues with floating-point underflows
-            events = np.random.poisson(np.maximum([
-                rate_inf1, rate_rec1, rate_wan1, rate_birth1, rate_m_S1, rate_m_I1,
-                rate_inf2, rate_rec2, rate_wan2, rate_birth2, rate_m_S2, rate_m_I2,
-                rate_inf3, rate_rec3, rate_wan3, rate_birth3, rate_m_S3, rate_m_I3
-            ], 0) * tau)
-            
-            # Unpack events
-            e_inf1, e_rec1, e_wan1, e_b1, e_ms1, e_mi1 = events[0:6]
-            e_inf2, e_rec2, e_wan2, e_b2, e_ms2, e_mi2 = events[6:12]
-            e_inf3, e_rec3, e_wan3, e_b3, e_ms3, e_mi3 = events[12:18]
-            
+            e_inf, e_out, e_in, e_ms = rng.poisson(np.stack([
+                np.maximum(forceV * Sa, 0), (gamma + mu) * Ia, np.maximum(omegaV * (N - (Sa + Ia)), 0) + births, mu * Sa
+            ]) * tau)
+
             # Apply state changes securely, bounding populations at 0
-            # Region 1 Updates
-            x[0] = max(0.0, SV1 - e_inf1 + e_wan1 + e_b1 - e_ms1)
-            x[1] = max(0.0, IV1 + e_inf1 - e_rec1 - e_mi1)
-            x[2] += e_inf1 # tracking cumulative infections
-            
-            # Region 2 Updates
-            x[3] = max(0.0, SV2 - e_inf2 + e_wan2 + e_b2 - e_ms2)
-            x[4] = max(0.0, IV2 + e_inf2 - e_rec2 - e_mi2)
-            x[5] += e_inf2
-            
-            # Region 3 Updates
-            x[6] = max(0.0, SV3 - e_inf3 + e_wan3 + e_b3 - e_ms3)
-            x[7] = max(0.0, IV3 + e_inf3 - e_rec3 - e_mi3)
-            x[8] += e_inf3
-            
-    return t_eval, all_trajectories
+            Sa = np.maximum(0.0, Sa - e_inf + e_in - e_ms)
+            Ia = np.maximum(0.0, Ia + e_inf - e_out)
+            cuma = cuma + e_inf # tracking cumulative infections
+        S[alive], I[alive], cum[alive] = Sa, Ia, cuma
+
+    if I_at_check is None:
+        I_at_check = I.sum(axis=1)
+    return t_eval, all_cum, I_at_check
 
 
 def model(
         R0V=1.2, R0Y=1.2, gamma=1/3.4,
         omegaV=0.0, omegaY=0.0,
         sigmaVY=0.0, sigmaYV=0.0,
-        tspan=26.75*365.25, Tpan=20.25/26.75, Lockdown_duration=500,
+        tspan=27.75*365.25, Tpan=20.25/27.75, Lockdown_duration=500,
         c_pandemic=0.5,
         N1: int = 4_000_000_000,
         N2: int = 3_400_000_000,
@@ -167,7 +179,7 @@ def model(
         m = 0.0060,                        
         threshold: float = 1.0, 
         season_amp: float = 0.1, season_phase: float = 90, season_period: float = 365.25,
-        plot: bool = True, transient_years=15.75, shortcuts: bool = True, name=None, stochastic: bool = False, nsims=100, stochastic2: bool = False, nsims2=100,
+        plot: bool = True, transient_years=15.75, shortcuts: bool = True, name=None, title=None, style=None, stochastic: bool = False, nsims=100, stochastic2: bool = False, nsims2=100,
         **solver_kwargs):
 
     S_V, S_Y, I_V, I_Y, simple_coexist = coexistence_equilibrium(R0V, R0Y, gamma, omegaV, omegaY, sigmaVY, sigmaYV, mortality_rate)
@@ -182,6 +194,7 @@ def model(
         betaV = R0V * (gamma+mortality_rate)
         betaY = R0Y * (gamma+mortality_rate)
         t_lock = Tpan * tspan
+        (a1, a2, a3), (q1, q2, q3) = balanced_mixing(m, N1, N2, N3)
         
 
         def force_strain(beta, seasonal, I_in, I_out_1, I_out_2):
@@ -214,9 +227,10 @@ def model(
             r12, r13, r23 = N1/N2, N1/N3, N2/N3
             r21, r31, r32 = N2/N1, N3/N1, N3/N2 
 
-            forceV1, forceY1 = force_region(t, seas1, IV1, IV2*r21, IV3*r31, IY1, IY2*r21, IY3*r31)
-            forceV2, forceY2 = force_region(t, seas2, IV2, IV1*r12, IV3*r32, IY2, IY1*r12, IY3*r32)
-            forceV3, forceY3 = force_region(t, seas3, IV3, IV1*r13, IV2*r23, IY3, IY1*r13, IY2*r23)
+            # balanced mixing: force_strain gives beta*s*(a_i*i_i + m*sum_j q_j*i_j)
+            forceV1, forceY1 = force_region(t, seas1, a1*IV1, IV2*q2, IV3*q3, a1*IY1, IY2*q2, IY3*q3)
+            forceV2, forceY2 = force_region(t, seas2, a2*IV2, IV1*q1, IV3*q3, a2*IY2, IY1*q1, IY3*q3)
+            forceV3, forceY3 = force_region(t, seas3, a3*IV3, IV1*q1, IV2*q2, a3*IY3, IY1*q1, IY2*q2)
 
             dSV1, dIV1, dSY1, dIY1 = derivatives_region(forceV1, forceY1, SV1, IV1, SY1, IY1)
             dSV2, dIV2, dSY2, dIY2 = derivatives_region(forceV2, forceY2, SV2, IV2, SY2, IY2)
@@ -391,8 +405,9 @@ def model(
         # --- PRESERVED BASELINE METRIC CALCULATIONS ---
         recovery_V = np.nan
         recovery_Y = np.nan
-        min_prevalence_V = np.nan 
-        
+        min_prevalence_V = np.nan
+        t_min_prevalence_V = np.nan  # when it happens (days)
+
         if Tpan < 1.0:
             years_for_peak = 5
             pre_weeks_mask = (weekly_times >= (t_lock - years_for_peak * 365.25)) & (weekly_times < t_lock)
@@ -442,6 +457,7 @@ def model(
             
             if np.any(trough_mask_V):
                 min_prevalence_V = float(np.min(abs_IV_global[trough_mask_V]))
+                t_min_prevalence_V = float(t_eval[trough_mask_V][np.argmin(abs_IV_global[trough_mask_V])])
 
         # Trigger stochastic simulation if Yamagata extinction occurred
         stoch_times = None
@@ -456,56 +472,35 @@ def model(
             if t_yamagata_extinction < actual_stoch_end:
                 # Initialize extinction metric tracker
                 stoch_extinction_pct_V = np.nan
-                stoch_times, stoch_trajectories = run_stochastic_ensemble(
-                    t_start=t_yamagata_extinction, t_end=actual_stoch_end, 
-                    y_start_state=yamagata_extinction_state_captured,
-                    N1=N1, N2=N2, N3=N3, betaV=betaV, gamma=gamma, mu=mortality_rate, omegaV=omegaV, m=m,
-                    season_amp=season_amp, season_phase=season_phase, season_period=season_period,
-                    t_lock=t_lock, Lockdown_duration=Lockdown_duration, c_pandemic=c_pandemic, n_sims=nsims, seed=1)
-                
                 # --- NEW ADDITION: CALCULATE VICTORIA STOCHASTIC EXTINCTION PERCENTAGE ---
                 t_check_extinct = actual_stoch_end
                 if not np.isnan(recovery_V) and recovery_V > 0:
                     t_check_extinct = min(actual_stoch_end, t_lock + recovery_V * 365.25)
-                
-                check_idx = np.searchsorted(stoch_times, t_check_extinct)
-                if check_idx >= len(stoch_times):
-                    check_idx = -1
 
-                # Extract final step active infecteds across all simulations: IV1 (idx 1), IV2 (idx 4), IV3 (idx 7)
-                final_active_V = (stoch_trajectories[:, check_idx, 1] + 
-                                  stoch_trajectories[:, check_idx, 4] + 
-                                  stoch_trajectories[:, check_idx, 7])
-                
+                # final_active_V: active infecteds IV1 + IV2 + IV3 of every run at t_check_extinct
+                stoch_times, stoch_cum, final_active_V = run_stochastic_ensemble(
+                    t_start=t_yamagata_extinction, t_end=actual_stoch_end,
+                    y_start_state=yamagata_extinction_state_captured,
+                    N1=N1, N2=N2, N3=N3, betaV=betaV, gamma=gamma, mu=mortality_rate, omegaV=omegaV, m=m,
+                    season_amp=season_amp, season_phase=season_phase, season_period=season_period,
+                    t_lock=t_lock, Lockdown_duration=Lockdown_duration, c_pandemic=c_pandemic, n_sims=nsims, seed=1,
+                    t_check=t_check_extinct)
+
                 # Count the number of simulations where the final count of active infections is 0
                 extinct_runs_count = np.sum(final_active_V == 0)
-                stoch_extinction_pct_V = (extinct_runs_count / stoch_trajectories.shape[0]) * 100
+                stoch_extinction_pct_V = (extinct_runs_count / stoch_cum.shape[0]) * 100
                 print(f">> Victoria went extinct in {stoch_extinction_pct_V:.2f}% of the stochastic runs before its recovery.")
 
-                # Map full trajectories into weekly incidences matching deterministic tracking structures
-                stoch_week_indices = np.arange(0, len(stoch_times), 7)
-                stoch_times_weekly = stoch_times[stoch_week_indices]
-                
+                # Weekly incidences from the weekly cumulative counts (the first week holds the count
+                # at the first record, as before)
                 # Shape mapping: [simulations, regions, weeks]
-                stoch_weekly_inc = np.zeros((nsims, 3, len(stoch_week_indices)))
-                for s in range(nsims):
-                    cumV1_s = stoch_trajectories[s, :, 2]
-                    cumV2_s = stoch_trajectories[s, :, 5]
-                    cumV3_s = stoch_trajectories[s, :, 8]
-                    for w_idx, idx in enumerate(stoch_week_indices):
-                        if w_idx == 0:
-                            stoch_weekly_inc[s, 0, w_idx] = cumV1_s[idx]
-                            stoch_weekly_inc[s, 1, w_idx] = cumV2_s[idx]
-                            stoch_weekly_inc[s, 2, w_idx] = cumV3_s[idx]
-                        else:
-                            p_idx = stoch_week_indices[w_idx - 1]
-                            stoch_weekly_inc[s, 0, w_idx] = (cumV1_s[idx] - cumV1_s[p_idx])
-                            stoch_weekly_inc[s, 1, w_idx] = (cumV2_s[idx] - cumV2_s[p_idx])
-                            stoch_weekly_inc[s, 2, w_idx] = (cumV3_s[idx] - cumV3_s[p_idx])
-                stoch_data = {'times': stoch_times_weekly, 'incidence': stoch_weekly_inc}
+                stoch_weekly_inc = np.diff(stoch_cum, axis=1, prepend=0.0).transpose(0, 2, 1)
+                del stoch_cum
+                stoch_data = {'times': stoch_times, 'incidence': stoch_weekly_inc}
         
         R_eff_Y_peak_2026_27 = np.nan
-        t_ref_days = 26.75* 365.25 #arbitrary 
+        t_R_eff_Y_peak_2026_27 = np.nan  # when that peak is (days)
+        t_ref_days = 26.75* 365.25 #arbitrary
         ref_date = datetime.datetime(2026, 10, 1, tzinfo=datetime.timezone.utc)
         _season_start = t_ref_days + (datetime.datetime(2026, 10, 1, tzinfo=datetime.timezone.utc) - ref_date).days
         _season_end   = t_ref_days + (datetime.datetime(2027, 3, 31, tzinfo=datetime.timezone.utc) - ref_date).days
@@ -517,8 +512,9 @@ def model(
             _SY1_season = y_all[2][_season_mask]
             _seas_vals = np.array([seasonal_multiplier_local(season_amp, season_phase, season_period, _t, t_lock, Lockdown_duration) for _t in _t_season])
             _peak_idx = np.argmax(_seas_vals)
-            _Reff_r1 = R0Y * _SY1_season[_peak_idx] * _seas_vals[_peak_idx] * contact_multiplier(_t_season[_peak_idx], t_lock, Lockdown_duration, c_pandemic)
+            _Reff_r1 = R0Y * a1 * _SY1_season[_peak_idx] * _seas_vals[_peak_idx] * contact_multiplier(_t_season[_peak_idx], t_lock, Lockdown_duration, c_pandemic)
             R_eff_Y_peak_2026_27 = _Reff_r1,
+            t_R_eff_Y_peak_2026_27 = float(_t_season[_peak_idx])
 
         # --- NEW ADDITION: STOCHASTIC YAMAGATA TRACKING (MULTI-DATE ENSEMBLES) ---
         # Kept as None to cleanly remove stochastic Yamagata envelopes from the downstream plot system
@@ -536,7 +532,7 @@ def model(
 
             # Safely map the calendar dates to simulation days using the model's datetime framework
             hypo_times = [(d - ref_date).days + t_ref_days for d in target_dates]
-            tau = 1.0
+            tau = 0.1  # leap length in days (1-day leaps drift below the ODE, as in run_stochastic_ensemble)
             
             r21, r31 = N2/N1, N3/N1
             r12, r32 = N1/N2, N3/N2
@@ -556,7 +552,7 @@ def model(
                 seas1_init = seasonal_multiplier_local(season_amp, season_phase, season_period, t_reintro_hypo, t_lock, Lockdown_duration)
                 cm_init = contact_multiplier(t_reintro_hypo, t_lock, Lockdown_duration, c_pandemic)
                 
-                Re_Y = (betaY * seas1_init * cm_init * SY1_det_init) / (N1 * (gamma + mortality_rate))
+                Re_Y = (betaY * a1 * seas1_init * cm_init * SY1_det_init) / (N1 * (gamma + mortality_rate))
                 R_values.append(Re_Y)
 
                 if nsims2 > 0:
@@ -569,10 +565,10 @@ def model(
                                             np.interp(t_eval_stoch_Y, t_eval, y_all[7]),
                                             np.interp(t_eval_stoch_Y, t_eval, y_all[13])])
                     
-                    # Dynamic initialization of susceptibles from deterministic system state at this date
-                    SY_init = np.array([np.interp(t_reintro_hypo, t_eval, y_all[2]) * N1,
-                                        np.interp(t_reintro_hypo, t_eval, y_all[8]) * N2,
-                                        np.interp(t_reintro_hypo, t_eval, y_all[14]) * N3])
+                    # Dynamic initialization of susceptibles from deterministic system state at this date (rounded counts)
+                    SY_init = np.rint([np.interp(t_reintro_hypo, t_eval, y_all[2]) * N1,
+                                       np.interp(t_reintro_hypo, t_eval, y_all[8]) * N2,
+                                       np.interp(t_reintro_hypo, t_eval, y_all[14]) * N3])
                     
                     cm_arr = np.array([contact_multiplier(t, t_lock, Lockdown_duration, c_pandemic) for t in t_eval_stoch_Y])
                     seas1_arr = np.array([seasonal_multiplier_local(season_amp, season_phase, season_period, t, t_lock, Lockdown_duration) for t in t_eval_stoch_Y])
@@ -582,78 +578,55 @@ def model(
                     forceV_det = np.zeros((3, n_steps_Y))
                     for step_idx in range(n_steps_Y):
                         iv1, iv2, iv3 = IV_det_frac[0, step_idx], IV_det_frac[1, step_idx], IV_det_frac[2, step_idx]
-                        forceV_det[0, step_idx] = betaV * seas1_arr[step_idx] * cm_arr[step_idx] * (iv1 + m*(iv2*r21 + iv3*r31))
-                        forceV_det[1, step_idx] = betaV * seas2_arr[step_idx] * cm_arr[step_idx] * (iv2 + m*(iv1*r12 + iv3*r32))
-                        forceV_det[2, step_idx] = betaV * seas3_arr[step_idx] * cm_arr[step_idx] * (iv3 + m*(iv1*r13 + iv2*r23))
+                        forceV_det[0, step_idx] = betaV * seas1_arr[step_idx] * cm_arr[step_idx] * (a1*iv1 + m*(iv2*q2 + iv3*q3))
+                        forceV_det[1, step_idx] = betaV * seas2_arr[step_idx] * cm_arr[step_idx] * (a2*iv2 + m*(iv1*q1 + iv3*q3))
+                        forceV_det[2, step_idx] = betaV * seas3_arr[step_idx] * cm_arr[step_idx] * (a3*iv3 + m*(iv1*q1 + iv2*q2))
                     
-                    all_cum_Y = np.zeros((nsims2, 3, n_steps_Y))
-                    np.random.seed(1) # All 4 hypothetical dates can use the same NRG
-                    
-                    # 3. RUN THE INDEPENDENT STOCHASTIC ENSEMBLE
-                    for sim in range(nsims2):
-                        SY = SY_init.copy()
-                        IY = np.array([1.0, 0.0, 0.0]) # Reintroduce exactly 1 case in NH
-                        cumY = np.array([0.0, 0.0, 0.0])
-                        
-                        for step_idx in range(n_steps_Y):
-                            all_cum_Y[sim, :, step_idx] = cumY
-                                
-                            # Calculate Yamagata force of infection
-                            f1Y = betaY * seas1_arr[step_idx] * cm_arr[step_idx] * (IY[0]/N1 + m*(IY[1]/N2*r21 + IY[2]/N3*r31))
-                            f2Y = betaY * seas2_arr[step_idx] * cm_arr[step_idx] * (IY[1]/N2 + m*(IY[0]/N1*r12 + IY[2]/N3*r32))
-                            f3Y = betaY * seas3_arr[step_idx] * cm_arr[step_idx] * (IY[2]/N3 + m*(IY[0]/N1*r13 + IY[1]/N2*r23))
-                            
-                            # Region 1 rates
-                            r_inf1 = f1Y * SY[0]
-                            r_cross1 = sigmaVY * forceV_det[0, step_idx] * SY[0]
-                            r_wan1 = omegaY * max(0, N1 - SY[0] - IY[0])
-                            r_b1 = mortality_rate * N1
-                            r_ds1 = mortality_rate * SY[0]
-                            r_di1 = mortality_rate * IY[0]
-                            r_rec1 = gamma * IY[0]
-                            
-                            # Region 2 rates
-                            r_inf2 = f2Y * SY[1]
-                            r_cross2 = sigmaVY * forceV_det[1, step_idx] * SY[1]
-                            r_wan2 = omegaY * max(0, N2 - SY[1] - IY[1])
-                            r_b2 = mortality_rate * N2
-                            r_ds2 = mortality_rate * SY[1]
-                            r_di2 = mortality_rate * IY[1]
-                            r_rec2 = gamma * IY[1]
-                            
-                            # Region 3 rates
-                            r_inf3 = f3Y * SY[2]
-                            r_cross3 = sigmaVY * forceV_det[2, step_idx] * SY[2]
-                            r_wan3 = omegaY * max(0, N3 - SY[2] - IY[2])
-                            r_b3 = mortality_rate * N3
-                            r_ds3 = mortality_rate * SY[2]
-                            r_di3 = mortality_rate * IY[2]
-                            r_rec3 = gamma * IY[2]
-                            
-                            events = np.random.poisson(np.maximum([
-                                r_inf1, r_cross1, r_wan1, r_b1, r_ds1, r_di1, r_rec1,
-                                r_inf2, r_cross2, r_wan2, r_b2, r_ds2, r_di2, r_rec2,
-                                r_inf3, r_cross3, r_wan3, r_b3, r_ds3, r_di3, r_rec3
-                            ], 0) * tau)
-                            
-                            e_inf1, e_cr1, e_w1, e_b1, e_ds1, e_di1, e_r1 = events[0:7]
-                            e_inf2, e_cr2, e_w2, e_b2, e_ds2, e_di2, e_r2 = events[7:14]
-                            e_inf3, e_cr3, e_w3, e_b3, e_ds3, e_di3, e_r3 = events[14:21]
-                            
-                            SY[0] = max(0, SY[0] - e_inf1 - e_cr1 + e_w1 + e_b1 - e_ds1)
-                            IY[0] = max(0, IY[0] + e_inf1 - e_r1 - e_di1)
-                            cumY[0] += e_inf1
-                            
-                            SY[1] = max(0, SY[1] - e_inf2 - e_cr2 + e_w2 + e_b2 - e_ds2)
-                            IY[1] = max(0, IY[1] + e_inf2 - e_r2 - e_di2)
-                            cumY[1] += e_inf2
-                            
-                            SY[2] = max(0, SY[2] - e_inf3 - e_cr3 + e_w3 + e_b3 - e_ds3)
-                            IY[2] = max(0, IY[2] + e_inf3 - e_r3 - e_di3)
-                            cumY[2] += e_inf3
+                    rng = np.random.default_rng(1) # All 4 hypothetical dates can use the same NRG
+                    N_vec = np.array([N1, N2, N3])
+                    a_vec, q_vec = np.array([a1, a2, a3]), np.array([q1, q2, q3])
+                    births_Y = mortality_rate * N_vec
+
+                    # 3. RUN THE INDEPENDENT STOCHASTIC ENSEMBLE, all runs together (rows: runs, columns: regions).
+                    # Events between the same two compartments are drawn as one Poisson count (cross-immunity
+                    # and deaths of susceptibles; waning and births; recoveries and deaths of infecteds), which
+                    # has the same distribution as drawing them separately. A run whose infecteds reach zero
+                    # has its final outbreak size (Yamagata has no other source), so it is no longer advanced.
+                    SY = np.tile(SY_init, (nsims2, 1))
+                    IY = np.zeros((nsims2, 3))
+                    IY[:, 0] = 1.0 # Reintroduce exactly 1 case in NH
+                    cumY = np.zeros((nsims2, 3))
+                    alive = np.arange(nsims2)  # runs still advanced (SY, IY, cumY hold only these)
+                    cumY_done = np.zeros((nsims2, 3))  # final cumulative infections of every run
+
+                    for step_idx in range(n_steps_Y):
+                        if step_idx % 10 == 0:  # once a day, set aside the runs that have faded out
+                            keep = IY.sum(axis=1) > 0
+                            cumY_done[alive[~keep]] = cumY[~keep]
+                            alive, SY, IY, cumY = alive[keep], SY[keep], IY[keep], cumY[keep]
+                            if len(alive) == 0:
+                                break
+                        # Calculate Yamagata force of infection: a_i I_i/N_i + m * sum_{j != i} q_j I_j/N_j
+                        prevY = IY / N_vec
+                        sharedY = prevY * q_vec
+                        seas_step = np.array([seas1_arr[step_idx], seas2_arr[step_idx], seas3_arr[step_idx]])
+                        fY = betaY * seas_step * cm_arr[step_idx] * (a_vec * prevY + m * (sharedY.sum(axis=1, keepdims=True) - sharedY))
+
+                        # Rates: infection; cross-immunity from (deterministic) Victoria and death of
+                        # susceptibles; waning and birth; recovery and death of infecteds
+                        e_inf, e_out_S, e_in_S, e_out_I = rng.poisson(np.stack([
+                            np.maximum(fY * SY, 0), (sigmaVY * forceV_det[:, step_idx] + mortality_rate) * SY,
+                            omegaY * np.maximum(0, N_vec - SY - IY) + births_Y, (gamma + mortality_rate) * IY
+                        ]) * tau)
+
+                        SY = np.maximum(0, SY - e_inf - e_out_S + e_in_S)
+                        IY = np.maximum(0, IY + e_inf - e_out_I)
+                        cumY = cumY + e_inf
+                    cumY_done[alive] = cumY
+                    cumY = cumY_done
 
                     # 4. EVALUATE OUTBREAK SIZE METRICS FOR THIS ENSEMBLE
-                    outbreak_sizes_Y = np.sum(all_cum_Y[:, :, -1], axis=1)
+                    outbreak_sizes_Y = cumY.sum(axis=1)
                     fadeout_count = np.sum(outbreak_sizes_Y < 100)
                     prob_fadeout = fadeout_count / nsims2
                     print(f"Hypothetical Introduction Date: {d_str}")
@@ -666,16 +639,18 @@ def model(
         
         
         # --- EXECUTE EXTENDED PLOTTING SYSTEM ---
+        # What the figure shows is gathered in fig3, saved next to the figure (fig3_data_path) so that
+        # redraw_fig3 can redraw it without rerunning anything, and drawn by draw_fig3.
         if plot:
             t_post = transient_years * 365.25
             weekly_mask = weekly_times >= t_post
-            
+
             weekly_mask_V = weekly_mask.copy()
             if extinct_V and t_extinct_V >= t_post:
                 weekly_mask_V &= (weekly_times < t_extinct_V)
             elif extinct_V:
                 weekly_mask_V = np.zeros(len(weekly_times), dtype=bool)
-                
+
             weekly_mask_Y = weekly_mask.copy()
             if not np.isnan(t_yamagata_extinction):
                 # Only draw the Yamagata deterministic line up to its very first lockdown extinction
@@ -683,203 +658,75 @@ def model(
 
             weekly_times_plot = weekly_times[weekly_mask]
             iso_dates = [f"{(ref_date + datetime.timedelta(days=t - t_ref_days)).isocalendar()[0]}-W{(ref_date + datetime.timedelta(days=t - t_ref_days)).isocalendar()[1]:02d}" for t in weekly_times_plot]
-            
-            fig, axes = plt.subplots(3, 1, figsize=(14, 12))
-            region_names = ["Northern Hemisphere", "Tropics", "Southern Hemisphere"]
-            
 
             # Dynamic x-coordinate mapping for vertical lines
             def t_days_to_x(t_days):
                 if t_days < weekly_times_plot[0] or t_days > weekly_times_plot[-1]:
                     return None
                 return np.argmin(np.abs(weekly_times_plot - t_days)).item()
-            
-            t_lock_x = t_days_to_x(t_lock)
-            t_testing_x = t_days_to_x(20.5 * 365.25) # July 1st 2020, increase in surveillance
-            t_data_x = t_days_to_x(25.5 * 365.25) # September 30th 2025, end of fitted data 
+
             t_extinct_Y_x = None
             if not np.isnan(t_yamagata_extinction) and t_yamagata_extinction >= t_post:
                 t_extinct_Y_x = t_days_to_x(t_yamagata_extinction)
 
-          
-            # Format X-Ticks to isolate and display ONLY the year
-            tick_positions = []
-            tick_labels = []
-            prev_year = None
-            for i, iso_date in enumerate(iso_dates):
-                year = int(iso_date.split('-')[0])
-                # Crucial: Only drop a tick line when shifting into a NEW year (skips index 0 padding)
-                if prev_year is not None and year != prev_year:
-                    tick_positions.append(i)
-                    tick_labels.append(str(year))
-                prev_year = year
-            
-            lim=[]
+            regions = []
             for r in range(3):
-                ax = axes[r]
-                ax.text(0, 1, ['A', 'B', 'C'][r], transform=ax.transAxes,
-                        fontsize=20, fontname='Arial', fontweight='bold', va='bottom', ha='right')
-                weeks = np.arange(len(iso_dates))
-                
                 v_weekly = weekly_infections_V[r, weekly_mask].copy() / 1e6
                 y_weekly = weekly_infections_Y[r, weekly_mask].copy() / 1e6
-                
                 v_weekly[~weekly_mask_V[weekly_mask]] = np.nan
                 y_weekly[~weekly_mask_Y[weekly_mask]] = np.nan
-                
-                # Plot standard deterministic lines
-                if len(y_weekly) > 0 and not np.all(np.isnan(y_weekly)):
-                    ax.plot(weeks, np.sqrt(y_weekly), 
-                            linewidth=2.5, label='Yamagata deterministic', color='tab:orange')
-                if len(v_weekly) > 0 and not np.all(np.isnan(v_weekly)):
-                    ax.plot(weeks, np.sqrt(v_weekly), 
-                            linewidth=2.5, label='Victoria deterministic', color='tab:blue')
-                
-                
-                safe_max_v = np.nanmax(v_weekly) if len(v_weekly) > 0 and not np.all(np.isnan(v_weekly)) else 0
-                safe_max_y = np.nanmax(y_weekly) if len(y_weekly) > 0 and not np.all(np.isnan(y_weekly)) else 0
-                lim.append(np.sqrt(1.55* max(safe_max_v, safe_max_y, 1)))
-                # Render Yamagata Extinction Line if it happened
-                if t_extinct_Y_x is not None:
-                    ax.axvline(x=t_extinct_Y_x, color='tab:orange', linestyle='--', linewidth=2, alpha=0.7)
-                # Compute and overlay stochastic summary envelopes
+                region = {'v_weekly': v_weekly, 'y_weekly': y_weekly, 'stoch': None}
+
+                # Summaries of the stochastic Victoria runs, week by week
                 if stoch_data is not None:
                     stoch_times_w = stoch_data['times']
                     stoch_inc_w = stoch_data['incidence'][:, r, :]
 
-                    # 1. Track matching pairs explicitly to prevent data shifting bugs
+                    # Track matching pairs explicitly to prevent data shifting bugs
                     stoch_x_indices = []
                     valid_data_indices = []
-                    
                     for data_idx, st_t in enumerate(stoch_times_w):
-                        # Find the absolute closest deterministic week index
+                        # Find the absolute closest deterministic week index (None if out of bounds)
                         closest_plot_idx = t_days_to_x(st_t)
-                        
-                        # 1. Safely check if it returned None (out of bounds)
                         if closest_plot_idx is not None:
-                            # 2. Compute the absolute difference
-                            diff = np.abs(weekly_times_plot[closest_plot_idx] - st_t)
-                            
-                            # Verify it falls within the 3.5-day boundary
-                            if diff < 3.5: # 3.5 is half a week, round to closest week.
+                            # Verify it falls within the 3.5-day boundary (half a week, round to closest week)
+                            if np.abs(weekly_times_plot[closest_plot_idx] - st_t) < 3.5:
                                 stoch_x_indices.append(closest_plot_idx)
                                 valid_data_indices.append(data_idx)
-                                    
                     stoch_x_indices = np.array(stoch_x_indices)
-                    
+
                     if len(stoch_x_indices) > 0:
-                        # Use the tracked indices to extract data columns cleanly
                         stoch_inc_trimmed = stoch_inc_w[:, valid_data_indices] / 1e6
-                    
-                        mean_stoch = np.mean(stoch_inc_trimmed, axis=0)
-                        median_stoch = np.median(stoch_inc_trimmed, axis=0)
-                        low_ci = np.percentile(stoch_inc_trimmed, 2.5, axis=0)
-                        high_ci = np.percentile(stoch_inc_trimmed, 97.5, axis=0)
-                        
-                        ax.plot(stoch_x_indices, np.sqrt(median_stoch), linestyle=':', linewidth=2,
-                                color='tab:blue', label='Victoria median')
-                        ax.plot(stoch_x_indices, np.sqrt(mean_stoch), linestyle='--', linewidth=1.5,
-                                color='tab:blue', label='Victoria mean')
-                        ax.fill_between(stoch_x_indices, np.sqrt(np.maximum(low_ci, 0)), np.sqrt(high_ci),
-                                        color='tab:blue', alpha=0.15, label='Victoria 95% interval')
-                
-                # Plot Stochastic Reintroduced Yamagata Envelopes
-                if stoch_Y_data is not None:
-                    stoch_times_w_y = stoch_Y_data['times']
-                    stoch_inc_w_y = stoch_Y_data['incidence'][:, r, :]
+                        region['stoch'] = {'x': stoch_x_indices,
+                                           'mean': np.mean(stoch_inc_trimmed, axis=0),
+                                           'median': np.median(stoch_inc_trimmed, axis=0),
+                                           'low': np.percentile(stoch_inc_trimmed, 2.5, axis=0),
+                                           'high': np.percentile(stoch_inc_trimmed, 97.5, axis=0)}
 
-                    stoch_x_indices_y = []
-                    valid_data_indices_y = []
-                    for data_idx_y, st_t_y in enumerate(stoch_times_w_y):
-                        closest_plot_idx_y = t_days_to_x(st_t_y)
-                        if closest_plot_idx_y is not None:
-                            if np.abs(weekly_times_plot[closest_plot_idx_y] - st_t_y) < 3.5:
-                                stoch_x_indices_y.append(closest_plot_idx_y)
-                                valid_data_indices_y.append(data_idx_y)
-                                    
-                    stoch_x_indices_y = np.array(stoch_x_indices_y)
-                    
-                    if len(stoch_x_indices_y) > 0:
-                        stoch_inc_trimmed_y = stoch_inc_w_y[:, valid_data_indices_y] / 1e6
-                    
-                        import warnings
-                        with warnings.catch_warnings():
-                            warnings.simplefilter("ignore", category=RuntimeWarning)
-                            mean_stoch_y = np.nanmean(stoch_inc_trimmed_y, axis=0)
-                            median_stoch_y = np.nanmedian(stoch_inc_trimmed_y, axis=0)
-                            low_ci_y = np.nanpercentile(stoch_inc_trimmed_y, 2.5, axis=0)
-                            high_ci_y = np.nanpercentile(stoch_inc_trimmed_y, 97.5, axis=0)
-                        
-                        ax.plot(stoch_x_indices_y, np.sqrt(np.maximum(0, median_stoch_y)), linestyle=':', linewidth=2,
-                                color='tab:orange', label='Yamagata stochastic median')
-                        ax.plot(stoch_x_indices_y, np.sqrt(np.maximum(0, mean_stoch_y)), linestyle='--', linewidth=1.5,
-                                color='tab:orange', label='Yamagata stochastic mean')
-                        ax.fill_between(stoch_x_indices_y, np.sqrt(np.maximum(0, low_ci_y)), np.sqrt(np.maximum(0, high_ci_y)),
-                                        color='tab:orange', alpha=0.15, label='Yamagata 95% interval')
-                
-                # Render April 1st 2020 Lockdown Line correctly mapped to x-axis indices
-                ax.axvline(x=t_lock_x, color='red', linestyle='--', linewidth=2, alpha=0.7, label='April 1st 2020 (Lockdown)' if r==0 else "")
-                # Render July 1st 2020 Testing Increase Line
-                ax.axvline(x=t_testing_x, color='green', linestyle='-.', linewidth=2, alpha=0.7, label='July 1st 2020 (Testing Increase)' if r==0 else "")
-                # Render September 30th 2025 Data End Line
-                ax.axvline(x=t_data_x, color='green', linestyle='--', linewidth=2, alpha=0.7, label='Sept 30th 2025 (Data End)' if r==0 else "")
-                #Yamagata reintroductions
-                t_reintro_x = t_days_to_x(26.75*365.25)
-                ax.axvline(x=t_reintro_x, color='tab:orange', linestyle=':', linewidth=2, alpha=1)
-                ax.axvline(x=t_days_to_x(27*365.25), color='tab:orange', linestyle=':', linewidth=2, alpha=1)
-                ax.axvline(x=t_days_to_x(27.25*365.25), color='tab:orange', linestyle=':', linewidth=2, alpha=1)
-                ax.axvline(x=t_days_to_x(27.5*365.25), color='tab:orange', linestyle=':', linewidth=2, alpha=1)
-
-                ax.set_xticks(tick_positions)
-                ax.set_xticklabels(tick_labels)
-                ax.set_xlim(0, len(iso_dates))
-                ax.set_ylabel('weekly cases (millions)', fontsize=14)
-                #ax.annotate('× 10⁶', xy=(0, 1.01), xycoords='axes fraction', ha='left', va='bottom', fontsize=12)
-                
-                ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, pos: f'{int(val**2):,}'))
-                plt.setp(ax.xaxis.get_majorticklabels(), fontsize=12)
-                plt.setp(ax.yaxis.get_majorticklabels(), fontsize=12)
-                ax.grid(True, alpha=0.3)
-                ax.set_title(f'{region_names[r]}', fontsize=14, fontweight='bold')
-                
-                # Position middle subplot legend nicely on the right side
-                if r == 1:
-                    ax.legend(loc=[0.02, 0.425], fontsize=14, facecolor='white', framealpha=1)
-                
                 # Background seasonal parameters
-                ax2 = ax.twinx()
                 multipliers = []
                 for t in weekly_times_plot:
                     seas = seasonal_multiplier_local(season_amp, season_phase, season_period, t, t_lock, Lockdown_duration) if r==0 else \
                             (1.0 if r==1 else 2.0 - seasonal_multiplier_local(season_amp, season_phase, season_period, t, t_lock, Lockdown_duration))
                     multipliers.append(seas * contact_multiplier(t, t_lock, Lockdown_duration, c_pandemic))
-                
-                ax2.plot(weeks, multipliers, linestyle='--', linewidth=1, color='gray', alpha=0.7)
-                ax2.set_ylabel('seasonality × contact multiplier', color='gray', fontsize=14)
-                ax2.set_ylim(0.65,1.15) 
-                plt.setp(ax2.yaxis.get_majorticklabels(), fontsize=12, color='gray')
-            for r in range(3):
-                ax = axes[r]
-                mlim = max(lim)
-                ax.set_ylim(0, mlim)
-                mlim=0.95*mlim #for v coordinate of text annotations
-                offset=2
-                if t_lock_x is not None:
-                    ax.text(t_lock_x+offset , mlim , 'lockdown', color='red', fontsize=14,  alpha=0.7, va='top', ha='left', rotation=90)
-                if t_testing_x is not None:
-                    ax.text(t_testing_x+offset , mlim, 'increased reporting', color='green', fontsize=14, alpha=0.7, va='top', ha='left', rotation=90)
-                if t_data_x is not None:
-                    ax.text(t_data_x+offset, mlim, 'end of data', color='green', fontsize=14, alpha=0.7, va='top', ha='left', rotation=90)
-                if t_extinct_Y_x is not None:
-                    ax.text(t_extinct_Y_x+offset, mlim, 'Yam. extinction', color='tab:orange', fontsize=14, alpha=1, va='top', ha='left', rotation=90)
-                    ax.text(t_reintro_x-offset, mlim, 'Yam. reintroductions', color='tab:orange', fontsize=14, alpha=1, va='top', ha='right', rotation=90)
-            ax.set_xticks(tick_positions)
-            ax.set_xticklabels(tick_labels)
-            ax.set_xlim(0, len(iso_dates))
-            plt.tight_layout()
+                region['multipliers'] = multipliers
+                regions.append(region)
+
+            fig3 = {'iso_dates': iso_dates, 'regions': regions,
+                    't_lock_x': t_days_to_x(t_lock),
+                    't_testing_x': t_days_to_x(20.5 * 365.25),  # July 1st 2020, increase in surveillance
+                    # September 30th 2025, end of fitted data (t = 15.75 years is 1 October 2015)
+                    't_data_x': t_days_to_x(15.75 * 365.25 + (datetime.date(2025, 9, 30) - datetime.date(2015, 10, 1)).days),
+                    't_extinct_Y_x': t_extinct_Y_x,
+                    # Victoria's minimum prevalence after lockdown (deterministic), and the weeks shown
+                    't_min_V_x': None if np.isnan(t_min_prevalence_V) else t_days_to_x(t_min_prevalence_V),
+                    'weekly_times': weekly_times_plot,
+                    # the four hypothetical Yamagata reintroductions
+                    't_reintro_xs': [t_days_to_x(years * 365.25) for years in (26.75, 27, 27.25, 27.5)]}
             if name is not None:
-                plt.savefig(name)
-            plt.show()
+                with open(fig3_data_path(name), 'wb') as f:
+                    pickle.dump(fig3, f)
+            draw_fig3(fig3, name=name, title=title, style=style)
 
             
 
@@ -888,10 +735,167 @@ def model(
             'min_prevalence_V': min_prevalence_V, 'R_eff_Y_peak_2026_27': R_eff_Y_peak_2026_27, 'R_values': R_values,
             'extinct_V': extinct_V, 'extinct_Y': extinct_Y, 'weekly_infections_V': weekly_infections_V,
             'weekly_infections_Y': weekly_infections_Y, 'weekly_times': weekly_times, 't_eval': t_eval,
-            'y_all': y_all, 'region_pops': [N1, N2, N3]
+            'y_all': y_all, 'region_pops': [N1, N2, N3], 't_yamagata_extinction': t_yamagata_extinction,
+            't_min_prevalence_V': t_min_prevalence_V, 't_R_eff_Y_peak_2026_27': t_R_eff_Y_peak_2026_27
         }
     
     
+
+def fig3_data_path(name):
+    """Where model(plot=True, name=...) saves what its figure shows, for redraw_fig3."""
+    return str(name).rsplit('.', 1)[0] + '_plotdata.pkl'
+
+
+def redraw_fig3(name, title=None, out=None, style=None):
+    """Redraw a figure in Fig. 3's layout from the data model() saved with it (no simulations), to out
+    (default: name itself), optionally with a title and style options (see draw_fig3)."""
+    with open(fig3_data_path(name), 'rb') as f:
+        fig3 = pickle.load(f)
+    draw_fig3(fig3, name=out or name, title=title, style=style)
+
+
+def draw_fig3(fig3, name=None, title=None, style=None):
+    """Draw Fig. 3's layout (three regions; deterministic lines, the stochastic Victoria summaries, the events)
+    from the data model() gathers. title: (text, marker, colour) above the panels, e.g. a best fit's rank.
+    style: {'labels_left': (label, ...)} puts those event labels to the left of their lines instead of
+    the right, where events are only weeks apart."""
+    style = style or {}
+    iso_dates, regions = fig3['iso_dates'], fig3['regions']
+    t_lock_x, t_testing_x, t_data_x = fig3['t_lock_x'], fig3['t_testing_x'], fig3['t_data_x']
+    t_extinct_Y_x, t_reintro_xs = fig3['t_extinct_Y_x'], fig3['t_reintro_xs']
+    t_min_V_x = fig3.get('t_min_V_x')  # Victoria's deterministic minimum (figures saved before 28 Oct 2026 lack it)
+    t_reintro_x = t_reintro_xs[0]
+
+    fig, axes = plt.subplots(3, 1, figsize=(14, 12))
+    region_names = ["Northern Hemisphere", "Tropics", "Southern Hemisphere"]
+
+    # Format X-Ticks to isolate and display ONLY the year
+    tick_positions = []
+    tick_labels = []
+    prev_year = None
+    for i, iso_date in enumerate(iso_dates):
+        year = int(iso_date.split('-')[0])
+        # Crucial: Only drop a tick line when shifting into a NEW year (skips index 0 padding)
+        if prev_year is not None and year != prev_year:
+            tick_positions.append(i)
+            tick_labels.append(str(year))
+        prev_year = year
+
+    lim=[]
+    for r in range(3):
+        ax = axes[r]
+        ax.text(0, 1, ['A', 'B', 'C'][r], transform=ax.transAxes,
+                fontsize=20, fontname='Arial', fontweight='bold', va='bottom', ha='right')
+        weeks = np.arange(len(iso_dates))
+        v_weekly, y_weekly = regions[r]['v_weekly'], regions[r]['y_weekly']
+
+        # Plot standard deterministic lines
+        if len(y_weekly) > 0 and not np.all(np.isnan(y_weekly)):
+            ax.plot(weeks, np.sqrt(y_weekly),
+                    linewidth=2.5, label='Yamagata deterministic', color='tab:orange')
+        if len(v_weekly) > 0 and not np.all(np.isnan(v_weekly)):
+            ax.plot(weeks, np.sqrt(v_weekly),
+                    linewidth=2.5, label='Victoria deterministic', color='tab:blue')
+
+        safe_max_v = np.nanmax(v_weekly) if len(v_weekly) > 0 and not np.all(np.isnan(v_weekly)) else 0
+        safe_max_y = np.nanmax(y_weekly) if len(y_weekly) > 0 and not np.all(np.isnan(y_weekly)) else 0
+        lim.append(np.sqrt(1.55* max(safe_max_v, safe_max_y, 1)))
+        # Render Yamagata Extinction Line if it happened
+        if t_extinct_Y_x is not None:
+            ax.axvline(x=t_extinct_Y_x, color='tab:orange', linestyle='--', linewidth=2, alpha=0.7)
+        # and Victoria's minimum prevalence (deterministic)
+        if t_min_V_x is not None:
+            ax.axvline(x=t_min_V_x, color='tab:blue', linestyle='--', linewidth=2, alpha=0.7)
+        # Overlay the stochastic summary envelopes
+        stoch = regions[r]['stoch']
+        if stoch is not None:
+            ax.plot(stoch['x'], np.sqrt(stoch['median']), linestyle=':', linewidth=2,
+                    color='tab:blue', label='Victoria median')
+            ax.plot(stoch['x'], np.sqrt(stoch['mean']), linestyle='-.', linewidth=1.5,
+                    color='tab:blue', label='Victoria mean')
+            ax.fill_between(stoch['x'], np.sqrt(np.maximum(stoch['low'], 0)), np.sqrt(stoch['high']),
+                            color='tab:blue', alpha=0.15, label='Victoria 95% interval')
+
+        # Render April 1st 2020 Lockdown Line correctly mapped to x-axis indices
+        ax.axvline(x=t_lock_x, color='red', linestyle='--', linewidth=2, alpha=0.7, label='April 1st 2020 (Lockdown)' if r==0 else "")
+        # Render July 1st 2020 Testing Increase Line
+        ax.axvline(x=t_testing_x, color='green', linestyle='--', linewidth=2, alpha=0.7, label='July 1st 2020 (Testing Increase)' if r==0 else "")
+        # Render September 30th 2025 Data End Line
+        ax.axvline(x=t_data_x, color='green', linestyle='-.', linewidth=2, alpha=0.7, label='Sept 30th 2025 (Data End)' if r==0 else "")
+        #Yamagata reintroductions
+        for x in t_reintro_xs:
+            ax.axvline(x=x, color='tab:orange', linestyle=':', linewidth=2, alpha=1)
+
+        ax.set_xticks(tick_positions)
+        ax.set_xticklabels(tick_labels)
+        ax.set_xlim(0, len(iso_dates))
+        ax.set_ylabel('weekly cases (millions)', fontsize=14)
+
+        ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, pos: f'{int(val**2):,}'))
+        plt.setp(ax.xaxis.get_majorticklabels(), fontsize=12)
+        plt.setp(ax.yaxis.get_majorticklabels(), fontsize=12)
+        ax.grid(True, alpha=0.3)
+        ax.set_title(f'{region_names[r]}', fontsize=14, fontweight='bold')
+
+        # Position middle subplot legend nicely on the right side
+        if r == 1:
+            ax.legend(loc=[0.02, 0.425], fontsize=14, facecolor='white', framealpha=1)
+
+        # Background seasonal parameters
+        ax2 = ax.twinx()
+        ax2.plot(weeks, regions[r]['multipliers'], linestyle='--', linewidth=1, color='gray', alpha=0.7)
+        ax2.set_ylabel('seasonality × contact multiplier', color='gray', fontsize=14)
+        ax2.set_ylim(0.65,1.15)
+        plt.setp(ax2.yaxis.get_majorticklabels(), fontsize=12, color='gray')
+    labels_left = set(style.get('labels_left', ()))
+
+    def event_label(ax, x, y, text, colour, alpha):
+        """An event's label along its line: to the right of it, or to the left if in style['labels_left']."""
+        if text in labels_left:  # right up to the line: the rotated text's descender space overlaps it
+            ax.text(x+0.75*offset, y, text, color=colour, fontsize=14, alpha=alpha, va='top', ha='right', rotation=90)
+        else:
+            ax.text(x+offset, y, text, color=colour, fontsize=14, alpha=alpha, va='top', ha='left', rotation=90)
+
+    for r in range(3):
+        ax = axes[r]
+        mlim = max(lim)
+        ax.set_ylim(0, mlim)
+        mlim=0.95*mlim #for v coordinate of text annotations
+        offset=2
+        if t_lock_x is not None:
+            event_label(ax, t_lock_x, mlim, 'lockdown', 'red', 0.7)
+        if t_testing_x is not None:
+            event_label(ax, t_testing_x, mlim, 'increased reporting', 'green', 0.7)
+        if t_data_x is not None:
+            event_label(ax, t_data_x, mlim, 'end of data', 'green', 0.7)
+        if t_extinct_Y_x is not None:
+            event_label(ax, t_extinct_Y_x, mlim, 'Yam. extinction', 'tab:orange', 1)
+            ax.text(t_reintro_x-offset, mlim, 'Yam. reintroductions', color='tab:orange', fontsize=14, alpha=1, va='top', ha='right', rotation=90)
+        if t_min_V_x is not None:
+            event_label(ax, t_min_V_x, mlim, 'Vic. minimum', 'tab:blue', 0.7)
+    ax.set_xticks(tick_positions)
+    ax.set_xticklabels(tick_labels)
+    ax.set_xlim(0, len(iso_dates))
+    title_above(fig, title)
+    if name is not None:
+        plt.savefig(name)
+    plt.show()
+
+
+def title_above(fig, title):
+    """Lay out a figure in Fig. 3's layout, with title = (text, marker, colour) above the panels (e.g. a best
+    fit's rank and its marker) or none. Also used by simulator_leaky.py."""
+    if title is None:
+        plt.tight_layout()
+        return
+    text, marker, colour = title
+    fig.legend(handles=[Line2D([0], [0], linestyle='none', marker=marker, markersize=16, color=colour,
+                               markeredgecolor='white', label=text)],
+               loc='upper center', bbox_to_anchor=(0.5, 1.0), frameon=False, handletextpad=0.3,
+               prop={'size': 18, 'weight': 'bold'})
+    plt.tight_layout(rect=(0, 0, 1, 0.965))
+
+
 def run_single_simulation(params, threshold=1):
     """Wrapper function that a single CPU core will run."""
     rV, rY, tV, tY, sVY, sYV,  m, season_phase, c_pandemic, Lockdown_duration = params
