@@ -12,3 +12,6 @@ tqdm==4.67.3
 # Needed only to open and run the notebook:
 jupyterlab>=4.0
 ipykernel>=6.29
+
+# Needed only to run the tests (tests/):
+pytest>=8
