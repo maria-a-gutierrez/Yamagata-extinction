@@ -133,6 +133,20 @@ def balanced_mixing(m, N1, N2, N3):
     return tuple(1 - m*(1 - qi) for qi in q), q
 
 
+# Every output of model()
+RESULT_KEYS = ('simple_coexist', 'recovery_V', 'recovery_Y', 'min_prevalence_V', 'R_eff_Y_peak_2026_27',
+               'R_values', 'extinct_V', 'extinct_Y', 'weekly_infections_V', 'weekly_infections_Y',
+               'weekly_times', 't_eval', 'y_all', 'region_pops', 't_min_prevalence_V')
+
+
+def stopped_early(region_pops, **outcome):
+    """model()'s result when shortcuts=True stops a run early: the outcome given, the region populations
+    and NaN for every other output. When Victoria dies out, extinct_V is NaN and extinct_Y True whatever
+    Yamagata did: recovery_V (-1 before the lockdown, -10 after) is what marks Victoria's extinction, and the
+    selection rules rely on these values."""
+    return {**dict.fromkeys(RESULT_KEYS, np.nan), 'region_pops': region_pops, **outcome}
+
+
 def run_stochastic_ensemble(t_start, t_end, y_start_state, N1, N2, N3, betaV, gamma, mu, omegaV, m, 
                             season_amp, season_phase, season_period, t_lock, Lockdown_duration, c_pandemic,
                             n_sims=100, seed=1, tau=1.0):
@@ -264,11 +278,7 @@ def model(
                                                        mortality_rate, leaky_mode)
 
     if shortcuts and not simple_coexist:
-        return {'simple_coexist': simple_coexist, 'recovery_V': np.nan, 'recovery_Y': np.nan,
-                'min_prevalence_V': np.nan, 'R_eff_Y_peak_2026_27': np.nan, 'R_values': np.nan,
-                'extinct_V': np.nan, 'extinct_Y': np.nan,
-                'weekly_infections_V': np.nan, 'weekly_infections_Y': np.nan, 'weekly_times': np.nan,
-                't_eval': np.nan, 'y_all': np.nan, 'region_pops': [N1, N2, N3]}
+        return stopped_early([N1, N2, N3], simple_coexist=simple_coexist)
     else: 
         betaV = R0V * (gamma+mortality_rate)
         betaY = R0Y * (gamma+mortality_rate)
@@ -365,15 +375,6 @@ def model(
 
         t_extinction_tracking_start = t_lock - (2 * 365.25) # check two years before lockdown
 
-        # Calculate exact reintroduction date for Yamagata in 2026-27 season
-        t_ref_days_calc = 15.75 * 365.25
-        ref_date_calc = datetime.datetime(2015, 10, 1, tzinfo=datetime.timezone.utc)
-        t_season_start = t_ref_days_calc + (datetime.datetime(2026, 10, 1, tzinfo=datetime.timezone.utc) - ref_date_calc).days
-        t_season_end = t_ref_days_calc + (datetime.datetime(2027, 3, 31, tzinfo=datetime.timezone.utc) - ref_date_calc).days
-        t_candidates = np.arange(t_season_start, t_season_end, 1.0)
-        seas_candidates = [seasonal_multiplier_local(season_amp, season_phase, season_period, tc, t_lock, Lockdown_duration) for tc in t_candidates]
-        t_reintro = t_candidates[np.argmax(seas_candidates)]
-
         while t_seg_start < tspan:
             active_events = []
             event_labels = [] 
@@ -390,11 +391,8 @@ def model(
                 event_labels.append('V')
             else:
                 if shortcuts:
-                    return {'simple_coexist': simple_coexist, 'recovery_V': -1 if t_seg_start < t_lock else -10,
-                            'recovery_Y': np.nan, 'min_prevalence_V': np.nan, 'R_eff_Y_peak_2026_27': np.nan,  'R_values': np.nan,
-                            'extinct_V': np.nan, 'extinct_Y': True, 'weekly_infections_V': np.nan,
-                            'weekly_infections_Y': np.nan, 'weekly_times': np.nan, 't_eval': np.nan,
-                            'y_all': np.nan, 'region_pops': [N1, N2, N3]}
+                    return stopped_early([N1, N2, N3], simple_coexist=simple_coexist,
+                                         recovery_V=-1 if t_seg_start < t_lock else -10, extinct_Y=True)
 
             if not extinct_Y:
                 def make_global_y_ev():
@@ -408,10 +406,7 @@ def model(
                 event_labels.append('Y')
             else:
                 if shortcuts and t_seg_start < t_lock:
-                    return {'simple_coexist': simple_coexist, 'recovery_V': np.nan, 'recovery_Y': -1,
-                            'min_prevalence_V': np.nan, 'R_eff_Y_peak_2026_27': np.nan,  'R_values': np.nan,'extinct_V': np.nan,
-                            'extinct_Y': True, 'weekly_infections_V': np.nan, 'weekly_infections_Y': np.nan,
-                            'weekly_times': np.nan, 't_eval': np.nan, 'y_all': np.nan, 'region_pops': [N1, N2, N3]}
+                    return stopped_early([N1, N2, N3], simple_coexist=simple_coexist, recovery_Y=-1, extinct_Y=True)
             
             t_start_i = int(np.ceil(t_seg_start)) if t_seg_start > 0 else 0
             t_eval_seg = np.arange(t_start_i, tspan, 1.0)
@@ -456,10 +451,7 @@ def model(
                 break
 
         if shortcuts and not extinct_Y:
-            return {'simple_coexist': simple_coexist, 'recovery_V': np.nan, 'recovery_Y': np.nan,
-                    'min_prevalence_V': np.nan, 'R_eff_Y_peak_2026_27': np.nan,  'R_values': np.nan,'extinct_V': np.nan, 'extinct_Y': False,
-                    'weekly_infections_V': np.nan, 'weekly_infections_Y': np.nan, 'weekly_times': np.nan,
-                    't_eval': np.nan, 'y_all': np.nan, 'region_pops': [N1, N2, N3]}
+            return stopped_early([N1, N2, N3], simple_coexist=simple_coexist, extinct_Y=False)
 
         # Concatenate deterministic segments cleanly
         if len(seg_ts) > 1:
@@ -632,7 +624,7 @@ def model(
             _seas_vals = np.array([seasonal_multiplier_local(season_amp, season_phase, season_period, _t, t_lock, Lockdown_duration) for _t in _t_season])
             _peak_idx = np.argmax(_seas_vals)
             _Reff_r1 = R0Y * a1 * _SY1_season[_peak_idx] * _seas_vals[_peak_idx] * contact_multiplier(_t_season[_peak_idx], t_lock, Lockdown_duration, c_pandemic)
-            R_eff_Y_peak_2026_27 = _Reff_r1,
+            R_eff_Y_peak_2026_27 = float(_Reff_r1)
 
         # --- NEW ADDITION: STOCHASTIC YAMAGATA TRACKING (MULTI-DATE ENSEMBLES) ---
         # Kept as None to cleanly remove stochastic Yamagata envelopes from the downstream plot system
@@ -883,12 +875,19 @@ def model(
         }
     
     
+# The outputs of model() that the Latin hypercube search keeps
+SEARCH_OUTPUTS = ('extinct_V', 'extinct_Y', 'recovery_V', 'recovery_Y', 'simple_coexist', 'min_prevalence_V',
+                  'R_eff_Y_peak_2026_27', 'R_values')
+
+
 def run_single_simulation(params, threshold=1):
-    """Wrapper function that a single CPU core will run."""
+    """One sample of the Latin hypercube search (what each worker process runs). Returns the parameters,
+    the outputs in SEARCH_OUTPUTS and success=True or, if the model raises, the parameters, success=False
+    and the error."""
     rV, rY, tV, tY, sVY, sYV,  m, season_phase, c_pandemic, Lockdown_duration = params
-    
+    row = {'R0V': rV, 'R0Y': rY, 'TV_years': tV, 'TY_years': tY, 'sigmaVY': sVY, 'sigmaYV': sYV, 'm': m,
+           'season_phase': season_phase, 'c_pandemic': c_pandemic, 'Lockdown_duration': Lockdown_duration}
     try:
-        # Calls your existing simulator function in the same file
         res = model(
             R0V=rV, R0Y=rY, threshold=threshold,
             omegaV=1/(tV * 365.25), omegaY=1/(tY * 365.25),
@@ -896,58 +895,6 @@ def run_single_simulation(params, threshold=1):
             m=m, season_phase=season_phase, c_pandemic=c_pandemic, Lockdown_duration=Lockdown_duration,
             plot=False, stochastic=False  # Crucial for multiprocessing!
         )
-        
-        return {
-            'R0V': rV,
-            'R0Y': rY,
-            'TV_years': tV,
-            'TY_years': tY,
-            'sigmaVY': sVY,
-            'sigmaYV': sYV,
-            'm': m,
-            'season_phase': season_phase,
-            'c_pandemic': c_pandemic,
-            'Lockdown_duration': Lockdown_duration,
-            'extinct_V': res['extinct_V'],
-            'extinct_Y': res['extinct_Y'],
-            'recovery_V': res['recovery_V'],
-            'recovery_Y': res['recovery_Y'],
-            'simple_coexist': res['simple_coexist'],
-            'min_prevalence_V': res['min_prevalence_V'],
-            'R_eff_Y_peak_2026_27': res['R_eff_Y_peak_2026_27'],
-            'R_values': res['R_values'],
-            'success': True 
-        }
     except Exception as e:
-        return {'R0V': rV,
-            'R0Y': rY,
-            'TV_years': tV,
-            'TY_years': tY,
-            'sigmaVY': sVY,
-            'sigmaYV': sYV,
-            'm': m,
-            'season_phase': season_phase,
-            'c_pandemic': c_pandemic,
-            'Lockdown_duration': Lockdown_duration,
-            'extinct_V': res['extinct_V'],
-            'extinct_Y': res['extinct_Y'],
-            'recovery_V': res['recovery_V'],
-            'recovery_Y': res['recovery_Y'],
-            'simple_coexist': res['simple_coexist'],
-            'min_prevalence_V': res['min_prevalence_V'],
-            'R_eff_Y_peak_2026_27': res['R_eff_Y_peak_2026_27'],
-            'R_values': res['R_values'],
-            'success': True 
-        }
-    except Exception as e:
-        return {'R0V': rV,
-            'R0Y': rY,
-            'TV_years': tV,
-            'TY_years': tY,
-            'sigmaVY': sVY,
-            'sigmaYV': sYV,
-            'm': m,
-            'season_phase': season_phase,
-            'c_pandemic': c_pandemic,
-            'Lockdown_duration': Lockdown_duration,
-            'success': False}
+        return {**row, 'success': False, 'error': repr(e)}
+    return {**row, **{k: res[k] for k in SEARCH_OUTPUTS}, 'success': True}
